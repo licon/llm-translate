@@ -76,7 +76,7 @@ async function handleTranslation(text, targetLanguage, sendResponse) {
  */
 async function callGeminiAPI(text, apiKey, modelName, targetLanguage) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
-    const prompt = `请将以下文本翻译成${targetLanguage}。请直接返回译文，不要包含任何解释、说明或多余的文字.\n\n原文:\n"${text}"`;
+    const prompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, text]);
     
     const response = await fetch(url, {
         method: 'POST',
@@ -99,7 +99,7 @@ async function callGeminiAPI(text, apiKey, modelName, targetLanguage) {
  */
 async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
     const url = 'https://api.siliconflow.cn/v1/chat/completions';
-    const prompt = `请将以下文本翻译成${targetLanguage}。请直接返回译文，不要包含任何解释、说明或多余的文字。`;
+    const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
 
     const response = await fetch(url, {
         method: 'POST',
@@ -110,7 +110,7 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
         body: JSON.stringify({
             model: modelName,
             messages: [
-                { role: 'system', content: prompt },
+                { role: 'system', content: systemPrompt },
                 { role: 'user', content: text }
             ],
             max_tokens: 2048,

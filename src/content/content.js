@@ -63,7 +63,7 @@ function createTranslateIcon(x, y, text) {
     translateIcon.addEventListener('click', async (e) => {
         e.stopPropagation();
         const { targetLanguage } = await chrome.storage.local.get('targetLanguage');
-        showResultPopover(x, y, '翻译中...');
+        showResultPopover(x, y, chrome.i18n.getMessage('statusTranslating'));
         chrome.runtime.sendMessage({ type: 'translate', text, targetLanguage: targetLanguage || '中文' }, (response) => {
             if (response.error) {
                 updateResultPopover(response.error);

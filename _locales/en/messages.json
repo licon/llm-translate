@@ -137,5 +137,29 @@
     "langSpanish": { "message": "Spanish" },
     "langFrench": { "message": "French" },
     "langRussian": { "message": "Russian" },
-    "langKorean": { "message": "Korean" }
+    "langKorean": { "message": "Korean" },
+    "translationPrompt": {
+        "message": "Please translate the following text into $targetLanguage$. Please return the translation directly, without any explanation, description, or extra text.\n\nOriginal text:\n\"$text$\"",
+        "description": "Prompt for the translation API.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Chinese"
+            },
+            "text": {
+                "content": "$2",
+                "example": "Hello, world!"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "Please translate the following text into $targetLanguage$. Please return the translation directly, without any explanation, description, or extra text.",
+        "description": "System prompt for the translation API.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Chinese"
+            }
+        }
+    }
 }

@@ -137,5 +137,29 @@
     "langSpanish": { "message": "Español" },
     "langFrench": { "message": "Français" },
     "langRussian": { "message": "Русский" },
-    "langKorean": { "message": "한국어" }
+    "langKorean": { "message": "한국어" },
+    "translationPrompt": {
+        "message": "请将以下文本翻译成$targetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。\n\n原文:\n\"$text$\"",
+        "description": "翻译 API 的提示。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "中文"
+            },
+            "text": {
+                "content": "$2",
+                "example": "你好，世界！"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "请将以下文本翻译成$targetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。",
+        "description": "翻译 API 的系统提示。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "中文"
+            }
+        }
+    }
 }
