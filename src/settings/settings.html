@@ -4,54 +4,84 @@
     <meta charset="UTF-8">
     <title>LLM-Translate 设置</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; background-color: #f8f9fa; }
+        h1 { text-align: center; color: #343a40; }
+        .tabs { display: flex; border-bottom: 2px solid #dee2e6; margin-bottom: 20px; }
+        .tab-button { 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            border: none; 
+            background-color: #e9ecef; /* 添加了默认背景色 */
+            font-size: 16px; 
+            color: #495057; /* 添加了默认文字颜色 */
+            border-bottom: 2px solid transparent;
+            margin-right: 5px; /* 添加了间距 */
+            border-radius: 5px 5px 0 0; /* 添加了圆角 */
+        }
+        .tab-button.active { 
+            color: #007bff; 
+            border-bottom-color: #007bff; 
+            font-weight: bold; 
+            background-color: #fff; /* 激活时背景变白 */
+        }
+        .tab-button:not(.active):hover {
+            background-color: #dee2e6; /* 悬浮时使用更柔和的灰色 */
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
         .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 5px; }
-        input[type="text"], input[type="password"], select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            padding: 10px 15px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        #status {
-            margin-top: 15px;
-            color: green;
-            font-weight: bold;
-        }
-        .api-key-container {
-            display: flex;
-            gap: 10px;
-        }
-        .api-key-container input {
-            flex-grow: 1;
-        }
+        label { display: block; margin-bottom: 8px; font-weight: 500; color: #495057; }
+        input[type="password"], select { width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; }
+        .api-key-container { display: flex; gap: 10px; }
+        .api-key-container input { flex-grow: 1; }
+        button { padding: 10px 15px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; transition: background-color 0.2s; }
+        button:hover { background-color: #0056b3; }
+        #status { margin-top: 20px; font-weight: bold; text-align: center; min-height: 20px; }
     </style>
 </head>
 <body>
     <h1>设置</h1>
 
-    <div class="form-group">
-        <label for="gemini-api-key">Gemini API 密钥</label>
-        <div class="api-key-container">
-            <input type="password" id="gemini-api-key" placeholder="在此输入您的 Gemini API 密钥">
-            <button id="fetch-models-button">获取模型</button>
+    <!-- 标签页切换 -->
+    <div class="tabs">
+        <button class="tab-button active" data-provider="gemini">Gemini</button>
+        <button class="tab-button" data-provider="siliconflow">Silicon Flow</button>
+    </div>
+
+    <!-- Gemini 设置 -->
+    <div id="gemini-settings" class="tab-content active">
+        <div class="form-group">
+            <label for="gemini-api-key">Gemini API 密钥</label>
+            <div class="api-key-container">
+                <input type="password" id="gemini-api-key" placeholder="输入您的 Google AI Studio API 密钥">
+                <button class="fetch-models-button" data-provider="gemini">获取模型</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gemini-model-select">选择模型</label>
+            <p style="font-size: 12px; color: #6c757d; margin: -5px 0 10px 0;">建议选择免费模型，例如 gemma 等。</p>
+            <select id="gemini-model-select">
+                <option value="">-- 请先获取模型 --</option>
+            </select>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="model-selection">选择模型</label>
-        <p style="font-size: 12px; color: #6c757d; margin: -5px 0 10px 0;">建议选择免费模型，例如 gemma 等。</p>
-        <select id="model-selection">
-            <option value="">-- 请先获取模型 --</option>
-        </select>
+    <!-- Silicon Flow 设置 -->
+    <div id="siliconflow-settings" class="tab-content">
+        <div class="form-group">
+            <label for="siliconflow-api-key">Silicon Flow API 密钥</label>
+            <div class="api-key-container">
+                <input type="password" id="siliconflow-api-key" placeholder="输入您的 Silicon Flow API 密钥">
+                <button class="fetch-models-button" data-provider="siliconflow">获取模型</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="siliconflow-model-select">选择模型</label>
+            <p style="font-size: 12px; color: #6c757d; margin: -5px 0 10px 0;">建议选择免费模型，例如 qwen 等。</p>
+            <select id="siliconflow-model-select">
+                <option value="">-- 请先获取模型 --</option>
+            </select>
+        </div>
     </div>
 
     <div id="status"></div>

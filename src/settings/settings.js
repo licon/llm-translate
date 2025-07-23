@@ -1,121 +1,190 @@
-// settings.js - 具有改进的UX和自动保存功能
+// settings.js - 支持多提供商的设置逻辑
 
-const apiKeyInput = document.getElementById('gemini-api-key');
-const fetchModelsButton = document.getElementById('fetch-models-button');
-const modelSelect = document.getElementById('model-selection');
-const statusDiv = document.getElementById('status');
+document.addEventListener('DOMContentLoaded', () => {
+    // 全局状态和元素引用
+    const state = {
+        activeProvider: 'gemini', // 默认提供商
+    };
 
-// 当用户点击“获取模型”时，保存API密钥然后获取
-async function handleFetchAndSaveKey() {
-    const apiKey = apiKeyInput.value;
-    if (!apiKey) {
-        showStatus('请输入 API 密钥。', 'error');
-        return;
-    }
+    const elements = {
+        tabs: document.querySelectorAll('.tab-button'),
+        tabContents: document.querySelectorAll('.tab-content'),
+        statusDiv: document.getElementById('status'),
+        providers: {
+            gemini: {
+                apiKeyInput: document.getElementById('gemini-api-key'),
+                modelSelect: document.getElementById('gemini-model-select'),
+                fetchButton: document.querySelector('.fetch-models-button[data-provider="gemini"]'),
+            },
+            siliconflow: {
+                apiKeyInput: document.getElementById('siliconflow-api-key'),
+                modelSelect: document.getElementById('siliconflow-model-select'),
+                fetchButton: document.querySelector('.fetch-models-button[data-provider="siliconflow"]'),
+            },
+        },
+    };
 
-    // 1. 立即保存 API 密钥
-    chrome.storage.local.set({ geminiApiKey: apiKey }, () => {
-        showStatus('API 密钥已保存。正在获取模型...', 'info');
+    // --- 事件绑定 ---
+
+    // 绑定标签页切换事件
+    elements.tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.dataset.provider));
     });
 
-    // 2. 获取模型
-    await fetchModels(apiKey);
-}
+    // 为每个提供商绑定事件
+    for (const providerName in elements.providers) {
+        const providerElements = elements.providers[providerName];
+        providerElements.fetchButton.addEventListener('click', () => handleFetchModels(providerName));
+        providerElements.modelSelect.addEventListener('change', () => saveSelectedModel(providerName));
+    }
 
-// 获取模型列表
-async function fetchModels(apiKey) {
-    modelSelect.innerHTML = '<option>加载中...</option>';
+    // --- 核心功能函数 ---
 
-    try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error.message || `API 请求失败，状态码: ${response.status}`);
-        }
-        const data = await response.json();
+    // 切换标签页
+    function switchTab(providerName) {
+        state.activeProvider = providerName;
+        
+        elements.tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.provider === providerName));
+        elements.tabContents.forEach(content => content.classList.toggle('active', content.id === `${providerName}-settings`));
+        
+        // 保存当前激活的提供商
+        chrome.storage.local.set({ activeProvider: providerName });
+        showStatus(`已切换到 ${providerName}`, 'info', 1500);
+    }
 
-        const supportedModels = data.models.filter(model => 
-            model.supportedGenerationMethods.includes('generateContent')
-        );
-
-        modelSelect.innerHTML = '';
-        if (supportedModels.length === 0) {
-            modelSelect.innerHTML = '<option>未找到可用模型</option>';
-            showStatus('未找到支持文本生成的模型。', 'error');
+    // 处理获取模型的请求
+    async function handleFetchModels(providerName) {
+        const { apiKeyInput } = elements.providers[providerName];
+        const apiKey = apiKeyInput.value;
+        if (!apiKey) {
+            showStatus('请输入 API 密钥。', 'error');
             return;
         }
 
-        supportedModels.forEach(model => {
+        // 立即保存 API 密钥
+        chrome.storage.local.set({ [`${providerName}ApiKey`]: apiKey }, () => {
+            showStatus('API 密钥已保存。正在获取模型...', 'info');
+        });
+
+        // 根据提供商调用不同的获取函数
+        if (providerName === 'gemini') {
+            await fetchGeminiModels(apiKey);
+        } else if (providerName === 'siliconflow') {
+            await fetchSiliconFlowModels(apiKey);
+        }
+    }
+
+    // 获取 Gemini 模型
+    async function fetchGeminiModels(apiKey) {
+        const modelSelect = elements.providers.gemini.modelSelect;
+        modelSelect.innerHTML = '<option>加载中...</option>';
+        try {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
+            if (!response.ok) throw new Error((await response.json()).error.message);
+            const data = await response.json();
+            const supportedModels = data.models.filter(m => m.supportedGenerationMethods.includes('generateContent'));
+            populateModelSelect(modelSelect, supportedModels, m => m.name.replace('models/', ''), m => `${m.displayName} (${m.name.replace('models/', '')})`);
+            showStatus('Gemini 模型获取成功！', 'success');
+            loadSelectedModel('gemini');
+        } catch (error) {
+            modelSelect.innerHTML = '<option>获取失败</option>';
+            showStatus(`获取 Gemini 模型失败: ${error.message}`, 'error');
+        }
+    }
+
+    // 获取 Silicon Flow 模型
+    async function fetchSiliconFlowModels(apiKey) {
+        const modelSelect = elements.providers.siliconflow.modelSelect;
+        modelSelect.innerHTML = '<option>加载中...</option>';
+        try {
+            const response = await fetch('https://api.siliconflow.cn/v1/models', {
+                headers: { 'Authorization': `Bearer ${apiKey}` }
+            });
+            if (!response.ok) throw new Error((await response.json()).error.message);
+            const data = await response.json();
+            // 假设其 API 格式与 OpenAI 兼容
+            populateModelSelect(modelSelect, data.data, m => m.id, m => m.id);
+            showStatus('Silicon Flow 模型获取成功！', 'success');
+            loadSelectedModel('siliconflow');
+        } catch (error) {
+            modelSelect.innerHTML = '<option>获取失败</option>';
+            showStatus(`获取 Silicon Flow 模型失败: ${error.message}`, 'error');
+        }
+    }
+
+    // 通用的模型下拉列表填充函数
+    function populateModelSelect(selectElement, models, valueFn, textFn) {
+        selectElement.innerHTML = '';
+        if (models.length === 0) {
+            selectElement.innerHTML = '<option>未找到可用模型</option>';
+            return;
+        }
+        models.forEach(model => {
             const option = document.createElement('option');
-            option.value = model.name.replace('models/', ''); 
-            option.textContent = `${model.displayName} (${option.value})`;
-            modelSelect.appendChild(option);
-        });
-        showStatus('模型列表获取成功！请选择一个模型。', 'success');
-        
-        // 获取成功后，加载之前保存过的模型选项
-        loadSelectedModel();
-
-    } catch (error) {
-        console.error('获取模型失败:', error);
-        modelSelect.innerHTML = '<option>获取失败</option>';
-        showStatus(`获取模型失败: ${error.message}`, 'error');
-    }
-}
-
-// 当用户选择一个新模型时，自动保存
-function saveSelectedModel() {
-    const selectedModel = modelSelect.value;
-    if (selectedModel) {
-        chrome.storage.local.set({ selectedModel: selectedModel }, () => {
-            showStatus(`模型 '${selectedModel}' 已自动保存。`, 'success');
+            option.value = valueFn(model);
+            option.textContent = textFn(model);
+            selectElement.appendChild(option);
         });
     }
-}
 
-// 加载已保存的设置
-function loadSettings() {
-    chrome.storage.local.get(['geminiApiKey'], (result) => {
-        if (result.geminiApiKey) {
-            apiKeyInput.value = result.geminiApiKey;
-            // 如果有 key，自动触发一次模型获取
-            fetchModels(result.geminiApiKey);
+    // 保存所选模型
+    function saveSelectedModel(providerName) {
+        const { modelSelect } = elements.providers[providerName];
+        if (modelSelect.value) {
+            chrome.storage.local.set({ [`${providerName}SelectedModel`]: modelSelect.value }, () => {
+                showStatus(`模型 '${modelSelect.value}' 已自动保存。`, 'success');
+            });
         }
-    });
-}
+    }
 
-// 加载并选中之前选择的模型
-function loadSelectedModel() {
-    chrome.storage.local.get('selectedModel', (result) => {
-        if (result.selectedModel) {
-            // 检查该选项是否存在
-            if ([...modelSelect.options].some(opt => opt.value === result.selectedModel)) {
-                modelSelect.value = result.selectedModel;
+    // --- 初始化函数 ---
+
+    // 加载所有已保存的设置
+    function loadAllSettings() {
+        const keys = [
+            'activeProvider',
+            'geminiApiKey', 'geminiSelectedModel',
+            'siliconflowApiKey', 'siliconflowSelectedModel'
+        ];
+        chrome.storage.local.get(keys, (result) => {
+            // 激活上次选中的标签页
+            if (result.activeProvider) {
+                switchTab(result.activeProvider);
             }
-        }
-    });
-}
-
-// 显示状态消息
-function showStatus(message, type = 'info') {
-    const colorMap = {
-        'info': '#007bff',
-        'success': 'green',
-        'error': 'red'
-    };
-    statusDiv.textContent = message;
-    statusDiv.style.color = colorMap[type] || 'black';
+            // 加载 Gemini 设置
+            if (result.geminiApiKey) {
+                elements.providers.gemini.apiKeyInput.value = result.geminiApiKey;
+                fetchGeminiModels(result.geminiApiKey);
+            }
+            // 加载 Silicon Flow 设置
+            if (result.siliconflowApiKey) {
+                elements.providers.siliconflow.apiKeyInput.value = result.siliconflowApiKey;
+                fetchSiliconFlowModels(result.siliconflowApiKey);
+            }
+        });
+    }
     
-    // 让成功消息停留时间短一些
-    const duration = type === 'success' ? 2500 : 4000;
-    setTimeout(() => {
-        if (statusDiv.textContent === message) {
-            statusDiv.textContent = '';
-        }
-    }, duration);
-}
+    // 加载并选中特定提供商的模型
+    function loadSelectedModel(providerName) {
+        chrome.storage.local.get([`${providerName}SelectedModel`], (result) => {
+            const model = result[`${providerName}SelectedModel`];
+            const { modelSelect } = elements.providers[providerName];
+            if (model && [...modelSelect.options].some(opt => opt.value === model)) {
+                modelSelect.value = model;
+            }
+        });
+    }
 
-// 绑定事件
-document.addEventListener('DOMContentLoaded', loadSettings);
-fetchModelsButton.addEventListener('click', handleFetchAndSaveKey);
-modelSelect.addEventListener('change', saveSelectedModel);
+    // 显示状态消息
+    function showStatus(message, type = 'info', duration = 3000) {
+        const colorMap = { 'info': '#007bff', 'success': 'green', 'error': 'red' };
+        elements.statusDiv.textContent = message;
+        elements.statusDiv.style.color = colorMap[type] || 'black';
+        setTimeout(() => {
+            if (elements.statusDiv.textContent === message) elements.statusDiv.textContent = '';
+        }, duration);
+    }
+
+    // 初始化
+    loadAllSettings();
+});

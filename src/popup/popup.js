@@ -39,10 +39,12 @@ function loadSettings() {
 // 加载上次选择的文本并填充到输入框
 function loadSelectedText() {
     chrome.storage.local.get('lastSelectedText', (result) => {
+        // 确保 result.lastSelectedText 不是 null 或 undefined
         if (result.lastSelectedText) {
             textInput.value = result.lastSelectedText;
-            // 填充后清除，避免每次都显示旧内容
-            chrome.storage.local.remove('lastSelectedText');
+            // 填充后将其设置为空字符串，而不是移除
+            // 这是一种更安全的方式，可以避免在其他地方意外地重新创建该值
+            chrome.storage.local.set({ 'lastSelectedText': '' });
         }
     });
 }

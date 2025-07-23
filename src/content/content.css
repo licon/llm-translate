@@ -1,31 +1,36 @@
-/* content.css - 用于设置页面注入元素的样式 */
+/* content.css - 用于划词翻译的图标和浮窗样式 */
 
 #llm-translate-icon {
-    position: fixed;
+    position: absolute; /* 使用 absolute 以便跟随页面滚动 */
     background-color: #007bff;
     color: white;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 2147483647; /* 尝试使用最高层级 */
+    transition: transform 0.1s ease-in-out;
 }
 
-.llm-translation-popover {
-    position: fixed;
-    background-color: white;
-    border: 1px solid #ccc;
+#llm-translate-icon:hover {
+    transform: scale(1.1);
+}
+
+#llm-translate-popover {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
     border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 10000;
-    max-width: 350px;
+    padding: 12px 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 2147483647;
+    max-width: 380px;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
+    color: #333;
+    display: none; /* 默认隐藏 */
 }
