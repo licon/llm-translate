@@ -27,7 +27,7 @@ To provide its features, the extension handles the following data:
 When you use the extension, the text you translate and your API key are sent to the third-party service you have selected. Your data becomes subject to their privacy policies. We encourage you to review them:
 
 *   **Google Gemini:** [Google Privacy Policy](https://policies.google.com/privacy)
-*   **Silicon Flow:** You should find and link to their privacy policy.
+*   **Silicon Flow:** [Privacy Policy](https://docs.siliconflow.cn/en/legals/privacy-policy)
 
 ### Data Security
 
