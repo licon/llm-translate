@@ -1,98 +1,52 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>LLM-Translate 设置</title>
-    <style>
-        /* --- 全局与布局 --- */
-        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; background-color: #f8f9fa; }
-        h1 { text-align: center; color: #343a40; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 500; color: #495057; }
-        input[type="password"], select { width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; }
-        .api-key-container { display: flex; gap: 10px; }
-        .api-key-container input { flex-grow: 1; }
-        #status { margin-top: 20px; font-weight: bold; text-align: center; min-height: 20px; }
-
-        /* --- 标签页系统 (Tab System) --- */
-        .tabs { display: flex; border-bottom: 2px solid #dee2e6; margin-bottom: 20px; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-
-        /* 标签页按钮 (.tab-button) - 遵从您的最新指示 */
-        .tab-button {
-            padding: 10px 20px;
-            cursor: pointer;
-            border: 1px solid transparent; /* 添加透明边框以统一尺寸 */
-            border-bottom: none; /* 底部边框由 .tabs 控制 */
-            background-color: #fff; /* 所有标签背景均为白色 */
-            font-size: 16px;
-            color: #495057; /* 默认文字为深灰色 */
-            margin-right: 5px;
-            border-radius: 5px 5px 0 0;
-            position: relative;
-            top: 1px; /* 与底边框对齐 */
-        }
-        .tab-button:hover {
-            color: #0056b3; /* 悬浮时只改变文字颜色 */
-        }
-        .tab-button.active {
-            color: #007bff; /* 激活时文字为蓝色 */
-            border-color: #dee2e6 #dee2e6 #fff; /* 边框与内容区融合 */
-            font-weight: bold;
-        }
-
-        /* 操作按钮 (.btn-action) - 样式完全独立 */
-        .btn-action {
-            padding: 10px 15px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title data-i18n="settingsTitle"></title>
+    <link rel="stylesheet" href="settings.css">
 </head>
 <body>
-    <h1>设置</h1>
+    <h1 data-i18n="settingsTitle"></h1>
 
     <div class="tabs">
-        <button class="tab-button active" data-provider="gemini">Gemini</button>
-        <button class="tab-button" data-provider="siliconflow">Silicon Flow</button>
+        <button class="tab-button active" data-provider="gemini" data-i18n="geminiProvider"></button>
+        <button class="tab-button" data-provider="siliconflow" data-i18n="siliconflowProvider"></button>
     </div>
 
-    <!-- Gemini 设置 -->
+    <!-- Gemini Settings -->
     <div id="gemini-settings" class="tab-content active">
         <div class="form-group">
-            <label for="gemini-api-key">Gemini API 密钥</label>
+            <label for="gemini-api-key">
+                <span data-i18n="geminiApiKeyLabel"></span>
+                <a href="https://aistudio.google.com/app/apikey" target="_blank" data-i18n="getApiKeyLink"></a>
+            </label>
             <div class="api-key-container">
-                <input type="password" id="gemini-api-key" placeholder="输入您的 Google AI Studio API 密钥">
-                <button class="fetch-models-button btn-action" data-provider="gemini">获取模型</button>
+                <input type="password" id="gemini-api-key" data-i18n-placeholder="geminiApiPlaceholder">
+                <button class="fetch-models-button btn-action" data-provider="gemini" data-i18n="fetchModelsButton"></button>
             </div>
         </div>
         <div class="form-group">
-            <label for="gemini-model-select">选择模型</label>
-            <p style="font-size: 12px; color: #6c757d; margin: -5px 0 10px 0;">建议选择免费模型，例如 gemma 等。</p>
+            <label data-i18n="modelSelectLabel"></label>
+            <p class="hint" data-i18n="geminiModelHint"></p>
             <select id="gemini-model-select"></select>
         </div>
     </div>
 
-    <!-- Silicon Flow 设置 -->
+    <!-- Silicon Flow Settings -->
     <div id="siliconflow-settings" class="tab-content">
         <div class="form-group">
-            <label for="siliconflow-api-key">Silicon Flow API 密钥</label>
+            <label for="siliconflow-api-key">
+                <span data-i18n="siliconflowApiKeyLabel"></span>
+                <a href="https://cloud.siliconflow.cn/api-keys" target="_blank" data-i18n="getApiKeyLink"></a>
+            </label>
             <div class="api-key-container">
-                <input type="password" id="siliconflow-api-key" placeholder="输入您的 Silicon Flow API 密钥">
-                <button class="fetch-models-button btn-action" data-provider="siliconflow">获取模型</button>
+                <input type="password" id="siliconflow-api-key" data-i18n-placeholder="siliconflowApiPlaceholder">
+                <button class="fetch-models-button btn-action" data-provider="siliconflow" data-i18n="fetchModelsButton"></button>
             </div>
         </div>
         <div class="form-group">
-            <label for="siliconflow-model-select">选择模型</label>
-            <p style="font-size: 12px; color: #6c757d; margin: -5px 0 10px 0;">建议选择免费模型，例如 qwen 等。</p>
+            <label data-i18n="modelSelectLabel"></label>
+            <p class="hint" data-i18n="siliconflowModelHint"></p>
             <select id="siliconflow-model-select"></select>
         </div>
     </div>

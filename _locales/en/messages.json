@@ -1,0 +1,141 @@
+{
+    "appName": {
+        "message": "LLM-Translate",
+        "description": "The name of the extension."
+    },
+    "appDescription": {
+        "message": "A browser translation plugin supporting multiple large language models (e.g., Gemini, Silicon Flow) with on-page and popup translation features.",
+        "description": "The description of the extension."
+    },
+    "popupTitle": {
+        "message": "LLM-Translate",
+        "description": "Title for the popup window."
+    },
+    "textInputPlaceholder": {
+        "message": "Enter text here...",
+        "description": "Placeholder for the text input area in the popup."
+    },
+    "translateButton": {
+        "message": "Translate",
+        "description": "Label for the translate button."
+    },
+    "settingsLink": {
+        "message": "Settings",
+        "description": "Link text to the settings page."
+    },
+    "settingsTitle": {
+        "message": "Settings",
+        "description": "Title for the settings page."
+    },
+    "geminiProvider": {
+        "message": "Gemini",
+        "description": "Label for the Gemini provider tab."
+    },
+    "siliconflowProvider": {
+        "message": "Silicon Flow",
+        "description": "Label for the Silicon Flow provider tab."
+    },
+    "geminiApiKeyLabel": {
+        "message": "Gemini API Key",
+        "description": "Label for the Gemini API key input."
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "Silicon Flow API Key",
+        "description": "Label for the Silicon Flow API key input."
+    },
+    "getApiKeyLink": {
+        "message": "Get API Key",
+        "description": "Link text to get an API key."
+    },
+    "geminiApiPlaceholder": {
+        "message": "Enter your Google AI Studio API key",
+        "description": "Placeholder for the Gemini API key input."
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "Enter your Silicon Flow API key",
+        "description": "Placeholder for the Silicon Flow API key input."
+    },
+    "fetchModelsButton": {
+        "message": "Fetch Models",
+        "description": "Label for the fetch models button."
+    },
+    "modelSelectLabel": {
+        "message": "Select Model",
+        "description": "Label for the model selection dropdown."
+    },
+    "geminiModelHint": {
+        "message": "Recommended to choose free models, e.g., gemma.",
+        "description": "Hint for selecting a Gemini model."
+    },
+    "siliconflowModelHint": {
+        "message": "Recommended to choose free models, e.g., qwen.",
+        "description": "Hint for selecting a Silicon Flow model."
+    },
+    "statusTranslating": {
+        "message": "Translating...",
+        "description": "Status message when translation is in progress."
+    },
+    "statusError": {
+        "message": "Error: $message$",
+        "description": "Status message when an error occurs.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "API key is invalid."
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "Please enter your API key.",
+        "description": "Status message asking the user to enter an API key."
+    },
+    "statusFetchingModels": {
+        "message": "Fetching model list...",
+        "description": "Status message when fetching models."
+    },
+    "statusModelsSuccess": {
+        "message": "Models fetched successfully! Please select a model.",
+        "description": "Status message when models are fetched successfully."
+    },
+    "statusModelsFailed": {
+        "message": "Failed to fetch models: $message$",
+        "description": "Status message when fetching models fails.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "Network error."
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "API key saved. Fetching models...",
+        "description": "Status message when API key is saved."
+    },
+    "statusModelSaved": {
+        "message": "Model '$model$' has been saved automatically.",
+        "description": "Status message when a model is saved.",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "gemini-pro"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "Switched to $provider$",
+        "description": "Status message when switching providers.",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "Gemini"
+            }
+        }
+    },
+    "langChinese": { "message": "Chinese" },
+    "langEnglish": { "message": "English" },
+    "langJapanese": { "message": "Japanese" },
+    "langSpanish": { "message": "Spanish" },
+    "langFrench": { "message": "French" },
+    "langRussian": { "message": "Russian" },
+    "langKorean": { "message": "Korean" }
+}

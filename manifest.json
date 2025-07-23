@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "LLM-Translate",
-  "version": "0.1.0",
-  "description": "一款支持多种大型语言模型（如 Gemini, Silicon Flow）的浏览器翻译插件，提供划词翻译和弹窗翻译功能。",
+  "name": "__MSG_appName__",
+  "version": "0.2.0",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
   "permissions": [
     "storage",
     "activeTab",
