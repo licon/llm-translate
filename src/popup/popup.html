@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM-Translate</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LLM-Translate</h1>
+        <textarea id="text-input" rows="5" placeholder="在此输入文本..."></textarea>
+        <div class="actions">
+            <select id="target-language">
+                <option value="中文">中文</option>
+                <option value="English">English</option>
+                <option value="日本語">日本語</option>
+                <option value="Español">Español</option>
+                <option value="Français">Français</option>
+                <option value="Русский">Русский</option>
+                <option value="한국어">한국어</option>
+            </select>
+            <button id="translate-button">翻译</button>
+        </div>
+        <div class="result-container" id="result-container">
+            <p id="translation-result"></p>
+        </div>
+        <a href="../settings/settings.html" target="_blank" class="settings-link">设置</a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

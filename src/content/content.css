@@ -1,0 +1,31 @@
+/* content.css - 用于设置页面注入元素的样式 */
+
+#llm-translate-icon {
+    position: fixed;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.llm-translation-popover {
+    position: fixed;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10000;
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 1.5;
+}
