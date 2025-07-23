@@ -2,16 +2,16 @@
 
 #llm-translate-icon {
     position: absolute; /* 使用 absolute 以便跟随页面滚动 */
-    background-color: #007bff;
-    color: white;
+    background-color: #ffffff; /* 背景改为白色 */
+    border: 1px solid #e0e0e0; /* 添加细边框 */
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 2147483647; /* 尝试使用最高层级 */
     transition: transform 0.1s ease-in-out;
 }

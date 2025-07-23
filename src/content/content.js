@@ -46,15 +46,16 @@ function createTranslateIcon(x, y, text) {
     translateIcon.style.left = `${x + window.scrollX}px`;
     translateIcon.style.top = `${y + window.scrollY + 15}px`;
     
-    // **修复1: 使用 chrome.runtime.getURL() 加载真实的图标文件**
+    // 使用 chrome.runtime.getURL() 加载真实的图标文件
     const iconImg = document.createElement('img');
-    iconImg.id = 'llm-translate-icon-img'; // 为图片本身添加ID
+    iconImg.id = 'llm-translate-icon-img';
     iconImg.src = chrome.runtime.getURL('icons/icon48.png');
+    // 遵从您的指示，将尺寸设置为 20x20
     iconImg.style.width = '20px';
     iconImg.style.height = '20px';
     translateIcon.appendChild(iconImg);
 
-    // **修复2: 添加 mouseup 监听器并阻止事件冒泡**
+    // 阻止 mouseup 事件冒泡，避免冲突
     translateIcon.addEventListener('mouseup', (e) => {
         e.stopPropagation();
     });
