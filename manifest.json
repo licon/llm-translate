@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "LLM-Translate",
   "version": "0.1.0",
-  "description": "利用大型语言模型提供高质量网页翻译的浏览器插件。",
+  "description": "一款支持多种大型语言模型（如 Gemini, Silicon Flow）的浏览器翻译插件，提供划词翻译和弹窗翻译功能。",
   "permissions": [
     "storage",
     "activeTab",
