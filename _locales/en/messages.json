@@ -4,7 +4,7 @@
         "description": "The name of the extension."
     },
     "appDescription": {
-        "message": "A browser translation plugin supporting multiple large language models (e.g., Gemini, Silicon Flow) with on-page and popup translation features.",
+        "message": "A translation plugin using LLMs (e.g., Gemini) for on-page and popup translations.",
         "description": "The description of the extension."
     },
     "popupTitle": {
