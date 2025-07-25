@@ -71,6 +71,11 @@ button:hover {
     margin: 0;
 }
 
+.result-actions {
+    display: flex;
+    gap: 5px;
+}
+
 .speak-button {
     background: none;
     border: none;

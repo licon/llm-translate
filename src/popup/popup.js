@@ -40,6 +40,7 @@ const resultContainer = document.getElementById('translation-result');
 const targetLanguageSelect = document.getElementById('target-language');
 const speakButton = document.getElementById('speak-button');
 const speakInputButton = document.getElementById('speak-input-button');
+const copyButton = document.getElementById('copy-button');
 
 textInput.addEventListener('input', () => {
     speakInputButton.style.display = textInput.value.trim() ? 'block' : 'none';
@@ -52,13 +53,16 @@ translateButton.addEventListener('click', () => {
     if (text.trim()) {
         resultContainer.innerText = chrome.i18n.getMessage('statusTranslating');
         speakButton.style.display = 'none';
+        copyButton.style.display = 'none';
         chrome.runtime.sendMessage({ type: 'translate', text, targetLanguage }, (response) => {
             if (response.error) {
                 resultContainer.innerText = chrome.i18n.getMessage('statusError', [response.error]);
                 speakButton.style.display = 'none';
+                copyButton.style.display = 'none';
             } else {
                 resultContainer.innerText = response.translation;
                 speakButton.style.display = 'block';
+                copyButton.style.display = 'block';
             }
         });
     }
@@ -68,6 +72,19 @@ speakButton.addEventListener('click', () => {
     const text = resultContainer.innerText;
     const lang = langMap[targetLanguageSelect.value] || 'en-US';
     speak(text, lang);
+});
+
+copyButton.addEventListener('click', () => {
+    const text = resultContainer.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        // Optional: Add visual feedback
+        copyButton.textContent = '✓';
+        setTimeout(() => {
+            copyButton.innerHTML = '&#x1f4cb;';
+        }, 1000);
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
 });
 
 speakInputButton.addEventListener('click', () => {
