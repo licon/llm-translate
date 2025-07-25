@@ -11,11 +11,34 @@ function setupI18n() {
     document.title = chrome.i18n.getMessage('popupTitle');
 }
 
+// --- TTS Helper ---
+const langMap = {
+    '中文': 'zh-CN',
+    'English': 'en-US',
+    '日本語': 'ja-JP',
+    'Español': 'es-ES',
+    'Français': 'fr-FR',
+    'Русский': 'ru-RU',
+    '한국어': 'ko-KR'
+};
+
+function speak(text, lang) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        window.speechSynthesis.speak(utterance);
+    } else {
+        console.error('Speech Synthesis not supported in this browser.');
+    }
+}
+
 // --- Main Logic ---
 const translateButton = document.getElementById('translate-button');
 const textInput = document.getElementById('text-input');
 const resultContainer = document.getElementById('translation-result');
 const targetLanguageSelect = document.getElementById('target-language');
+const speakButton = document.getElementById('speak-button');
 
 translateButton.addEventListener('click', () => {
     const text = textInput.value;
@@ -23,14 +46,23 @@ translateButton.addEventListener('click', () => {
 
     if (text.trim()) {
         resultContainer.innerText = chrome.i18n.getMessage('statusTranslating');
+        speakButton.style.display = 'none';
         chrome.runtime.sendMessage({ type: 'translate', text, targetLanguage }, (response) => {
             if (response.error) {
                 resultContainer.innerText = chrome.i18n.getMessage('statusError', [response.error]);
+                speakButton.style.display = 'none';
             } else {
                 resultContainer.innerText = response.translation;
+                speakButton.style.display = 'block';
             }
         });
     }
+});
+
+speakButton.addEventListener('click', () => {
+    const text = resultContainer.innerText;
+    const lang = langMap[targetLanguageSelect.value] || 'en-US';
+    speak(text, lang);
 });
 
 targetLanguageSelect.addEventListener('change', () => {
@@ -58,4 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupI18n();
     loadSettings();
     loadSelectedText();
+});
+
+// Listen for messages from the background script (e.g., from context menu)
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.type === 'SET_TEXT_AND_TRANSLATE') {
+        textInput.value = request.text;
+        translateButton.click();
+    }
 });
