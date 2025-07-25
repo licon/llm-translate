@@ -39,6 +39,11 @@ const textInput = document.getElementById('text-input');
 const resultContainer = document.getElementById('translation-result');
 const targetLanguageSelect = document.getElementById('target-language');
 const speakButton = document.getElementById('speak-button');
+const speakInputButton = document.getElementById('speak-input-button');
+
+textInput.addEventListener('input', () => {
+    speakInputButton.style.display = textInput.value.trim() ? 'block' : 'none';
+});
 
 translateButton.addEventListener('click', () => {
     const text = textInput.value;
@@ -65,6 +70,21 @@ speakButton.addEventListener('click', () => {
     speak(text, lang);
 });
 
+speakInputButton.addEventListener('click', () => {
+    const text = textInput.value;
+    if (text.trim()) {
+        chrome.i18n.detectLanguage(text, (result) => {
+            if (result && result.languages && result.languages.length > 0) {
+                const langCode = result.languages[0].language;
+                speak(text, langCode);
+            } else {
+                // Fallback to a default language if detection fails
+                speak(text, 'en-US');
+            }
+        });
+    }
+});
+
 targetLanguageSelect.addEventListener('change', () => {
     chrome.storage.local.set({ targetLanguage: targetLanguageSelect.value });
 });
@@ -81,6 +101,8 @@ function loadSelectedText() {
     chrome.storage.local.get('lastSelectedText', (result) => {
         if (result.lastSelectedText) {
             textInput.value = result.lastSelectedText;
+            // Show speak button if there is text
+            speakInputButton.style.display = 'block';
             chrome.storage.local.set({ 'lastSelectedText': '' });
         }
     });

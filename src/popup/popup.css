@@ -18,12 +18,26 @@ h1 {
     color: #333;
 }
 
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 textarea {
-    width: 95%;
+    width: 100%;
     padding: 5px;
+    padding-right: 30px; /* Make space for the icon */
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    box-sizing: border-box;
+}
+
+#speak-input-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 button {
