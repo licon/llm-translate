@@ -31,7 +31,16 @@
                 <button id="speak-button" class="speak-button" style="display: none;">&#128266;</button>
             </div>
         </div>
-        <a href="../settings/settings.html" target="_blank" class="settings-link" data-i18n="settingsLink"></a>
+        <div class="settings-container">
+            <div class="setting-item">
+                <label for="selection-translate-toggle" data-i18n="selectionTranslateLabel"></label>
+                <label class="switch">
+                    <input type="checkbox" id="selection-translate-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <a href="../settings/settings.html" target="_blank" class="settings-link" data-i18n="settingsLink"></a>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>

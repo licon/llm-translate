@@ -41,10 +41,12 @@ const targetLanguageSelect = document.getElementById('target-language');
 const speakButton = document.getElementById('speak-button');
 const speakInputButton = document.getElementById('speak-input-button');
 const copyButton = document.getElementById('copy-button');
+const selectionTranslateToggle = document.getElementById('selection-translate-toggle');
 
 textInput.addEventListener('input', () => {
     speakInputButton.style.display = textInput.value.trim() ? 'block' : 'none';
 });
+
 
 translateButton.addEventListener('click', () => {
     const text = textInput.value;
@@ -106,11 +108,16 @@ targetLanguageSelect.addEventListener('change', () => {
     chrome.storage.local.set({ targetLanguage: targetLanguageSelect.value });
 });
 
+selectionTranslateToggle.addEventListener('change', () => {
+    chrome.storage.local.set({ isSelectionTranslationEnabled: selectionTranslateToggle.checked });
+});
+
 function loadSettings() {
-    chrome.storage.local.get('targetLanguage', (result) => {
+    chrome.storage.local.get(['targetLanguage', 'isSelectionTranslationEnabled'], (result) => {
         if (result.targetLanguage) {
             targetLanguageSelect.value = result.targetLanguage;
         }
+        selectionTranslateToggle.checked = result.isSelectionTranslationEnabled !== false; // Default to true
     });
 }
 

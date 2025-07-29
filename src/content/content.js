@@ -3,11 +3,34 @@
 // --- 全局变量 ---
 let translateIcon = null;
 let resultPopover = null;
+let isEnabled = true; // 默认启用
+
+// --- 初始化和设置监听 ---
+// 首次加载时获取设置
+chrome.storage.local.get('isSelectionTranslationEnabled', (result) => {
+    // 如果未设置，则默认为 true
+    isEnabled = result.isSelectionTranslationEnabled !== false;
+});
+
+// 监听设置变化
+chrome.storage.onChanged.addListener((changes, namespace) => {
+    if (namespace === 'local' && changes.isSelectionTranslationEnabled) {
+        isEnabled = changes.isSelectionTranslationEnabled.newValue;
+        // 如果禁用了，立即移除现有UI
+        if (!isEnabled) {
+            removeTranslationUI();
+        }
+    }
+});
+
 
 // --- 事件监听 ---
 
 // 监听鼠标抬起事件，用于显示翻译图标
 document.addEventListener('mouseup', (event) => {
+    // 如果功能被禁用，则不执行任何操作
+    if (!isEnabled) return;
+
     // 如果事件的目标是我们的UI，则不处理，避免冲突
     if (event.target.id?.startsWith('llm-translate-')) return;
     
@@ -61,6 +84,7 @@ function createTranslateIcon(x, y, text) {
     });
 
     translateIcon.addEventListener('click', async (e) => {
+        e.preventDefault();
         e.stopPropagation();
         const { targetLanguage } = await chrome.storage.local.get('targetLanguage');
         showResultPopover(x, y, chrome.i18n.getMessage('statusTranslating'));

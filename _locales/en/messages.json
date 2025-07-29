@@ -138,6 +138,10 @@
     "langFrench": { "message": "French" },
     "langRussian": { "message": "Russian" },
     "langKorean": { "message": "Korean" },
+    "selectionTranslateLabel": {
+        "message": "Enable In-Page Translation",
+        "description": "Label for the toggle switch to enable/disable in-page selection translation."
+    },
     "translationPrompt": {
         "message": "Please translate the following text into $targetLanguage$. Please return the translation directly, without any explanation, description, or extra text.\n\nOriginal text:\n\"$text$\"",
         "description": "Prompt for the translation API.",

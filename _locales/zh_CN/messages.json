@@ -112,7 +112,8 @@
         "description": "API 密钥已保存时的状态消息。"
     },
     "statusModelSaved": {
-        "message": "模型 '$model$' 已自动保存。",
+        "message": "模型 '$model
+ 已自动保存。",
         "description": "模型已保存时的状态消息。",
         "placeholders": {
             "model": {
@@ -138,8 +139,12 @@
     "langFrench": { "message": "Français" },
     "langRussian": { "message": "Русский" },
     "langKorean": { "message": "한국어" },
+    "selectionTranslateLabel": {
+        "message": "开启页面划词翻译",
+        "description": "用于启用/禁用页面划词翻译功能的切换开关的标签。"
+    },
     "translationPrompt": {
-        "message": "请将以下文本翻译成$targetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。\n\n原文:\n\"$text$\"",
+        "message": "请将以下文本翻译成$targetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字.\n\n原文:\n\"$text$\"",
         "description": "翻译 API 的提示。",
         "placeholders": {
             "targetLanguage": {
