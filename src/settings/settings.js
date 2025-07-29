@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modelSelect = elements.providers.siliconflow.modelSelect;
         modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusFetchingModels')}</option>`;
         try {
-            const response = await fetch('https://api.siliconflow.cn/v1/models', { headers: { 'Authorization': `Bearer ${apiKey}` } });
+            const response = await fetch('https://api.siliconflow.cn/v1/models?type=text&sub_type=chat', { headers: { 'Authorization': `Bearer ${apiKey}` } });
             if (!response.ok) throw new Error((await response.json()).error.message);
             const data = await response.json();
             populateModelSelect(modelSelect, data.data, m => m.id, m => m.id);
