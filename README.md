@@ -18,7 +18,3 @@ LLM-Translate 是一款现代化的浏览器翻译插件，它利用大型语言
 *   **前端:** `HTML`, `CSS`, `JavaScript`
 *   **浏览器接口:** `WebExtensions API` (兼容 Chrome, Firefox, Edge 等现代浏览器)
 *   **语音合成:** `Web Speech API`
-
-## 项目状态
-
-v0.1.0 版本已完成，具备了稳定、核心的翻译功能。欢迎开发者参与贡献，共同探索更多可能性。
