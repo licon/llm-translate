@@ -112,7 +112,7 @@
         "description": "API 密钥已保存时的状态消息。"
     },
     "statusModelSaved": {
-        "message": "模型 $model 已自动保存。",
+        "message": "模型 '$model$' 已自动保存。",
         "description": "模型已保存时的状态消息。",
         "placeholders": {
             "model": {
