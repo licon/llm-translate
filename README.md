@@ -1,20 +1,22 @@
-# LLM-Translate: 智能浏览器翻译插件
+# LLM-Translate: Smart Browser Translation Plugin
 
-LLM-Translate 是一款现代化的浏览器翻译插件，它利用大型语言模型（LLM）的强大能力，为您提供更加精准、流畅且贴近上下文的网页翻译体验。
+LLM-Translate is a modern browser translation plugin that harnesses the power of Large Language Models (LLMs) to provide you with a more accurate, fluent, and context-aware web page translation experience.
 
-与传统的机器翻译不同，本插件旨在通过先进的 AI 技术理解语言的细微差别，生成高质量的译文，帮助您轻松跨越语言障碍，高效获取全球信息。
+Unlike traditional machine translation, this plugin aims to understand the nuances of language through advanced AI technology, generating high-quality translations to help you easily overcome language barriers and efficiently access global information.
 
-## 核心功能
+[查看中文版本 (View Chinese Version)](README_zh.md)
 
-*   **多提供商支持:** 支持配置多个大型语言模型提供商 (当前支持 **Google Gemini** 和 **Silicon Flow**)，让您自由选择最适合的模型。
-*   **即时划词翻译:** 在任何网页上选择文本，即可在鼠标旁看到翻译图标，点击后立刻在原地显示翻译结果，体验流畅无打扰。
-*   **弹窗快速翻译:** 点击浏览器工具栏图标，在弹出窗口中快速输入或粘贴文本进行翻译。
-*   **智能自动填充:** 划词后打开弹窗，选中的文本会自动填充到输入框，简化操作。
-*   **安全本地存储:** 所有 API 密钥都安全地存储在您本地的浏览器中，绝不上传。
-*   **朗读与复制:** 在弹窗中，可以朗读输入和输出的文本，也可以一键复制翻译结果，操作便捷。
+## Core Features
 
-## 技术栈
+*   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini** and **Silicon Flow**), allowing you to freely choose the most suitable model.
+*   **Instant Hover Translation:** Select text on any web page, and a translation icon will appear next to your mouse. Click it to see the translation result in place for a smooth and uninterrupted experience.
+*   **Quick Popup Translation:** Click the browser toolbar icon to quickly enter or paste text for translation in a popup window.
+*   **Smart Auto-fill:** After selecting text, open the popup, and the selected text will be automatically filled into the input box, simplifying the operation.
+*   **Secure Local Storage:** All API keys are securely stored in your local browser and are never uploaded.
+*   **Read Aloud and Copy:** In the popup window, you can read the input and output text aloud, and you can also copy the translation result with one click for convenient operation.
 
-*   **前端:** `HTML`, `CSS`, `JavaScript`
-*   **浏览器接口:** `WebExtensions API` (兼容 Chrome, Firefox, Edge 等现代浏览器)
-*   **语音合成:** `Web Speech API`
+## Tech Stack
+
+*   **Frontend:** `HTML`, `CSS`, `JavaScript`
+*   **Browser API:** `WebExtensions API` (compatible with modern browsers like Chrome, Firefox, Edge, etc.)
+*   **Speech Synthesis:** `Web Speech API`
