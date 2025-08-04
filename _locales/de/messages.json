@@ -1,0 +1,281 @@
+{
+    "appName": {
+        "message": "LLM-Translate",
+        "description": "Der Name der Erweiterung."
+    },
+    "appDescription": {
+        "message": "Ein Übersetzungs-Plugin, das LLMs (z. B. Gemini) für Übersetzungen auf der Seite und in Popups verwendet.",
+        "description": "Die Beschreibung der Erweiterung."
+    },
+    "popupTitle": {
+        "message": "LLM-Translate",
+        "description": "Titel für das Popup-Fenster."
+    },
+    "textInputPlaceholder": {
+        "message": "Text hier eingeben...",
+        "description": "Platzhalter für den Texteingabebereich im Popup."
+    },
+    "translateButton": {
+        "message": "Übersetzen",
+        "description": "Beschriftung für die Übersetzungsschaltfläche."
+    },
+    "settingsLink": {
+        "message": "Einstellungen",
+        "description": "Linktext zur Einstellungsseite."
+    },
+    "settingsTitle": {
+        "message": "Einstellungen",
+        "description": "Titel für die Einstellungsseite."
+    },
+    "geminiProvider": {
+        "message": "Gemini",
+        "description": "Beschriftung für den Gemini-Anbieter-Tab."
+    },
+    "siliconflowProvider": {
+        "message": "Silicon Flow",
+        "description": "Beschriftung für den Silicon Flow-Anbieter-Tab."
+    },
+    "geminiApiKeyLabel": {
+        "message": "Gemini-API-Schlüssel",
+        "description": "Beschriftung für die Gemini-API-Schlüsseleingabe."
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "Silicon Flow-API-Schlüssel",
+        "description": "Beschriftung für die Silicon Flow-API-Schlüsseleingabe."
+    },
+    "getApiKeyLink": {
+        "message": "API-Schlüssel erhalten",
+        "description": "Linktext, um einen API-Schlüssel zu erhalten."
+    },
+    "geminiApiPlaceholder": {
+        "message": "Geben Sie Ihren Google AI Studio-API-Schlüssel ein",
+        "description": "Platzhalter für die Gemini-API-Schlüsseleingabe."
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "Geben Sie Ihren Silicon Flow-API-Schlüssel ein",
+        "description": "Platzhalter für die Silicon Flow-API-Schlüsseleingabe."
+    },
+    "fetchModelsButton": {
+        "message": "Modelle abrufen",
+        "description": "Beschriftung für die Schaltfläche zum Abrufen von Modellen."
+    },
+    "modelSelectLabel": {
+        "message": "Modell auswählen",
+        "description": "Beschriftung für die Modellauswahl-Dropdown-Liste."
+    },
+    "geminiModelHint": {
+        "message": "Es wird empfohlen, kostenlose Modelle wie z. B. Gemma zu wählen.",
+        "description": "Hinweis zur Auswahl eines Gemini-Modells."
+    },
+    "siliconflowModelHint": {
+        "message": "Es wird empfohlen, kostenlose Modelle wie z. B. Qwen zu wählen.",
+        "description": "Hinweis zur Auswahl eines Silicon Flow-Modells."
+    },
+    "statusTranslating": {
+        "message": "Übersetze...",
+        "description": "Statusmeldung, wenn die Übersetzung läuft."
+    },
+    "statusError": {
+        "message": "Fehler: $message$",
+        "description": "Statusmeldung, wenn ein Fehler auftritt.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "API-Schlüssel ist ungültig."
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "Bitte geben Sie Ihren API-Schlüssel ein.",
+        "description": "Statusmeldung, die den Benutzer zur Eingabe eines API-Schlüssels auffordert."
+    },
+    "statusFetchingModels": {
+        "message": "Modellliste wird abgerufen...",
+        "description": "Statusmeldung beim Abrufen von Modellen."
+    },
+    "statusModelsSuccess": {
+        "message": "Modelle erfolgreich abgerufen! Bitte wählen Sie ein Modell aus.",
+        "description": "Statusmeldung, wenn Modelle erfolgreich abgerufen wurden."
+    },
+    "statusModelsFailed": {
+        "message": "Fehler beim Abrufen der Modelle: $message$",
+        "description": "Statusmeldung, wenn das Abrufen von Modellen fehlschlägt.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "Netzwerkfehler."
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "API-Schlüssel gespeichert. Modelle werden abgerufen...",
+        "description": "Statusmeldung, wenn der API-Schlüssel gespeichert wird."
+    },
+    "statusModelSaved": {
+        "message": "Modell '$model$' wurde automatisch gespeichert.",
+        "description": "Statusmeldung, wenn ein Modell gespeichert wird.",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "gemini-pro"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "Zu $provider$ gewechselt",
+        "description": "Statusmeldung beim Wechseln des Anbieters.",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "Gemini"
+            }
+        }
+    },
+    "langEnglish": { "message": "Englisch" },
+    "langSimplifiedChinese": { "message": "Vereinfachtes Chinesisch" },
+    "langTraditionalChinese": { "message": "Traditionelles Chinesisch" },
+    "langFrench": { "message": "Französisch" },
+    "langSpanish": { "message": "Spanisch" },
+    "langArabic": { "message": "Arabisch" },
+    "langRussian": { "message": "Russisch" },
+    "langPortuguese": { "message": "Portugiesisch" },
+    "langGerman": { "message": "Deutsch" },
+    "langItalian": { "message": "Italienisch" },
+    "langDutch": { "message": "Niederländisch" },
+    "langDanish": { "message": "Dänisch" },
+    "langIrish": { "message": "Irisch" },
+    "langWelsh": { "message": "Walisisch" },
+    "langFinnish": { "message": "Finnisch" },
+    "langIcelandic": { "message": "Isländisch" },
+    "langSwedish": { "message": "Schwedisch" },
+    "langNorwegianNynorsk": { "message": "Norwegisch Nynorsk" },
+    "langNorwegianBokmal": { "message": "Norwegisch Bokmål" },
+    "langJapanese": { "message": "Japanisch" },
+    "langKorean": { "message": "Koreanisch" },
+    "langVietnamese": { "message": "Vietnamesisch" },
+    "langThai": { "message": "Thailändisch" },
+    "langIndonesian": { "message": "Indonesisch" },
+    "langMalay": { "message": "Malaiisch" },
+    "langBurmese": { "message": "Birmanisch" },
+    "langTagalog": { "message": "Tagalog" },
+    "langKhmer": { "message": "Khmer" },
+    "langLao": { "message": "Laotisch" },
+    "langHindi": { "message": "Hindi" },
+    "langBengali": { "message": "Bengalisch" },
+    "langUrdu": { "message": "Urdu" },
+    "langNepali": { "message": "Nepalesisch" },
+    "langHebrew": { "message": "Hebräisch" },
+    "langTurkish": { "message": "Türkisch" },
+    "langPersian": { "message": "Persisch" },
+    "langPolish": { "message": "Polnisch" },
+    "langUkrainian": { "message": "Ukrainisch" },
+    "langCzech": { "message": "Tschechisch" },
+    "langRomanian": { "message": "Rumänisch" },
+    "langBulgarian": { "message": "Bulgarisch" },
+    "langSlovak": { "message": "Slowakisch" },
+    "langHungarian": { "message": "Ungarisch" },
+    "langSlovenian": { "message": "Slowenisch" },
+    "langLatvian": { "message": "Lettisch" },
+    "langEstonian": { "message": "Estnisch" },
+    "langLithuanian": { "message": "Litauisch" },
+    "langBelarusian": { "message": "Weißrussisch" },
+    "langGreek": { "message": "Griechisch" },
+    "langCroatian": { "message": "Kroatisch" },
+    "langMacedonian": { "message": "Mazedonisch" },
+    "langMaltese": { "message": "Maltesisch" },
+    "langSerbian": { "message": "Serbisch" },
+    "langBosnian": { "message": "Bosnisch" },
+    "langGeorgian": { "message": "Georgisch" },
+    "langArmenian": { "message": "Armenisch" },
+    "langNorthAzerbaijani": { "message": "Nord-Aserbaidschanisch" },
+    "langKazakh": { "message": "Kasachisch" },
+    "langNorthernUzbek": { "message": "Nord-Usbekisch" },
+    "langTajik": { "message": "Tadschikisch" },
+    "langSwahili": { "message": "Suaheli" },
+    "langAfrikaans": { "message": "Afrikaans" },
+    "langCantonese": { "message": "Kantonesisch" },
+    "langLuxembourgish": { "message": "Luxemburgisch" },
+    "langLimburgish": { "message": "Limburgisch" },
+    "langCatalan": { "message": "Katalanisch" },
+    "langGalician": { "message": "Galicisch" },
+    "langAsturian": { "message": "Asturisch" },
+    "langBasque": { "message": "Baskisch" },
+    "langOccitan": { "message": "Okzitanisch" },
+    "langVenetian": { "message": "Venetisch" },
+    "langSardinian": { "message": "Sardisch" },
+    "langSicilian": { "message": "Sizilianisch" },
+    "langFriulian": { "message": "Friaulisch" },
+    "langLombard": { "message": "Lombardisch" },
+    "langLigurian": { "message": "Ligurisch" },
+    "langFaroese": { "message": "Färöisch" },
+    "langToskAlbanian": { "message": "Toskisch-Albanisch" },
+    "langSilesian": { "message": "Schlesisch" },
+    "langBashkir": { "message": "Baschkirisch" },
+    "langTatar": { "message": "Tatarisch" },
+    "langMesopotamianArabic": { "message": "Mesopotamisches Arabisch" },
+    "langNajdiArabic": { "message": "Nadschdi-Arabisch" },
+    "langEgyptianArabic": { "message": "Ägyptisch-Arabisch" },
+    "langLevantineArabic": { "message": "Levantinisches Arabisch" },
+    "langTaizziAdeniArabic": { "message": "Ta'izzi-Adeni-Arabisch" },
+    "langDari": { "message": "Dari" },
+    "langTunisianArabic": { "message": "Tunesisches Arabisch" },
+    "langMoroccanArabic": { "message": "Marokkanisches Arabisch" },
+    "langKabuverdianu": { "message": "Kabuverdianu" },
+    "langTokPisin": { "message": "Tok Pisin" },
+    "langEasternYiddish": { "message": "Ostjiddisch" },
+    "langSindhi": { "message": "Sindhi" },
+    "langSinhala": { "message": "Singhalesisch" },
+    "langTelugu": { "message": "Telugu" },
+    "langPunjabi": { "message": "Panjabi" },
+    "langTamil": { "message": "Tamil" },
+    "langGujarati": { "message": "Gujarati" },
+    "langMalayalam": { "message": "Malayalam" },
+    "langMarathi": { "message": "Marathi" },
+    "langKannada": { "message": "Kannada" },
+    "langMagahi": { "message": "Magahi" },
+    "langOriya": { "message": "Oriya" },
+    "langAwadhi": { "message": "Awadhi" },
+    "langMaithili": { "message": "Maithili" },
+    "langAssamese": { "message": "Assamesisch" },
+    "langChhattisgarhi": { "message": "Chhattisgarhi" },
+    "langBhojpuri": { "message": "Bhojpuri" },
+    "langMinangkabau": { "message": "Minangkabau" },
+    "langBalinese": { "message": "Balinesisch" },
+    "langJavanese": { "message": "Javanisch" },
+    "langBanjar": { "message": "Banjar" },
+    "langSundanese": { "message": "Sundanesisch" },
+    "langCebuano": { "message": "Cebuano" },
+    "langPangasinan": { "message": "Pangasinan" },
+    "langIloko": { "message": "Ilokano" },
+    "langWarayPhilippines": { "message": "Waray (Philippinen)" },
+    "langHaitian": { "message": "Haitianisch" },
+    "langPapiamento": { "message": "Papiamento" },
+    "selectionTranslateLabel": {
+        "message": "Seiteninterne Übersetzung aktivieren",
+        "description": "Beschriftung für den Umschalter zum Aktivieren/Deaktivieren der seiteninternen Auswahlübersetzung."
+    },
+    "translationPrompt": {
+        "message": "Bitte übersetzen Sie den folgenden Text ins $targetLanguage$. Bitte geben Sie die Übersetzung direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text.\\n\\nOriginaltext:\\n\\\"$text$\\\"",
+        "description": "Aufforderung für die Übersetzungs-API.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Chinesisch"
+            },
+            "text": {
+                "content": "$2",
+                "example": "Hallo, Welt!"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "Bitte übersetzen Sie den folgenden Text ins $targetLanguage$. Bitte geben Sie die Übersetzung direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text.",
+        "description": "Systemaufforderung für die Übersetzungs-API.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Chinesisch"
+            }
+        }
+    }
+}

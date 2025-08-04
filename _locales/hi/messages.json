@@ -1,0 +1,281 @@
+{
+    "appName": {
+        "message": "एलएलएम-अनुवाद",
+        "description": "एक्सटेंशन का नाम।"
+    },
+    "appDescription": {
+        "message": "एलएलएम (जैसे, जेमिनी) का उपयोग करके ऑन-पेज और पॉपअप अनुवाद के लिए एक अनुवाद प्लगइन।",
+        "description": "एक्सटेंशन का विवरण।"
+    },
+    "popupTitle": {
+        "message": "एलएलएम-अनुवाद",
+        "description": "पॉपअप विंडो के लिए शीर्षक।"
+    },
+    "textInputPlaceholder": {
+        "message": "यहां टेक्स्ट दर्ज करें...",
+        "description": "पॉपअप में टेक्स्ट इनपुट क्षेत्र के लिए प्लेसहोल्डर।"
+    },
+    "translateButton": {
+        "message": "अनुवाद करें",
+        "description": "अनुवाद बटन के लिए लेबल।"
+    },
+    "settingsLink": {
+        "message": "सेटिंग्स",
+        "description": "सेटिंग्स पृष्ठ का लिंक टेक्स्ट।"
+    },
+    "settingsTitle": {
+        "message": "सेटिंग्स",
+        "description": "सेटिंग्स पृष्ठ के लिए शीर्षक।"
+    },
+    "geminiProvider": {
+        "message": "जेमिनी",
+        "description": "जेमिनी प्रदाता टैब के लिए लेबल।"
+    },
+    "siliconflowProvider": {
+        "message": "सिलिकॉन फ्लो",
+        "description": "सिलिकॉन फ्लो प्रदाता टैब के लिए लेबल।"
+    },
+    "geminiApiKeyLabel": {
+        "message": "जेमिनी एपीआई कुंजी",
+        "description": "जेमिनी एपीआई कुंजी इनपुट के लिए लेबल।"
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "सिलिकॉन फ्लो एपीआई कुंजी",
+        "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए लेबल।"
+    },
+    "getApiKeyLink": {
+        "message": "एपीआई कुंजी प्राप्त करें",
+        "description": "एपीआई कुंजी प्राप्त करने के लिए लिंक टेक्स्ट।"
+    },
+    "geminiApiPlaceholder": {
+        "message": "अपनी गूगल एआई स्टूडियो एपीआई कुंजी दर्ज करें",
+        "description": "जेमिनी एपीआई कुंजी इनपुट के लिए प्लेसहोल्डर।"
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "अपनी सिलिकॉन फ्लो एपीआई कुंजी दर्ज करें",
+        "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए प्लेसहोल्डर।"
+    },
+    "fetchModelsButton": {
+        "message": "मॉडल प्राप्त करें",
+        "description": "मॉडल प्राप्त करें बटन के लिए लेबल।"
+    },
+    "modelSelectLabel": {
+        "message": "मॉडल चुनें",
+        "description": "मॉडल चयन ड्रॉपडाउन के लिए लेबल।"
+    },
+    "geminiModelHint": {
+        "message": "मुफ्त मॉडल चुनने की सिफारिश की जाती है, जैसे, जेम्मा।",
+        "description": "जेमिनी मॉडल चुनने के लिए संकेत।"
+    },
+    "siliconflowModelHint": {
+        "message": "मुफ्त मॉडल चुनने की सिफारिश की जाती है, जैसे, क्वेन।",
+        "description": "सिलिकॉन फ्लो मॉडल चुनने के लिए संकेत।"
+    },
+    "statusTranslating": {
+        "message": "अनुवाद हो रहा है...",
+        "description": "जब अनुवाद प्रगति पर हो तो स्थिति संदेश।"
+    },
+    "statusError": {
+        "message": "त्रुटि: $message$",
+        "description": "जब कोई त्रुटि होती है तो स्थिति संदेश।",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "एपीआई कुंजी अमान्य है।"
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "कृपया अपनी एपीआई कुंजी दर्ज करें।",
+        "description": "उपयोगकर्ता से एपीआई कुंजी दर्ज करने के लिए कहने वाला स्थिति संदेश।"
+    },
+    "statusFetchingModels": {
+        "message": "मॉडल सूची प्राप्त हो रही है...",
+        "description": "मॉडल प्राप्त करते समय स्थिति संदेश।"
+    },
+    "statusModelsSuccess": {
+        "message": "मॉडल सफलतापूर्वक प्राप्त हुए! कृपया एक मॉडल चुनें।",
+        "description": "जब मॉडल सफलतापूर्वक प्राप्त हो जाते हैं तो स्थिति संदेश।"
+    },
+    "statusModelsFailed": {
+        "message": "मॉडल प्राप्त करने में विफल: $message$",
+        "description": "जब मॉडल प्राप्त करने में विफल रहता है तो स्थिति संदेश।",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "नेटवर्क त्रुटि।"
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "एपीआई कुंजी सहेजी गई। मॉडल प्राप्त हो रहे हैं...",
+        "description": "जब एपीआई कुंजी सहेजी जाती है तो स्थिति संदेश।"
+    },
+    "statusModelSaved": {
+        "message": "मॉडल '$model$' स्वचालित रूप से सहेजा गया है।",
+        "description": "जब कोई मॉडल सहेजा जाता है तो स्थिति संदेश।",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "जेमिनी-प्रो"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "$provider$ पर स्विच किया गया",
+        "description": "प्रदाताओं को स्विच करते समय स्थिति संदेश।",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "जेमिनी"
+            }
+        }
+    },
+    "langEnglish": { "message": "अंग्रेजी" },
+    "langSimplifiedChinese": { "message": "सरलीकृत चीनी" },
+    "langTraditionalChinese": { "message": "पारंपरिक चीनी" },
+    "langFrench": { "message": "फ्रेंच" },
+    "langSpanish": { "message": "स्पेनिश" },
+    "langArabic": { "message": "अरबी" },
+    "langRussian": { "message": "रूसी" },
+    "langPortuguese": { "message": "पुर्तगाली" },
+    "langGerman": { "message": "जर्मन" },
+    "langItalian": { "message": "इतालवी" },
+    "langDutch": { "message": "डच" },
+    "langDanish": { "message": "डेनिश" },
+    "langIrish": { "message": "आयरिश" },
+    "langWelsh": { "message": "वेल्श" },
+    "langFinnish": { "message": "फिनिश" },
+    "langIcelandic": { "message": "आइसलैंडिक" },
+    "langSwedish": { "message": "स्वीडिश" },
+    "langNorwegianNynorsk": { "message": "नॉर्वेजियन निनोर्स्क" },
+    "langNorwegianBokmal": { "message": "नॉर्वेजियन बोकमाल" },
+    "langJapanese": { "message": "जापानी" },
+    "langKorean": { "message": "कोरियाई" },
+    "langVietnamese": { "message": "वियतनामी" },
+    "langThai": { "message": "थाई" },
+    "langIndonesian": { "message": "इंडोनेशियाई" },
+    "langMalay": { "message": "मलय" },
+    "langBurmese": { "message": "बर्मी" },
+    "langTagalog": { "message": "तागालोग" },
+    "langKhmer": { "message": "खमेर" },
+    "langLao": { "message": "लाओ" },
+    "langHindi": { "message": "हिंदी" },
+    "langBengali": { "message": "बंगाली" },
+    "langUrdu": { "message": "उर्दू" },
+    "langNepali": { "message": "नेपाली" },
+    "langHebrew": { "message": "हिब्रू" },
+    "langTurkish": { "message": "तुर्की" },
+    "langPersian": { "message": "फारसी" },
+    "langPolish": { "message": "पोलिश" },
+    "langUkrainian": { "message": "यूक्रेनी" },
+    "langCzech": { "message": "चेक" },
+    "langRomanian": { "message": "रोमानियाई" },
+    "langBulgarian": { "message": "बल्गेरियाई" },
+    "langSlovak": { "message": "स्लोवाक" },
+    "langHungarian": { "message": "हंगेरियन" },
+    "langSlovenian": { "message": "स्लोवेनियाई" },
+    "langLatvian": { "message": "लातवियाई" },
+    "langEstonian": { "message": "एस्टोनियाई" },
+    "langLithuanian": { "message": "लिथुआनियाई" },
+    "langBelarusian": { "message": "बेलारूसी" },
+    "langGreek": { "message": "यूनानी" },
+    "langCroatian": { "message": "क्रोएशियाई" },
+    "langMacedonian": { "message": "मेसेडोनियन" },
+    "langMaltese": { "message": "मालटिस्" },
+    "langSerbian": { "message": "सर्बियाई" },
+    "langBosnian": { "message": "बोस्नियाई" },
+    "langGeorgian": { "message": "जॉर्जियाई" },
+    "langArmenian": { "message": "अर्मेनियाई" },
+    "langNorthAzerbaijani": { "message": "उत्तरी अज़रबैजानी" },
+    "langKazakh": { "message": "कज़ाख" },
+    "langNorthernUzbek": { "message": "उत्तरी उज़्बेक" },
+    "langTajik": { "message": "ताजिक" },
+    "langSwahili": { "message": "स्वाहिली" },
+    "langAfrikaans": { "message": "अफ्रीकी" },
+    "langCantonese": { "message": "कैंटोनीज़" },
+    "langLuxembourgish": { "message": "लक्ज़मबर्गिश" },
+    "langLimburgish": { "message": "लिंबर्गिश" },
+    "langCatalan": { "message": "कैटलन" },
+    "langGalician": { "message": "गैलिशियन" },
+    "langAsturian": { "message": "अस्तुरियन" },
+    "langBasque": { "message": "बास्क" },
+    "langOccitan": { "message": "ओसीटान" },
+    "langVenetian": { "message": "विनीशियन" },
+    "langSardinian": { "message": "सार्डिनियन" },
+    "langSicilian": { "message": "सिसिलियन" },
+    "langFriulian": { "message": "फ्रूलियन" },
+    "langLombard": { "message": "लोम्बार्ड" },
+    "langLigurian": { "message": "लिगुरियन" },
+    "langFaroese": { "message": "फिरोज़ी" },
+    "langToskAlbanian": { "message": "तोस्क अल्बानियाई" },
+    "langSilesian": { "message": "सिलेसियन" },
+    "langBashkir": { "message": "बशख़िर" },
+    "langTatar": { "message": "तातार" },
+    "langMesopotamianArabic": { "message": "मेसोपोटामियन अरबी" },
+    "langNajdiArabic": { "message": "नज्दी अरबी" },
+    "langEgyptianArabic": { "message": "मिस्र की अरबी" },
+    "langLevantineArabic": { "message": "लेवेंटाइन अरबी" },
+    "langTaizziAdeniArabic": { "message": "ताइज़ी-अदेनी अरबी" },
+    "langDari": { "message": "दारी" },
+    "langTunisianArabic": { "message": "ट्यूनीशियाई अरबी" },
+    "langMoroccanArabic": { "message": "मोरक्कन अरबी" },
+    "langKabuverdianu": { "message": "काबुवेर्दियानु" },
+    "langTokPisin": { "message": "टोक पिसिन" },
+    "langEasternYiddish": { "message": "पूर्वी यिडिश" },
+    "langSindhi": { "message": "सिंधी" },
+    "langSinhala": { "message": "सिंहल" },
+    "langTelugu": { "message": "तेलुगु" },
+    "langPunjabi": { "message": "पंजाबी" },
+    "langTamil": { "message": "तमिल" },
+    "langGujarati": { "message": "गुजराती" },
+    "langMalayalam": { "message": "मलयालम" },
+    "langMarathi": { "message": "मराठी" },
+    "langKannada": { "message": "कन्नड़" },
+    "langMagahi": { "message": "मगही" },
+    "langOriya": { "message": "उड़िया" },
+    "langAwadhi": { "message": "अवधी" },
+    "langMaithili": { "message": "मैथिली" },
+    "langAssamese": { "message": "असमिया" },
+    "langChhattisgarhi": { "message": "छत्तीसगढ़ी" },
+    "langBhojpuri": { "message": "भोजपुरी" },
+    "langMinangkabau": { "message": "मिनांगकाबाउ" },
+    "langBalinese": { "message": "बालीनीज़" },
+    "langJavanese": { "message": "जावानीस" },
+    "langBanjar": { "message": "बंजार" },
+    "langSundanese": { "message": "सुंडानी" },
+    "langCebuano": { "message": "सिबुआनो" },
+    "langPangasinan": { "message": "पंगासिनन" },
+    "langIloko": { "message": "इलोको" },
+    "langWarayPhilippines": { "message": "वाराय (फिलीपींस)" },
+    "langHaitian": { "message": "हाईटियन" },
+    "langPapiamento": { "message": "पापियामेंटो" },
+    "selectionTranslateLabel": {
+        "message": "इन-पेज अनुवाद सक्षम करें",
+        "description": "इन-पेज चयन अनुवाद को सक्षम/अक्षम करने के लिए टॉगल स्विच के लिए लेबल।"
+    },
+    "translationPrompt": {
+        "message": "कृपया निम्नलिखित पाठ का $targetLanguage$ में अनुवाद करें। कृपया अनुवाद सीधे लौटाएं, बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के।\\n\\nमूल पाठ:\\n\\\"$text$\\\"",
+        "description": "अनुवाद एपीआई के लिए संकेत।",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "चीनी"
+            },
+            "text": {
+                "content": "$2",
+                "example": "नमस्ते, दुनिया!"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "कृपया निम्नलिखित पाठ का $targetLanguage$ में अनुवाद करें। कृपया अनुवाद सीधे लौटाएं, बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के।",
+        "description": "अनुवाद एपीआई के लिए सिस्टम संकेत।",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "चीनी"
+            }
+        }
+    }
+}

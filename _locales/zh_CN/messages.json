@@ -4,7 +4,7 @@
         "description": "扩展程序的名称。"
     },
     "appDescription": {
-        "message": "一款支持多种大型语言模型（如 Gemini, Silicon Flow）的浏览器翻译插件，提供划词翻译和弹窗翻译功能。",
+        "message": "一款支持多种大型语言模型（如 Gemini, Silicon Flow）的AI浏览器翻译插件，提供划词翻译和弹窗翻译功能。",
         "description": "扩展程序的描述。"
     },
     "popupTitle": {

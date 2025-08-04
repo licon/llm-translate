@@ -1,0 +1,281 @@
+{
+    "appName": {
+        "message": "LLM-Translate",
+        "description": "Название расширения."
+    },
+    "appDescription": {
+        "message": "Плагин для перевода с использованием LLM (например, Gemini) для перевода на странице и во всплывающих окнах.",
+        "description": "Описание расширения."
+    },
+    "popupTitle": {
+        "message": "LLM-Translate",
+        "description": "Заголовок всплывающего окна."
+    },
+    "textInputPlaceholder": {
+        "message": "Введите текст здесь...",
+        "description": "Заполнитель для области ввода текста во всплывающем окне."
+    },
+    "translateButton": {
+        "message": "Перевести",
+        "description": "Надпись для кнопки перевода."
+    },
+    "settingsLink": {
+        "message": "Настройки",
+        "description": "Текст ссылки на страницу настроек."
+    },
+    "settingsTitle": {
+        "message": "Настройки",
+        "description": "Заголовок страницы настроек."
+    },
+    "geminiProvider": {
+        "message": "Gemini",
+        "description": "Надпись для вкладки провайдера Gemini."
+    },
+    "siliconflowProvider": {
+        "message": "Silicon Flow",
+        "description": "Надпись для вкладки провайдера Silicon Flow."
+    },
+    "geminiApiKeyLabel": {
+        "message": "Ключ API Gemini",
+        "description": "Надпись для ввода ключа API Gemini."
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "Ключ API Silicon Flow",
+        "description": "Надпись для ввода ключа API Silicon Flow."
+    },
+    "getApiKeyLink": {
+        "message": "Получить ключ API",
+        "description": "Текст ссылки для получения ключа API."
+    },
+    "geminiApiPlaceholder": {
+        "message": "Введите ваш ключ API Google AI Studio",
+        "description": "Заполнитель для ввода ключа API Gemini."
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "Введите ваш ключ API Silicon Flow",
+        "description": "Заполнитель для ввода ключа API Silicon Flow."
+    },
+    "fetchModelsButton": {
+        "message": "Получить модели",
+        "description": "Надпись для кнопки получения моделей."
+    },
+    "modelSelectLabel": {
+        "message": "Выбрать модель",
+        "description": "Надпись для выпадающего списка выбора модели."
+    },
+    "geminiModelHint": {
+        "message": "Рекомендуется выбирать бесплатные модели, например, gemma.",
+        "description": "Подсказка по выбору модели Gemini."
+    },
+    "siliconflowModelHint": {
+        "message": "Рекомендуется выбирать бесплатные модели, например, qwen.",
+        "description": "Подсказка по выбору модели Silicon Flow."
+    },
+    "statusTranslating": {
+        "message": "Перевод...",
+        "description": "Сообщение о статусе, когда идет перевод."
+    },
+    "statusError": {
+        "message": "Ошибка: $message$",
+        "description": "Сообщение о статусе при возникновении ошибки.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "Ключ API недействителен."
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "Пожалуйста, введите ваш ключ API.",
+        "description": "Сообщение о статусе с просьбой ввести ключ API."
+    },
+    "statusFetchingModels": {
+        "message": "Получение списка моделей...",
+        "description": "Сообщение о статусе при получении моделей."
+    },
+    "statusModelsSuccess": {
+        "message": "Модели успешно получены! Пожалуйста, выберите модель.",
+        "description": "Сообщение о статусе при успешном получении моделей."
+    },
+    "statusModelsFailed": {
+        "message": "Не удалось получить модели: $message$",
+        "description": "Сообщение о статусе при сбое получения моделей.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "Сетевая ошибка."
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "Ключ API сохранен. Получение моделей...",
+        "description": "Сообщение о статусе при сохранении ключа API."
+    },
+    "statusModelSaved": {
+        "message": "Модель '$model$' была сохранена автоматически.",
+        "description": "Сообщение о статусе при сохранении модели.",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "gemini-pro"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "Переключено на $provider$",
+        "description": "Сообщение о статусе при переключении провайдеров.",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "Gemini"
+            }
+        }
+    },
+    "langEnglish": { "message": "Английский" },
+    "langSimplifiedChinese": { "message": "Упрощенный китайский" },
+    "langTraditionalChinese": { "message": "Традиционный китайский" },
+    "langFrench": { "message": "Французский" },
+    "langSpanish": { "message": "Испанский" },
+    "langArabic": { "message": "Арабский" },
+    "langRussian": { "message": "Русский" },
+    "langPortuguese": { "message": "Португальский" },
+    "langGerman": { "message": "Немецкий" },
+    "langItalian": { "message": "Итальянский" },
+    "langDutch": { "message": "Голландский" },
+    "langDanish": { "message": "Датский" },
+    "langIrish": { "message": "Ирландский" },
+    "langWelsh": { "message": "Валлийский" },
+    "langFinnish": { "message": "Финский" },
+    "langIcelandic": { "message": "Исландский" },
+    "langSwedish": { "message": "Шведский" },
+    "langNorwegianNynorsk": { "message": "Норвежский (нюнорск)" },
+    "langNorwegianBokmal": { "message": "Норвежский (букмол)" },
+    "langJapanese": { "message": "Японский" },
+    "langKorean": { "message": "Корейский" },
+    "langVietnamese": { "message": "Вьетнамский" },
+    "langThai": { "message": "Тайский" },
+    "langIndonesian": { "message": "Индонезийский" },
+    "langMalay": { "message": "Малайский" },
+    "langBurmese": { "message": "Бирманский" },
+    "langTagalog": { "message": "Тагальский" },
+    "langKhmer": { "message": "Кхмерский" },
+    "langLao": { "message": "Лаосский" },
+    "langHindi": { "message": "Хинди" },
+    "langBengali": { "message": "Бенгальский" },
+    "langUrdu": { "message": "Урду" },
+    "langNepali": { "message": "Непальский" },
+    "langHebrew": { "message": "Иврит" },
+    "langTurkish": { "message": "Турецкий" },
+    "langPersian": { "message": "Персидский" },
+    "langPolish": { "message": "Польский" },
+    "langUkrainian": { "message": "Украинский" },
+    "langCzech": { "message": "Чешский" },
+    "langRomanian": { "message": "Румынский" },
+    "langBulgarian": { "message": "Болгарский" },
+    "langSlovak": { "message": "Словацкий" },
+    "langHungarian": { "message": "Венгерский" },
+    "langSlovenian": { "message": "Словенский" },
+    "langLatvian": { "message": "Латышский" },
+    "langEstonian": { "message": "Эстонский" },
+    "langLithuanian": { "message": "Литовский" },
+    "langBelarusian": { "message": "Белорусский" },
+    "langGreek": { "message": "Греческий" },
+    "langCroatian": { "message": "Хорватский" },
+    "langMacedonian": { "message": "Македонский" },
+    "langMaltese": { "message": "Мальтийский" },
+    "langSerbian": { "message": "Сербский" },
+    "langBosnian": { "message": "Боснийский" },
+    "langGeorgian": { "message": "Грузинский" },
+    "langArmenian": { "message": "Армянский" },
+    "langNorthAzerbaijani": { "message": "Северноазербайджанский" },
+    "langKazakh": { "message": "Казахский" },
+    "langNorthernUzbek": { "message": "Северноузбекский" },
+    "langTajik": { "message": "Таджикский" },
+    "langSwahili": { "message": "Суахили" },
+    "langAfrikaans": { "message": "Африкаанс" },
+    "langCantonese": { "message": "Кантонский" },
+    "langLuxembourgish": { "message": "Люксембургский" },
+    "langLimburgish": { "message": "Лимбургский" },
+    "langCatalan": { "message": "Каталанский" },
+    "langGalician": { "message": "Галисийский" },
+    "langAsturian": { "message": "Астурийский" },
+    "langBasque": { "message": "Баскский" },
+    "langOccitan": { "message": "Окситанский" },
+    "langVenetian": { "message": "Венецианский" },
+    "langSardinian": { "message": "Сардинский" },
+    "langSicilian": { "message": "Сицилийский" },
+    "langFriulian": { "message": "Фриульский" },
+    "langLombard": { "message": "Ломбардский" },
+    "langLigurian": { "message": "Лигурийский" },
+    "langFaroese": { "message": "Фарерский" },
+    "langToskAlbanian": { "message": "Тоскский албанский" },
+    "langSilesian": { "message": "Силезский" },
+    "langBashkir": { "message": "Башкирский" },
+    "langTatar": { "message": "Татарский" },
+    "langMesopotamianArabic": { "message": "Месопотамский арабский" },
+    "langNajdiArabic": { "message": "Недждийский арабский" },
+    "langEgyptianArabic": { "message": "Египетский арабский" },
+    "langLevantineArabic": { "message": "Левантийский арабский" },
+    "langTaizziAdeniArabic": { "message": "Арабский Таизи-Адени" },
+    "langDari": { "message": "Дари" },
+    "langTunisianArabic": { "message": "Тунисский арабский" },
+    "langMoroccanArabic": { "message": "Марокканский арабский" },
+    "langKabuverdianu": { "message": "Кабувердьяну" },
+    "langTokPisin": { "message": "Ток-писин" },
+    "langEasternYiddish": { "message": "Восточный идиш" },
+    "langSindhi": { "message": "Синдхи" },
+    "langSinhala": { "message": "Сингальский" },
+    "langTelugu": { "message": "Телугу" },
+    "langPunjabi": { "message": "Панджаби" },
+    "langTamil": { "message": "Тамильский" },
+    "langGujarati": { "message": "Гуджарати" },
+    "langMalayalam": { "message": "Малаялам" },
+    "langMarathi": { "message": "Маратхи" },
+    "langKannada": { "message": "Каннада" },
+    "langMagahi": { "message": "Магахи" },
+    "langOriya": { "message": "Ория" },
+    "langAwadhi": { "message": "Авадхи" },
+    "langMaithili": { "message": "Майтхили" },
+    "langAssamese": { "message": "Ассамский" },
+    "langChhattisgarhi": { "message": "Чхаттисгархи" },
+    "langBhojpuri": { "message": "Бходжпури" },
+    "langMinangkabau": { "message": "Минангкабау" },
+    "langBalinese": { "message": "Балийский" },
+    "langJavanese": { "message": "Яванский" },
+    "langBanjar": { "message": "Банджарский" },
+    "langSundanese": { "message": "Сунданский" },
+    "langCebuano": { "message": "Себуанский" },
+    "langPangasinan": { "message": "Пангасинанский" },
+    "langIloko": { "message": "Илоканский" },
+    "langWarayPhilippines": { "message": "Варайский (Филиппины)" },
+    "langHaitian": { "message": "Гаитянский" },
+    "langPapiamento": { "message": "Папьяменто" },
+    "selectionTranslateLabel": {
+        "message": "Включить перевод на странице",
+        "description": "Надпись для переключателя для включения/выключения перевода выделенного текста на странице."
+    },
+    "translationPrompt": {
+        "message": "Пожалуйста, переведите следующий текст на $targetLanguage$. Пожалуйста, верните перевод напрямую, без каких-либо объяснений, описаний или дополнительного текста.\\n\\nИсходный текст:\\n\\\"$text$\\\"",
+        "description": "Запрос для API перевода.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Китайский"
+            },
+            "text": {
+                "content": "$2",
+                "example": "Привет, мир!"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "Пожалуйста, переведите следующий текст на $targetLanguage$. Пожалуйста, верните перевод напрямую, без каких-либо объяснений, описаний или дополнительного текста.",
+        "description": "Системный запрос для API перевода.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Китайский"
+            }
+        }
+    }
+}

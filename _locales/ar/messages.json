@@ -1,0 +1,281 @@
+{
+    "appName": {
+        "message": "LLM-Translate",
+        "description": "اسم الإضافة."
+    },
+    "appDescription": {
+        "message": "إضافة للترجمة تستخدم نماذج اللغة الكبيرة (مثل Gemini) للترجمة على الصفحة وفي النوافذ المنبثقة.",
+        "description": "وصف الإضافة."
+    },
+    "popupTitle": {
+        "message": "LLM-Translate",
+        "description": "عنوان النافذة المنبثقة."
+    },
+    "textInputPlaceholder": {
+        "message": "أدخل النص هنا...",
+        "description": "نص نائب لمنطقة إدخال النص في النافذة المنبثقة."
+    },
+    "translateButton": {
+        "message": "ترجمة",
+        "description": "تسمية زر الترجمة."
+    },
+    "settingsLink": {
+        "message": "الإعدادات",
+        "description": "نص رابط صفحة الإعدادات."
+    },
+    "settingsTitle": {
+        "message": "الإعدادات",
+        "description": "عنوان صفحة الإعدادات."
+    },
+    "geminiProvider": {
+        "message": "Gemini",
+        "description": "تسمية علامة تبويب مزود Gemini."
+    },
+    "siliconflowProvider": {
+        "message": "Silicon Flow",
+        "description": "تسمية علامة تبويب مزود Silicon Flow."
+    },
+    "geminiApiKeyLabel": {
+        "message": "مفتاح Gemini API",
+        "description": "تسمية حقل إدخال مفتاح Gemini API."
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "مفتاح Silicon Flow API",
+        "description": "تسمية حقل إدخال مفتاح Silicon Flow API."
+    },
+    "getApiKeyLink": {
+        "message": "الحصول على مفتاح API",
+        "description": "نص رابط الحصول على مفتاح API."
+    },
+    "geminiApiPlaceholder": {
+        "message": "أدخل مفتاح Google AI Studio API الخاص بك",
+        "description": "نص نائب لحقل إدخال مفتاح Gemini API."
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "أدخل مفتاح Silicon Flow API الخاص بك",
+        "description": "نص نائب لحقل إدخال مفتاح Silicon Flow API."
+    },
+    "fetchModelsButton": {
+        "message": "جلب النماذج",
+        "description": "تسمية زر جلب النماذج."
+    },
+    "modelSelectLabel": {
+        "message": "اختر النموذج",
+        "description": "تسمية القائمة المنسدلة لاختيار النموذج."
+    },
+    "geminiModelHint": {
+        "message": "يوصى باختيار النماذج المجانية، على سبيل المثال، gemma.",
+        "description": "تلميح لاختيار نموذج Gemini."
+    },
+    "siliconflowModelHint": {
+        "message": "يوصى باختيار النماذج المجانية، على سبيل المثال، qwen.",
+        "description": "تلميح لاختيار نموذج Silicon Flow."
+    },
+    "statusTranslating": {
+        "message": "جار الترجمة...",
+        "description": "رسالة الحالة عند 진행중인 번역."
+    },
+    "statusError": {
+        "message": "خطأ: $message$",
+        "description": "رسالة الحالة عند حدوث خطأ.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "مفتاح API غير صالح."
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "الرجاء إدخال مفتاح API الخاص بك.",
+        "description": "رسالة الحالة التي تطلب من المستخدم إدخال مفتاح API."
+    },
+    "statusFetchingModels": {
+        "message": "جارٍ جلب قائمة النماذج...",
+        "description": "رسالة الحالة عند جلب النماذج."
+    },
+    "statusModelsSuccess": {
+        "message": "تم جلب النماذج بنجاح! الرجاء اختيار نموذج.",
+        "description": "رسالة الحالة عند جلب النماذج بنجاح."
+    },
+    "statusModelsFailed": {
+        "message": "فشل جلب النماذج: $message$",
+        "description": "رسالة الحالة عند فشل جلب النماذج.",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "خطأ في الشبكة."
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "تم حفظ مفتاح API. جارٍ جلب النماذج...",
+        "description": "رسالة الحالة عند حفظ مفتاح API."
+    },
+    "statusModelSaved": {
+        "message": "تم حفظ النموذج '$model$' تلقائيًا.",
+        "description": "رسالة الحالة عند حفظ نموذج.",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "gemini-pro"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "تم التبديل إلى $provider$",
+        "description": "رسالة الحالة عند تبديل المزودين.",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "Gemini"
+            }
+        }
+    },
+    "langEnglish": { "message": "الإنجليزية" },
+    "langSimplifiedChinese": { "message": "الصينية المبسطة" },
+    "langTraditionalChinese": { "message": "الصينية التقليدية" },
+    "langFrench": { "message": "الفرنسية" },
+    "langSpanish": { "message": "الإسبانية" },
+    "langArabic": { "message": "العربية" },
+    "langRussian": { "message": "الروسية" },
+    "langPortuguese": { "message": "البرتغالية" },
+    "langGerman": { "message": "الألمانية" },
+    "langItalian": { "message": "الإيطالية" },
+    "langDutch": { "message": "الهولندية" },
+    "langDanish": { "message": "الدانمركية" },
+    "langIrish": { "message": "الأيرلندية" },
+    "langWelsh": { "message": "الويلزية" },
+    "langFinnish": { "message": "الفنلندية" },
+    "langIcelandic": { "message": "الأيسلندية" },
+    "langSwedish": { "message": "السويدية" },
+    "langNorwegianNynorsk": { "message": "النرويجية نينورسك" },
+    "langNorwegianBokmal": { "message": "النرويجية بوكمال" },
+    "langJapanese": { "message": "اليابانية" },
+    "langKorean": { "message": "الكورية" },
+    "langVietnamese": { "message": "الفيتنامية" },
+    "langThai": { "message": "التايلاندية" },
+    "langIndonesian": { "message": "الإندونيسية" },
+    "langMalay": { "message": "الماليزية" },
+    "langBurmese": { "message": "البورمية" },
+    "langTagalog": { "message": "التاغالوغية" },
+    "langKhmer": { "message": "الخميرية" },
+    "langLao": { "message": "اللاوية" },
+    "langHindi": { "message": "الهندية" },
+    "langBengali": { "message": "البنغالية" },
+    "langUrdu": { "message": "الأردية" },
+    "langNepali": { "message": "النيبالية" },
+    "langHebrew": { "message": "العبرية" },
+    "langTurkish": { "message": "التركية" },
+    "langPersian": { "message": "الفارسية" },
+    "langPolish": { "message": "البولندية" },
+    "langUkrainian": { "message": "الأوكرانية" },
+    "langCzech": { "message": "التشيكية" },
+    "langRomanian": { "message": "الرومانية" },
+    "langBulgarian": { "message": "البلغارية" },
+    "langSlovak": { "message": "السلوفاكية" },
+    "langHungarian": { "message": "المجرية" },
+    "langSlovenian": { "message": "السلوفينية" },
+    "langLatvian": { "message": "اللاتفية" },
+    "langEstonian": { "message": "الإستونية" },
+    "langLithuanian": { "message": "الليتوانية" },
+    "langBelarusian": { "message": "البيلاروسية" },
+    "langGreek": { "message": "اليونانية" },
+    "langCroatian": { "message": "الكرواتية" },
+    "langMacedonian": { "message": "المقدونية" },
+    "langMaltese": { "message": "المالطية" },
+    "langSerbian": { "message": "الصربية" },
+    "langBosnian": { "message": "البوسنية" },
+    "langGeorgian": { "message": "الجورجية" },
+    "langArmenian": { "message": "الأرمينية" },
+    "langNorthAzerbaijani": { "message": "الأذربيجانية الشمالية" },
+    "langKazakh": { "message": "الكازاخستانية" },
+    "langNorthernUzbek": { "message": "الأوزبكية الشمالية" },
+    "langTajik": { "message": "الطاجيكية" },
+    "langSwahili": { "message": "السواحيلية" },
+    "langAfrikaans": { "message": "الأفريكانية" },
+    "langCantonese": { "message": "الكانتونية" },
+    "langLuxembourgish": { "message": "اللوكسمبرجية" },
+    "langLimburgish": { "message": "الليمبورغية" },
+    "langCatalan": { "message": "الكتالونية" },
+    "langGalician": { "message": "الجاليكية" },
+    "langAsturian": { "message": "الأستورية" },
+    "langBasque": { "message": "الباسكية" },
+    "langOccitan": { "message": "الأوكيتانية" },
+    "langVenetian": { "message": "البندقية" },
+    "langSardinian": { "message": "السردينية" },
+    "langSicilian": { "message": "الصقلية" },
+    "langFriulian": { "message": "الفريولية" },
+    "langLombard": { "message": "اللومباردية" },
+    "langLigurian": { "message": "الليغورية" },
+    "langFaroese": { "message": "الفاروية" },
+    "langToskAlbanian": { "message": "الألبانية التوسكية" },
+    "langSilesian": { "message": "السيليزية" },
+    "langBashkir": { "message": "الباشكيرية" },
+    "langTatar": { "message": "التتارية" },
+    "langMesopotamianArabic": { "message": "العربية الرافدينية" },
+    "langNajdiArabic": { "message": "العربية النجدية" },
+    "langEgyptianArabic": { "message": "العربية المصرية" },
+    "langLevantineArabic": { "message": "العربية الشامية" },
+    "langTaizziAdeniArabic": { "message": "العربية التعزية-العدنية" },
+    "langDari": { "message": "الدرية" },
+    "langTunisianArabic": { "message": "العربية التونسية" },
+    "langMoroccanArabic": { "message": "العربية المغربية" },
+    "langKabuverdianu": { "message": "الكابوفيرديانو" },
+    "langTokPisin": { "message": "التوك بيسين" },
+    "langEasternYiddish": { "message": "اليديشية الشرقية" },
+    "langSindhi": { "message": "السندية" },
+    "langSinhala": { "message": "السنهالية" },
+    "langTelugu": { "message": "التيلجو" },
+    "langPunjabi": { "message": "البنجابية" },
+    "langTamil": { "message": "التاميلية" },
+    "langGujarati": { "message": "الغوجاراتية" },
+    "langMalayalam": { "message": "المالايالامية" },
+    "langMarathi": { "message": "الماراثية" },
+    "langKannada": { "message": "الكنادية" },
+    "langMagahi": { "message": "الماجاهية" },
+    "langOriya": { "message": "الأوريا" },
+    "langAwadhi": { "message": "الأوادية" },
+    "langMaithili": { "message": "المايثيلية" },
+    "langAssamese": { "message": "الأسامية" },
+    "langChhattisgarhi": { "message": "التشهاتيسجارية" },
+    "langBhojpuri": { "message": "البوجبورية" },
+    "langMinangkabau": { "message": "المينانغكاباو" },
+    "langBalinese": { "message": "البالية" },
+    "langJavanese": { "message": "الجاوية" },
+    "langBanjar": { "message": "البنجرية" },
+    "langSundanese": { "message": "السوندانية" },
+    "langCebuano": { "message": "السيبوانية" },
+    "langPangasinan": { "message": "البانغاسينانية" },
+    "langIloko": { "message": "الإيلوكانو" },
+    "langWarayPhilippines": { "message": "الواراي (الفلبين)" },
+    "langHaitian": { "message": "الهايتية" },
+    "langPapiamento": { "message": "البابيامنتو" },
+    "selectionTranslateLabel": {
+        "message": "تمكين الترجمة على الصفحة",
+        "description": "تسمية مفتاح التبديل لتمكين/تعطيل ترجمة التحديد على الصفحة."
+    },
+    "translationPrompt": {
+        "message": "يرجى ترجمة النص التالي إلى $targetLanguage$. يرجى إعادة الترجمة مباشرة، دون أي شرح أو وصف أو نص إضافي.\\n\\nالنص الأصلي:\\n\\\"$text$\\\"",
+        "description": "موجه لواجهة برمجة تطبيقات الترجمة.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "الصينية"
+            },
+            "text": {
+                "content": "$2",
+                "example": "أهلاً بالعالم!"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "يرجى ترجمة النص التالي إلى $targetLanguage$. يرجى إعادة الترجمة مباشرة، دون أي شرح أو وصف أو نص إضافي.",
+        "description": "موجه نظام لواجهة برمجة تطبيقات الترجمة.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "الصينية"
+            }
+        }
+    }
+}
