@@ -11,6 +11,7 @@
     <div class="tabs">
         <button class="tab-button active" data-provider="gemini" data-i18n="geminiProvider"></button>
         <button class="tab-button" data-provider="siliconflow" data-i18n="siliconflowProvider"></button>
+        <button class="tab-button" data-provider="ollama" data-i18n="ollamaProvider"></button>
     </div>
 
     <!-- Gemini Settings -->
@@ -48,6 +49,28 @@
             <label data-i18n="modelSelectLabel"></label>
             <p class="hint" data-i18n="siliconflowModelHint"></p>
             <select id="siliconflow-model-select"></select>
+        </div>
+    </div>
+
+    <!-- Ollama Settings -->
+    <div id="ollama-settings" class="tab-content">
+        <div class="ollama-notice">
+            <p class="cors-hint" data-i18n="ollamaCorsHint"></p>
+        </div>
+        <div class="form-group">
+            <label for="ollama-url">
+                <span data-i18n="ollamaUrlLabel"></span>
+                <a href="https://ollama.com/" target="_blank" data-i18n="getOllamaLink"></a>
+            </label>
+            <div class="api-key-container">
+                <input type="text" id="ollama-url" data-i18n-placeholder="ollamaUrlPlaceholder">
+                <button class="fetch-models-button btn-action" data-provider="ollama" data-i18n="fetchModelsButton"></button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label data-i18n="modelSelectLabel"></label>
+            <p class="hint" data-i18n="ollamaModelHint"></p>
+            <select id="ollama-model-select"></select>
         </div>
     </div>
 

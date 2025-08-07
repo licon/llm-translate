@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Label for the Silicon Flow provider tab."
     },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Label for the Ollama provider tab."
+    },
     "geminiApiKeyLabel": {
         "message": "Gemini API Key",
         "description": "Label for the Gemini API key input."
@@ -43,9 +47,17 @@
         "message": "Silicon Flow API Key",
         "description": "Label for the Silicon Flow API key input."
     },
+    "ollamaUrlLabel": {
+        "message": "Ollama Server URL",
+        "description": "Label for the Ollama URL input."
+    },
     "getApiKeyLink": {
         "message": "Get API Key",
         "description": "Link text to get an API key."
+    },
+    "getOllamaLink": {
+        "message": "Get Ollama",
+        "description": "Link text to get Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "Enter your Google AI Studio API key",
@@ -54,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Enter your Silicon Flow API key",
         "description": "Placeholder for the Silicon Flow API key input."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Enter your Ollama server URL (e.g., http://localhost:11434)",
+        "description": "Placeholder for the Ollama URL input."
     },
     "fetchModelsButton": {
         "message": "Fetch Models",
@@ -70,6 +86,14 @@
     "siliconflowModelHint": {
         "message": "Recommended to choose free models, e.g., qwen.",
         "description": "Hint for selecting a Silicon Flow model."
+    },
+    "ollamaModelHint": {
+        "message": "Select any model you have installed locally in Ollama.",
+        "description": "Hint for selecting an Ollama model."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Important: Before using Ollama, set environment variable OLLAMA_ORIGINS=\"*\" and restart Ollama service to allow browser access.",
+        "description": "Hint about setting CORS for Ollama."
     },
     "statusTranslating": {
         "message": "Translating...",
@@ -88,6 +112,10 @@
     "statusApiKeyNeeded": {
         "message": "Please enter your API key.",
         "description": "Status message asking the user to enter an API key."
+    },
+    "statusOllamaUrlNeeded": {
+        "message": "Please enter your Ollama server URL.",
+        "description": "Status message asking the user to enter Ollama URL."
     },
     "statusFetchingModels": {
         "message": "Fetching model list...",
@@ -110,6 +138,10 @@
     "statusApiKeySaved": {
         "message": "API key saved. Fetching models...",
         "description": "Status message when API key is saved."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "Ollama URL saved. Fetching models...",
+        "description": "Status message when Ollama URL is saved."
     },
     "statusModelSaved": {
         "message": "Model '$model$' has been saved automatically.",

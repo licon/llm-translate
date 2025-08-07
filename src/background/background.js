@@ -11,6 +11,8 @@ chrome.runtime.onInstalled.addListener(() => {
             geminiSelectedModel: '',
             siliconflowApiKey: '',
             siliconflowSelectedModel: '',
+            ollamaUrl: 'http://localhost:11434',
+            ollamaSelectedModel: '',
             targetLanguage: '中文'
         };
         let itemsToSet = {};
@@ -39,18 +41,44 @@ async function handleTranslation(text, targetLanguage, sendResponse) {
     try {
         const { activeProvider } = await chrome.storage.local.get('activeProvider');
         const provider = activeProvider || 'gemini'; // 默认为 gemini
+        
 
-        const configKey = `${provider}ApiKey`;
-        const modelKey = `${provider}SelectedModel`;
-        const config = await chrome.storage.local.get([configKey, modelKey]);
 
-        const apiKey = config[configKey];
-        const modelName = config[modelKey];
+        let config, apiKey, modelName, ollamaUrl;
+        
+        if (provider === 'ollama') {
+            const urlKey = `${provider}Url`;
+            const modelKey = `${provider}SelectedModel`;
+            config = await chrome.storage.local.get([urlKey, modelKey]);
+            ollamaUrl = config[urlKey];
+            modelName = config[modelKey];
+            
 
-        if (!apiKey || !modelName) {
-            sendResponse({ error: `当前提供商 (${provider}) 的 API 密钥或模型未设置。` });
-            chrome.runtime.openOptionsPage();
-            return;
+            
+            if (!ollamaUrl) {
+                sendResponse({ error: `Ollama 服务器地址未设置。请在设置页面配置 Ollama URL。` });
+                chrome.runtime.openOptionsPage();
+                return;
+            }
+            
+            if (!modelName) {
+                sendResponse({ error: `Ollama 模型未选择。请在设置页面选择一个模型。` });
+                chrome.runtime.openOptionsPage();
+                return;
+            }
+        } else {
+            const configKey = `${provider}ApiKey`;
+            const modelKey = `${provider}SelectedModel`;
+            config = await chrome.storage.local.get([configKey, modelKey]);
+
+            apiKey = config[configKey];
+            modelName = config[modelKey];
+
+            if (!apiKey || !modelName) {
+                sendResponse({ error: `当前提供商 (${provider}) 的 API 密钥或模型未设置。` });
+                chrome.runtime.openOptionsPage();
+                return;
+            }
         }
 
         let translation;
@@ -58,6 +86,8 @@ async function handleTranslation(text, targetLanguage, sendResponse) {
             translation = await callGeminiAPI(text, apiKey, modelName, targetLanguage);
         } else if (provider === 'siliconflow') {
             translation = await callSiliconFlowAPI(text, apiKey, modelName, targetLanguage);
+        } else if (provider === 'ollama') {
+            translation = await callOllamaAPI(text, ollamaUrl, modelName, targetLanguage);
         } else {
             throw new Error(`未知的模型提供商: ${provider}`);
         }
@@ -124,4 +154,60 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
     }
     const data = await response.json();
     return data.choices[0].message.content.trim();
+}
+
+/**
+ * 调用 Ollama API
+ */
+async function callOllamaAPI(text, ollamaUrl, modelName, targetLanguage) {
+    const url = `${ollamaUrl}/api/generate`;
+    const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
+    const prompt = `${systemPrompt}\n\n${text}`;
+    
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            model: modelName,
+            prompt: prompt,
+            stream: false,
+        }),
+    });
+    
+    if (!response.ok) {
+        if (response.status === 403) {
+            throw new Error('Ollama 服务器拒绝请求。请设置环境变量 OLLAMA_ORIGINS="*" 并重启 Ollama 服务。');
+        }
+        let errorMessage = `HTTP ${response.status}: ${response.statusText}`;
+        try {
+            const errorBody = await response.text();
+            try {
+                const errorJson = JSON.parse(errorBody);
+                errorMessage = errorJson.error || errorMessage;
+            } catch (jsonError) {
+                errorMessage = errorBody || errorMessage;
+            }
+        } catch (textError) {
+            // 忽略解析错误，使用默认错误消息
+        }
+        throw new Error(errorMessage);
+    }
+    
+    const responseText = await response.text();
+    
+    if (!responseText.trim()) {
+        throw new Error('Ollama 返回了空响应，请检查模型是否正确加载');
+    }
+    
+    try {
+        const data = JSON.parse(responseText);
+        if (!data.response) {
+            throw new Error('Ollama 响应格式异常，缺少 response 字段');
+        }
+        return data.response.trim();
+    } catch (jsonError) {
+        throw new Error(`Ollama 响应解析失败: ${jsonError.message}`);
+    }
 }

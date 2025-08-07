@@ -49,3 +49,19 @@ label a:hover { text-decoration: underline; }
     white-space: nowrap;
 }
 .btn-action:hover { background-color: #0056b3; }
+
+/* --- Ollama 特定样式 --- */
+.ollama-notice {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.cors-hint {
+    margin: 0;
+    font-size: 14px;
+    color: #856404;
+    line-height: 1.4;
+}

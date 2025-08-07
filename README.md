@@ -8,7 +8,7 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 
 ## Core Features
 
-*   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini** and **Silicon Flow**), allowing you to freely choose the most suitable model.
+*   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, and **Ollama**), allowing you to freely choose the most suitable model.
 *   **Instant Hover Translation:** Select text on any web page, and a translation icon will appear next to your mouse. Click it to see the translation result in place for a smooth and uninterrupted experience.
 *   **Quick Popup Translation:** Click the browser toolbar icon to quickly enter or paste text for translation in a popup window.
 *   **Smart Auto-fill:** After selecting text, open the popup, and the selected text will be automatically filled into the input box, simplifying the operation.

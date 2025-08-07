@@ -35,6 +35,14 @@
         "message": "Silicon Flow",
         "description": "Etiqueta para la pestaña del proveedor Silicon Flow."
     },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Etiqueta para la pestaña del proveedor Ollama."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Importante: Antes de usar Ollama, configure la variable de entorno OLLAMA_ORIGINS=\"*\" y reinicie el servicio Ollama para permitir el acceso del navegador.",
+        "description": "Consejo sobre configurar CORS para Ollama."
+    },
     "geminiApiKeyLabel": {
         "message": "Clave de API de Gemini",
         "description": "Etiqueta para la entrada de la clave de API de Gemini."

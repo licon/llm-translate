@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 modelSelect: document.getElementById('siliconflow-model-select'),
                 fetchButton: document.querySelector('.fetch-models-button[data-provider="siliconflow"]'),
             },
+            ollama: {
+                apiKeyInput: document.getElementById('ollama-url'),
+                modelSelect: document.getElementById('ollama-model-select'),
+                fetchButton: document.querySelector('.fetch-models-button[data-provider="ollama"]'),
+            },
         },
     };
 
@@ -44,16 +49,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function handleFetchModels(providerName) {
         const { apiKeyInput } = elements.providers[providerName];
-        const apiKey = apiKeyInput.value;
-        if (!apiKey) {
-            showStatus(chrome.i18n.getMessage('statusApiKeyNeeded'), 'error');
+        const inputValue = apiKeyInput.value;
+        if (!inputValue) {
+            const errorMsg = providerName === 'ollama' ? 
+                chrome.i18n.getMessage('statusOllamaUrlNeeded') : 
+                chrome.i18n.getMessage('statusApiKeyNeeded');
+            showStatus(errorMsg, 'error');
             return;
         }
-        chrome.storage.local.set({ [`${providerName}ApiKey`]: apiKey }, () => {
-            showStatus(chrome.i18n.getMessage('statusApiKeySaved'), 'info');
-        });
-        if (providerName === 'gemini') await fetchGeminiModels(apiKey);
-        else if (providerName === 'siliconflow') await fetchSiliconFlowModels(apiKey);
+        
+        if (providerName === 'ollama') {
+            chrome.storage.local.set({ [`${providerName}Url`]: inputValue }, () => {
+                showStatus(chrome.i18n.getMessage('statusOllamaUrlSaved'), 'info');
+            });
+            await fetchOllamaModels(inputValue);
+        } else {
+            chrome.storage.local.set({ [`${providerName}ApiKey`]: inputValue }, () => {
+                showStatus(chrome.i18n.getMessage('statusApiKeySaved'), 'info');
+            });
+            if (providerName === 'gemini') await fetchGeminiModels(inputValue);
+            else if (providerName === 'siliconflow') await fetchSiliconFlowModels(inputValue);
+        }
     }
 
     async function fetchGeminiModels(apiKey) {
@@ -89,6 +105,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    async function fetchOllamaModels(ollamaUrl) {
+        const modelSelect = elements.providers.ollama.modelSelect;
+        modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusFetchingModels')}</option>`;
+        try {
+            const response = await fetch(`${ollamaUrl}/api/tags`);
+            if (!response.ok) throw new Error('Failed to connect to Ollama server');
+            const data = await response.json();
+
+            populateModelSelect(modelSelect, data.models, m => m.name, m => `${m.name} (${(m.size / 1024 / 1024 / 1024).toFixed(1)}GB)`);
+            showStatus(chrome.i18n.getMessage('statusModelsSuccess'), 'success');
+            loadSelectedModel('ollama');
+            
+            // If no model was previously selected and we have models, auto-save the first one
+            if (data.models.length > 0 && modelSelect.value) {
+                saveSelectedModel('ollama');
+            }
+        } catch (error) {
+            modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusModelsFailed', [error.message])}</option>`;
+            showStatus(chrome.i18n.getMessage('statusModelsFailed', [error.message]), 'error');
+        }
+    }
+
     function populateModelSelect(selectElement, models, valueFn, textFn) {
         selectElement.innerHTML = '';
         if (models.length === 0) {
@@ -101,19 +139,25 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = textFn(model);
             selectElement.appendChild(option);
         });
+        
+        // Auto-select the first model if no model is currently selected
+        if (models.length > 0 && !selectElement.value) {
+            selectElement.value = valueFn(models[0]);
+        }
     }
 
     function saveSelectedModel(providerName) {
         const { modelSelect } = elements.providers[providerName];
         if (modelSelect.value) {
-            chrome.storage.local.set({ [`${providerName}SelectedModel`]: modelSelect.value }, () => {
+            const key = `${providerName}SelectedModel`;
+            chrome.storage.local.set({ [key]: modelSelect.value }, () => {
                 showStatus(chrome.i18n.getMessage('statusModelSaved', [modelSelect.value]), 'success');
             });
         }
     }
 
     function loadAllSettings() {
-        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey'];
+        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey', 'ollamaUrl', 'geminiSelectedModel', 'siliconflowSelectedModel', 'ollamaSelectedModel'];
         chrome.storage.local.get(keys, (result) => {
             if (result.activeProvider) switchTab(result.activeProvider);
             if (result.geminiApiKey) {
@@ -123,6 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (result.siliconflowApiKey) {
                 elements.providers.siliconflow.apiKeyInput.value = result.siliconflowApiKey;
                 fetchSiliconFlowModels(result.siliconflowApiKey);
+            }
+            if (result.ollamaUrl) {
+                elements.providers.ollama.apiKeyInput.value = result.ollamaUrl;
+                fetchOllamaModels(result.ollamaUrl);
+            } else {
+                // Set default Ollama URL if not set
+                elements.providers.ollama.apiKeyInput.value = 'http://localhost:11434';
             }
         });
     }
