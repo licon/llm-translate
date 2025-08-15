@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "LLM-Translate",
+        "message": "LLM Translate",
         "description": "اسم الإضافة."
     },
     "appDescription": {
@@ -34,6 +34,10 @@
     "siliconflowProvider": {
         "message": "Silicon Flow",
         "description": "تسمية علامة تبويب مزود Silicon Flow."
+    },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "تسمية علامة تبويب مزود Ollama."
     },
     "geminiApiKeyLabel": {
         "message": "مفتاح Gemini API",
@@ -70,6 +74,18 @@
     "siliconflowModelHint": {
         "message": "يوصى باختيار النماذج المجانية، على سبيل المثال، qwen.",
         "description": "تلميح لاختيار نموذج Silicon Flow."
+    },
+    "ollamaModelHint": {
+        "message": "اختر أي نموذج مثبت محليًا في Ollama.",
+        "description": "تلميح لاختيار نموذج Ollama."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ مهم: قبل استخدام Ollama، اضبط متغير البيئة OLLAMA_ORIGINS=\"*\" وأعد تشغيل خدمة Ollama للسماح بالوصول من المتصفح.",
+        "description": "تلميح حول إعداد CORS لـ Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 عرض النماذج الموصى بها لكل مزود",
+        "description": "رابط لقسم النماذج الموصى بها في README."
     },
     "statusTranslating": {
         "message": "جار الترجمة...",

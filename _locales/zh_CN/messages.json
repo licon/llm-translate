@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "LLM 翻译",
+        "message": "LLM Translate",
         "description": "扩展程序的名称。"
     },
     "appDescription": {
@@ -94,6 +94,10 @@
     "ollamaCorsHint": {
         "message": "⚠️ 重要提示：使用 Ollama 前，请设置环境变量 OLLAMA_ORIGINS=\"*\" 并重启 Ollama 服务以允许浏览器访问。",
         "description": "关于设置 Ollama CORS 的提示。"
+    },
+    "recommendedModelsLink": {
+        "message": "📋 查看各提供商推荐模型",
+        "description": "指向README中推荐模型部分的链接。"
     },
     "statusTranslating": {
         "message": "翻译中...",

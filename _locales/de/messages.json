@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "LLM-Translate",
+        "message": "LLM Translate",
         "description": "Der Name der Erweiterung."
     },
     "appDescription": {
@@ -42,6 +42,10 @@
     "ollamaCorsHint": {
         "message": "⚠️ Wichtig: Vor der Verwendung von Ollama setzen Sie die Umgebungsvariable OLLAMA_ORIGINS=\"*\" und starten Sie den Ollama-Dienst neu, um Browser-Zugriff zu ermöglichen.",
         "description": "Hinweis zur CORS-Konfiguration für Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 Empfohlene Modelle für jeden Anbieter anzeigen",
+        "description": "Link zum Abschnitt der empfohlenen Modelle in README."
     },
     "geminiApiKeyLabel": {
         "message": "Gemini-API-Schlüssel",

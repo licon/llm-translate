@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "LLM-Translate",
+        "message": "LLM Translate",
         "description": "O nome da extensão."
     },
     "appDescription": {
@@ -34,6 +34,10 @@
     "siliconflowProvider": {
         "message": "Silicon Flow",
         "description": "Rótulo para a guia do provedor Silicon Flow."
+    },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Rótulo para a guia do provedor Ollama."
     },
     "geminiApiKeyLabel": {
         "message": "Chave de API do Gemini",
@@ -70,6 +74,18 @@
     "siliconflowModelHint": {
         "message": "Recomendado escolher modelos gratuitos, por exemplo, qwen.",
         "description": "Dica para selecionar um modelo Silicon Flow."
+    },
+    "ollamaModelHint": {
+        "message": "Selecione qualquer modelo instalado localmente no Ollama.",
+        "description": "Dica para selecionar um modelo Ollama."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Importante: Antes de usar o Ollama, defina a variável de ambiente OLLAMA_ORIGINS=\"*\" e reinicie o serviço Ollama para permitir o acesso do navegador.",
+        "description": "Dica sobre configurar CORS para Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 Ver modelos recomendados para cada provedor",
+        "description": "Link para a seção de modelos recomendados no README."
     },
     "statusTranslating": {
         "message": "Traduzindo...",

@@ -1,6 +1,6 @@
 {
     "appName": {
-        "message": "LLM-Translate",
+        "message": "LLM Translate",
         "description": "拡張機能の名前。"
     },
     "appDescription": {
@@ -34,6 +34,10 @@
     "siliconflowProvider": {
         "message": "Silicon Flow",
         "description": "Silicon Flowプロバイダータブのラベル。"
+    },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Ollamaプロバイダータブのラベル。"
     },
     "geminiApiKeyLabel": {
         "message": "Gemini APIキー",
@@ -70,6 +74,18 @@
     "siliconflowModelHint": {
         "message": "無料のモデル（例：qwen）を選択することをお勧めします。",
         "description": "Silicon Flowモデルを選択するためのヒント。"
+    },
+    "ollamaModelHint": {
+        "message": "ローカルにインストールされているOllamaモデルを選択してください。",
+        "description": "Ollamaモデルを選択するためのヒント。"
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ 重要：Ollamaを使用する前に、環境変数OLLAMA_ORIGINS=\"*\"を設定し、Ollamaサービスを再起動してブラウザアクセスを許可してください。",
+        "description": "OllamaのCORS設定に関するヒント。"
+    },
+    "recommendedModelsLink": {
+        "message": "📋 各プロバイダーの推奨モデルを表示",
+        "description": "READMEの推奨モデルセクションへのリンク。"
     },
     "statusTranslating": {
         "message": "翻訳中...",
