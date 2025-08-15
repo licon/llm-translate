@@ -20,3 +20,22 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 *   **Frontend:** `HTML`, `CSS`, `JavaScript`
 *   **Browser API:** `WebExtensions API` (compatible with modern browsers like Chrome, Firefox, Edge, etc.)
 *   **Speech Synthesis:** `Web Speech API`
+
+## Recommended Models
+
+### Free Models by Provider
+
+| Provider | Recommended Models | Notes |
+|----------|-------------------|-------|
+| **Google Gemini** | `gemma3:12b`<br>`gemma3:4b`<br>`gemma3n` | Free models, recommend Gemma 3 12B |
+| **Silicon Flow** | `qwen3:8b`<br>`glm-4:9b`<br>`qwen2.5:7b` | Free models, recommend Qwen3-8B |
+| **Ollama (Local)** | `qwen2:1.5b`<br>`llama3.1:8b`<br>`gemma2:2b` | Download and run locally |
+
+### Model Selection Tips
+
+* **For Speed**: Choose smaller models (1.5B-3B parameters)
+* **For Quality**: Choose larger models (7B+ parameters)  
+* **For Privacy**: Use Ollama with local models
+* **For Cost**: All listed models are free to use
+
+*Last updated: August 15, 2025*

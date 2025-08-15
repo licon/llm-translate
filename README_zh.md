@@ -20,3 +20,22 @@ LLM-Translate 是一款现代化的浏览器翻译插件，它利用大型语言
 *   **前端:** `HTML`, `CSS`, `JavaScript`
 *   **浏览器接口:** `WebExtensions API` (兼容 Chrome, Firefox, Edge 等现代浏览器)
 *   **语音合成:** `Web Speech API`
+
+## 推荐模型
+
+### 各提供商免费模型
+
+| 提供商 | 推荐模型 | 说明 |
+|--------|----------|------|
+| **Google Gemini** | `gemma3:12b`<br>`gemma3:4b`<br>`gemma3n` | 免费模型，推荐 Gemma 3 12B |
+| **Silicon Flow** | `qwen3:8b`<br>`glm-4:9b`<br>`qwen2.5:7b` | 免费模型，推荐 Qwen3-8B |
+| **Ollama (本地)** | `qwen2:1.5b`<br>`llama3.1:8b`<br>`gemma2:2b` | 本地下载运行 |
+
+### 模型选择建议
+
+* **追求速度**: 选择较小模型 (1.5B-3B 参数)
+* **追求质量**: 选择较大模型 (7B+ 参数)
+* **追求隐私**: 使用 Ollama 本地模型
+* **成本考虑**: 以上模型均为免费使用
+
+*最后更新时间: 2025年8月15日*
