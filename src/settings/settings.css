@@ -8,6 +8,8 @@ input[type="password"], select { width: 100%; padding: 10px; border: 1px solid #
 .api-key-container input { flex-grow: 1; }
 label a { margin-left: 8px; font-size: 12px; font-weight: normal; text-decoration: none; color: #007bff; }
 label a:hover { text-decoration: underline; }
+.hint a { font-size: 12px; color: #007bff; text-decoration: none; margin-left: 5px; }
+.hint a:hover { text-decoration: underline; color: #0056b3; }
 #status { margin-top: 20px; font-weight: bold; text-align: center; min-height: 20px; }
 .hint { font-size: 12px; color: #6c757d; margin: -5px 0 10px 0; }
 
