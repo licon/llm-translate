@@ -95,6 +95,10 @@
         "message": "⚠️ Important: Before using Ollama, set environment variable OLLAMA_ORIGINS=\"*\" and restart Ollama service to allow browser access.",
         "description": "Hint about setting CORS for Ollama."
     },
+    "recommendedModelsLink": {
+        "message": "📋 View recommended models for each provider",
+        "description": "Link to recommended models section in README."
+    },
     "statusTranslating": {
         "message": "Translating...",
         "description": "Status message when translation is in progress."

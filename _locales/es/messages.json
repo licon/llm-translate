@@ -43,6 +43,10 @@
         "message": "⚠️ Importante: Antes de usar Ollama, configure la variable de entorno OLLAMA_ORIGINS=\"*\" y reinicie el servicio Ollama para permitir el acceso del navegador.",
         "description": "Consejo sobre configurar CORS para Ollama."
     },
+    "recommendedModelsLink": {
+        "message": "📋 Ver modelos recomendados para cada proveedor",
+        "description": "Enlace a la sección de modelos recomendados en README."
+    },
     "geminiApiKeyLabel": {
         "message": "Clave de API de Gemini",
         "description": "Etiqueta para la entrada de la clave de API de Gemini."

@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flow 공급자 탭의 라벨입니다."
     },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Ollama 공급자 탭의 라벨입니다."
+    },
     "geminiApiKeyLabel": {
         "message": "Gemini API 키",
         "description": "Gemini API 키 입력에 대한 라벨입니다."
@@ -70,6 +74,18 @@
     "siliconflowModelHint": {
         "message": "무료 모델(예: qwen)을 선택하는 것이 좋습니다.",
         "description": "Silicon Flow 모델 선택에 대한 힌트입니다."
+    },
+    "ollamaModelHint": {
+        "message": "Ollama에 로컬로 설치된 모든 모델을 선택하세요.",
+        "description": "Ollama 모델 선택에 대한 힌트입니다."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ 중요: Ollama를 사용하기 전에 환경 변수 OLLAMA_ORIGINS=\"*\"를 설정하고 Ollama 서비스를 다시 시작하여 브라우저 액세스를 허용하세요.",
+        "description": "Ollama의 CORS 설정에 대한 힌트입니다."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 각 공급자의 권장 모델 보기",
+        "description": "README의 권장 모델 섹션에 대한 링크입니다."
     },
     "statusTranslating": {
         "message": "번역 중...",
