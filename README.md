@@ -14,13 +14,42 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 *   **Smart Auto-fill:** After selecting text, open the popup, and the selected text will be automatically filled into the input box, simplifying the operation.
 *   **Secure Local Storage:** All API keys are securely stored in your local browser and are never uploaded.
 *   **Read Aloud and Copy:** In the popup window, you can read the input and output text aloud, and you can also copy the translation result with one click for convenient operation.
+*   **Smart Target Language Settings:** Configure default and second target languages for intelligent translation switching.
+*   **Intelligent Language Detection:** Automatically detects when source language matches target language and switches to second target language.
+*   **Comprehensive Language Support:** Supports 100+ languages with native translations for all interface elements.
 
 ## Features to Implement
 *   **Custom Translation Styles:** Allow users to customize translation tone (formal, casual, technical, etc.).
 *   **Translation History:** Track and manage translation history with search and export capabilities.
 *   **Keyboard Shortcuts:** Add customizable keyboard shortcuts for quick translation actions.
-*   **Second Target Language:** Expand the plugin interface to support the second target language.
-*   **Capture Screen to Translate :** Enhanced capability to translate the image captured from the screen.
+*   **Offline Mode:** Enable basic translation functionality when internet connection is unavailable.
+*   **Advanced Settings Panel:** Enhanced configuration options for power users.
+*   **Dark Mode:** Implement dark theme support for better user experience in low-light environments.
+*   **Capture Screen to Translate:** Enhanced capability to translate the image captured from the screen.
+
+## Target Language Settings
+
+LLM Translate now features intelligent target language management to enhance your translation experience:
+
+### **Default Target Language**
+- Set your preferred target language that syncs with the popup interface
+- Automatically used for all translation requests
+- Easily changeable through the settings page
+
+### **Second Target Language**
+- Configure an additional target language for quick switching
+- Automatically activated when source language matches your default target
+- Perfect for bilingual users or when translating between similar languages
+
+### **Smart Language Detection**
+- Automatically detects the source language of your text
+- Intelligently switches to second target language when source = default target
+- Prevents redundant translations and improves efficiency
+
+### **Example Use Cases**
+- **English ↔ Chinese**: Set English as default, Chinese as second target
+- **Spanish ↔ Portuguese**: Set Spanish as default, Portuguese as second target  
+- **German ↔ English**: Set German as default, English as second target
 
 ## Tech Stack
 
@@ -45,7 +74,7 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 * **For Privacy**: Use Ollama with local models
 * **For Cost**: All listed models are free to use
 
-*Last updated: August 15, 2025*
+*Last updated: December 19, 2024*
 
 ## Translation Quality Comparison
 
