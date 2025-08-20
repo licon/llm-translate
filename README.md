@@ -1,4 +1,7 @@
-# LLM Translate: Smart Browser Translation Plugin
+<div align="center">
+  <img src="icons/icon128.png" alt="LLM Translate Logo" width="128" height="128">
+  <h1>LLM Translate: Smart Browser Translation Plugin</h1>
+</div>
 
 LLM Translate is a modern browser translation plugin that harnesses the power of Large Language Models (LLMs) to provide you with a more accurate, fluent, and context-aware web page translation experience.
 
