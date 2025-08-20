@@ -291,15 +291,19 @@
         "description": "Label for the toggle switch to enable/disable in-page selection translation."
     },
     "translationPrompt": {
-        "message": "Please translate the following text into $targetLanguage$. Please return the translation directly, without any explanation, description, or extra text.\n\nOriginal text:\n\"$text$\"",
+        "message": "Please translate the following text into $targetLanguage$. If the source language is the same as the target language, please translate it into $secondTargetLanguage$ instead. Please return the translation text directly, without any explanation, description, or extra text.Please return only one language at a time.\n\nOriginal text:\n\"$text$\"",
         "description": "Prompt for the translation API.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Chinese"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "English"
+            },
+            "text": {
+                "content": "$3",
                 "example": "Hello, world!"
             }
         }
@@ -313,5 +317,25 @@
                 "example": "Chinese"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Target Language Settings",
+        "description": "Title for the target language settings section."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Default Target Language",
+        "description": "Label for the default target language selection."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "This setting is synchronized with the popup page language setting.",
+        "description": "Hint explaining the default target language setting."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Second Target Language",
+        "description": "Label for the second target language selection."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Additional target language for quick switching.",
+        "description": "Hint explaining the second target language setting."
     }
 }

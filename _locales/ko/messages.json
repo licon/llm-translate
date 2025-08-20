@@ -47,9 +47,17 @@
         "message": "Silicon Flow API 키",
         "description": "Silicon Flow API 키 입력에 대한 라벨입니다."
     },
+    "ollamaUrlLabel": {
+        "message": "Ollama 서버 URL",
+        "description": "Ollama URL 입력에 대한 라벨입니다."
+    },
     "getApiKeyLink": {
         "message": "API 키 받기",
         "description": "API 키를 받기 위한 링크 텍스트입니다."
+    },
+    "getOllamaLink": {
+        "message": "Ollama 받기",
+        "description": "Ollama를 받기 위한 링크 텍스트입니다."
     },
     "geminiApiPlaceholder": {
         "message": "Google AI Studio API 키를 입력하세요",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Silicon Flow API 키를 입력하세요",
         "description": "Silicon Flow API 키 입력에 대한 자리 표시자입니다."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Ollama 서버 URL을 입력하세요 (예: http://localhost:11434)",
+        "description": "Ollama URL 입력에 대한 자리 표시자입니다."
     },
     "fetchModelsButton": {
         "message": "모델 가져오기",
@@ -105,6 +117,10 @@
         "message": "API 키를 입력하세요.",
         "description": "사용자에게 API 키 입력을 요청하는 상태 메시지입니다."
     },
+    "statusOllamaUrlNeeded": {
+        "message": "Ollama 서버 URL을 입력하세요.",
+        "description": "사용자에게 Ollama URL 입력을 요청하는 상태 메시지입니다."
+    },
     "statusFetchingModels": {
         "message": "모델 목록을 가져오는 중...",
         "description": "모델을 가져오는 중일 때의 상태 메시지입니다."
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "API 키가 저장되었습니다. 모델을 가져오는 중...",
         "description": "API 키가 저장되었을 때의 상태 메시지입니다."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "Ollama URL이 저장되었습니다. 모델을 가져오는 중...",
+        "description": "Ollama URL이 저장되었을 때의 상태 메시지입니다."
     },
     "statusModelSaved": {
         "message": "'$model$' 모델이 자동으로 저장되었습니다.",
@@ -271,15 +291,19 @@
         "description": "페이지 내 선택 번역을 활성화/비활성화하는 토글 스위치의 라벨입니다."
     },
     "translationPrompt": {
-        "message": "다음 텍스트를 $targetLanguage$로 번역해 주세요. 설명, 묘사 또는 추가 텍스트 없이 번역본만 반환해 주세요.\\n\\n원본 텍스트:\\n\\\"$text$\\\"",
+        "message": "다음 텍스트를 $targetLanguage$로 번역해 주세요. 원본 언어가 대상 언어와 같다면 대신 $secondTargetLanguage$로 번역해 주세요. 설명, 묘사 또는 추가 텍스트 없이 번역 텍스트만 반환해 주세요. 한 번에 하나의 언어만 반환해 주세요.\n\n원본 텍스트:\n\"$text$\"",
         "description": "번역 API에 대한 프롬프트입니다.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "중국어"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "영어"
+            },
+            "text": {
+                "content": "$3",
                 "example": "안녕하세요, 세계!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "중국어"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "대상 언어 설정",
+        "description": "대상 언어 설정 섹션의 제목입니다."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "기본 대상 언어",
+        "description": "기본 대상 언어 선택에 대한 라벨입니다."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "이 설정은 팝업 페이지의 언어 설정과 동기화됩니다.",
+        "description": "기본 대상 언어 설정을 설명하는 힌트입니다."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "두 번째 대상 언어",
+        "description": "두 번째 대상 언어 선택에 대한 라벨입니다."
+    },
+    "secondTargetLanguageHint": {
+        "message": "빠른 전환을 위한 추가 대상 언어입니다.",
+        "description": "두 번째 대상 언어 설정을 설명하는 힌트입니다."
     }
 }

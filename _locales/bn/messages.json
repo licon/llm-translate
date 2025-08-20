@@ -47,9 +47,17 @@
         "message": "সিলিকন ফ্লো এপিআই কী",
         "description": "সিলিকন ফ্লো এপিআই কী ইনপুটের জন্য লেবেল।"
     },
+    "ollamaUrlLabel": {
+        "message": "ওলামা সার্ভার URL",
+        "description": "ওলামা URL ইনপুটের জন্য লেবেল।"
+    },
     "getApiKeyLink": {
         "message": "এপিআই কী পান",
         "description": "একটি এপিআই কী পেতে লিঙ্ক পাঠ্য।"
+    },
+    "getOllamaLink": {
+        "message": "ওলামা পান",
+        "description": "ওলামা পেতে লিঙ্ক পাঠ্য।"
     },
     "geminiApiPlaceholder": {
         "message": "আপনার গুগল এআই স্টুডিও এপিআই কী লিখুন",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "আপনার সিলিকন ফ্লো এপিআই কী লিখুন",
         "description": "সিলিকন ফ্লো এপিআই কী ইনপুটের জন্য স্থানধারক।"
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "আপনার ওলামা সার্ভার URL লিখুন (যেমন, http://localhost:11434)",
+        "description": "ওলামা URL ইনপুটের জন্য স্থানধারক।"
     },
     "fetchModelsButton": {
         "message": "মডেল আনুন",
@@ -105,6 +117,10 @@
         "message": "অনুগ্রহ করে আপনার এপিআই কী লিখুন।",
         "description": "ব্যবহারকারীকে একটি এপিআই কী প্রবেশ করতে বলার স্থিতি বার্তা।"
     },
+    "statusOllamaUrlNeeded": {
+        "message": "অনুগ্রহ করে আপনার ওলামা সার্ভার URL লিখুন।",
+        "description": "ব্যবহারকারীকে ওলামা URL প্রবেশ করতে বলার স্থিতি বার্তা।"
+    },
     "statusFetchingModels": {
         "message": "মডেল তালিকা আনা হচ্ছে...",
         "description": "মডেল আনার সময় স্থিতি বার্তা।"
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "এপিআই কী সংরক্ষিত হয়েছে। মডেল আনা হচ্ছে...",
         "description": "এপিআই কী সংরক্ষিত হলে স্থিতি বার্তা।"
+    },
+    "statusOllamaUrlSaved": {
+        "message": "ওলামা URL সংরক্ষিত হয়েছে। মডেল আনা হচ্ছে...",
+        "description": "ওলামা URL সংরক্ষিত হলে স্থিতি বার্তা।"
     },
     "statusModelSaved": {
         "message": "মডেল '$model$' স্বয়ংক্রিয়ভাবে সংরক্ষিত হয়েছে।",
@@ -271,15 +291,19 @@
         "description": "ইন-পেজ নির্বাচন অনুবাদ সক্ষম/অক্ষম করার জন্য টগল সুইচের জন্য লেবেল।"
     },
     "translationPrompt": {
-        "message": "অনুগ্রহ করে নিম্নলিখিত পাঠ্যটি $targetLanguage$ এ অনুবাদ করুন। অনুগ্রহ করে কোনো ব্যাখ্যা, বর্ণনা বা অতিরিক্ত পাঠ্য ছাড়াই সরাসরি অনুবাদটি ফেরত দিন।\\n\\nমূল পাঠ্য:\\n\\\"$text$\\\"",
+        "message": "অনুগ্রহ করে নিম্নলিখিত পাঠ্যটি $targetLanguage$ এ অনুবাদ করুন। যদি উৎস ভাষা লক্ষ্য ভাষার মতো হয়, অনুগ্রহ করে এটিকে $secondTargetLanguage$ এ অনুবাদ করুন। অনুগ্রহ করে কোনো ব্যাখ্যা, বর্ণনা বা অতিরিক্ত পাঠ্য ছাড়াই সরাসরি অনুবাদ পাঠ্য ফেরত দিন। অনুগ্রহ করে একবারে শুধুমাত্র একটি ভাষা ফেরত দিন।\n\nমূল পাঠ্য:\n\"$text$\"",
         "description": "অনুবাদ এপিআই-এর জন্য প্রম্পট।",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "চীনা"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "ইংরেজি"
+            },
+            "text": {
+                "content": "$3",
                 "example": "হ্যালো, বিশ্ব!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "চীনা"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "লক্ষ্য ভাষা সেটিংস",
+        "description": "লক্ষ্য ভাষা সেটিংস বিভাগের শিরোনাম।"
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "ডিফল্ট লক্ষ্য ভাষা",
+        "description": "ডিফল্ট লক্ষ্য ভাষা নির্বাচনের জন্য লেবেল।"
+    },
+    "defaultTargetLanguageHint": {
+        "message": "এই সেটিংটি পপআপ পৃষ্ঠার ভাষা সেটিংয়ের সাথে সিঙ্ক্রোনাইজ করা হয়েছে।",
+        "description": "ডিফল্ট লক্ষ্য ভাষা সেটিং ব্যাখ্যা করার জন্য ইঙ্গিত।"
+    },
+    "secondTargetLanguageLabel": {
+        "message": "দ্বিতীয় লক্ষ্য ভাষা",
+        "description": "দ্বিতীয় লক্ষ্য ভাষা নির্বাচনের জন্য লেবেল।"
+    },
+    "secondTargetLanguageHint": {
+        "message": "দ্রুত পরিবর্তনের জন্য অতিরিক্ত লক্ষ্য ভাষা।",
+        "description": "দ্বিতীয় লক্ষ্য ভাষা সেটিং ব্যাখ্যা করার জন্য ইঙ্গিত।"
     }
 }

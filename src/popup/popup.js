@@ -158,16 +158,28 @@ translateButton.addEventListener('click', () => {
         resultContainer.innerText = chrome.i18n.getMessage('statusTranslating');
         speakButton.style.display = 'none';
         copyButton.style.display = 'none';
-        chrome.runtime.sendMessage({ type: 'translate', text, targetLanguage }, (response) => {
-            if (response.error) {
-                resultContainer.innerText = chrome.i18n.getMessage('statusError', [response.error]);
-                speakButton.style.display = 'none';
-                copyButton.style.display = 'none';
-            } else {
-                resultContainer.innerText = response.translation;
-                speakButton.style.display = 'block';
-                copyButton.style.display = 'block';
-            }
+        
+        // Get second target language from settings
+        chrome.storage.local.get(['secondTargetLanguage'], (result) => {
+            const secondTargetLanguageKey = result.secondTargetLanguage || 'langEnglish';
+            const secondTargetLanguage = langKeyToEnName[secondTargetLanguageKey] || 'English';
+            
+            chrome.runtime.sendMessage({ 
+                type: 'translate', 
+                text, 
+                targetLanguage, 
+                secondTargetLanguage 
+            }, (response) => {
+                if (response.error) {
+                    resultContainer.innerText = chrome.i18n.getMessage('statusError', [response.error]);
+                    speakButton.style.display = 'none';
+                    copyButton.style.display = 'none';
+                } else {
+                    resultContainer.innerText = response.translation;
+                    speakButton.style.display = 'block';
+                    copyButton.style.display = 'block';
+                }
+            });
         });
     }
 });

@@ -39,14 +39,6 @@
         "message": "Ollama",
         "description": "Etiqueta para la pestaña del proveedor Ollama."
     },
-    "ollamaCorsHint": {
-        "message": "⚠️ Importante: Antes de usar Ollama, configure la variable de entorno OLLAMA_ORIGINS=\"*\" y reinicie el servicio Ollama para permitir el acceso del navegador.",
-        "description": "Consejo sobre configurar CORS para Ollama."
-    },
-    "recommendedModelsLink": {
-        "message": "📋 Ver modelos recomendados para cada proveedor",
-        "description": "Enlace a la sección de modelos recomendados en README."
-    },
     "geminiApiKeyLabel": {
         "message": "Clave de API de Gemini",
         "description": "Etiqueta para la entrada de la clave de API de Gemini."
@@ -55,9 +47,17 @@
         "message": "Clave de API de Silicon Flow",
         "description": "Etiqueta para la entrada de la clave de API de Silicon Flow."
     },
+    "ollamaUrlLabel": {
+        "message": "URL del Servidor Ollama",
+        "description": "Etiqueta para la entrada de URL de Ollama."
+    },
     "getApiKeyLink": {
         "message": "Obtener Clave de API",
         "description": "Texto del enlace para obtener una clave de API."
+    },
+    "getOllamaLink": {
+        "message": "Obtener Ollama",
+        "description": "Texto del enlace para obtener Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "Introduce tu clave de API de Google AI Studio",
@@ -66,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Introduce tu clave de API de Silicon Flow",
         "description": "Marcador de posición para la entrada de la clave de API de Silicon Flow."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Introduce la URL de tu servidor Ollama (ej., http://localhost:11434)",
+        "description": "Marcador de posición para la entrada de URL de Ollama."
     },
     "fetchModelsButton": {
         "message": "Obtener Modelos",
@@ -82,6 +86,18 @@
     "siliconflowModelHint": {
         "message": "Se recomienda elegir modelos gratuitos, por ejemplo, qwen.",
         "description": "Sugerencia para seleccionar un modelo de Silicon Flow."
+    },
+    "ollamaModelHint": {
+        "message": "Selecciona cualquier modelo que tengas instalado localmente en Ollama.",
+        "description": "Sugerencia para seleccionar un modelo de Ollama."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Importante: Antes de usar Ollama, configure la variable de entorno OLLAMA_ORIGINS=\"*\" y reinicie el servicio Ollama para permitir el acceso del navegador.",
+        "description": "Consejo sobre configurar CORS para Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 Ver modelos recomendados para cada proveedor",
+        "description": "Enlace a la sección de modelos recomendados en README."
     },
     "statusTranslating": {
         "message": "Traduciendo...",
@@ -100,6 +116,10 @@
     "statusApiKeyNeeded": {
         "message": "Por favor, introduce tu clave de API.",
         "description": "Mensaje de estado pidiendo al usuario que introduzca una clave de API."
+    },
+    "statusOllamaUrlNeeded": {
+        "message": "Por favor, introduce la URL de tu servidor Ollama.",
+        "description": "Mensaje de estado pidiendo al usuario que introduzca la URL de Ollama."
     },
     "statusFetchingModels": {
         "message": "Obteniendo lista de modelos...",
@@ -122,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "Clave de API guardada. Obteniendo modelos...",
         "description": "Mensaje de estado cuando se guarda la clave de API."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "URL de Ollama guardada. Obteniendo modelos...",
+        "description": "Mensaje de estado cuando se guarda la URL de Ollama."
     },
     "statusModelSaved": {
         "message": "El modelo '$model$' se ha guardado automáticamente.",
@@ -267,15 +291,19 @@
         "description": "Etiqueta para el interruptor para habilitar/deshabilitar la traducción de selección en la página."
     },
     "translationPrompt": {
-        "message": "Por favor, traduce el siguiente texto a $targetLanguage$. Por favor, devuelve la traducción directamente, sin ninguna explicación, descripción o texto extra.\\n\\nTexto original:\\n\\\"$text$\\\"",
+        "message": "Por favor, traduce el siguiente texto a $targetLanguage$. Si el idioma de origen es el mismo que el idioma de destino, por favor tradúcelo a $secondTargetLanguage$ en su lugar. Por favor, devuelve el texto de traducción directamente, sin ninguna explicación, descripción o texto extra. Por favor, devuelve solo un idioma a la vez.\n\nTexto original:\n\"$text$\"",
         "description": "Prompt para la API de traducción.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Chino"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "Inglés"
+            },
+            "text": {
+                "content": "$3",
                 "example": "¡Hola, mundo!"
             }
         }
@@ -289,5 +317,25 @@
                 "example": "Chino"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Configuración de Idioma de Destino",
+        "description": "Título de la sección de configuración de idioma de destino."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Idioma de Destino Predeterminado",
+        "description": "Etiqueta para la selección del idioma de destino predeterminado."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "Esta configuración está sincronizada con la configuración de idioma de la página emergente.",
+        "description": "Sugerencia explicando la configuración del idioma de destino predeterminado."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Segundo Idioma de Destino",
+        "description": "Etiqueta para la selección del segundo idioma de destino."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Idioma de destino adicional para cambio rápido.",
+        "description": "Sugerencia explicando la configuración del segundo idioma de destino."
     }
 }

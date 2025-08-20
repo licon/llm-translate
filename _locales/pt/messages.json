@@ -47,9 +47,17 @@
         "message": "Chave de API do Silicon Flow",
         "description": "Rótulo para a entrada da chave de API do Silicon Flow."
     },
+    "ollamaUrlLabel": {
+        "message": "URL do Servidor Ollama",
+        "description": "Rótulo para a entrada da URL do Ollama."
+    },
     "getApiKeyLink": {
         "message": "Obter Chave de API",
         "description": "Texto do link para obter uma chave de API."
+    },
+    "getOllamaLink": {
+        "message": "Obter Ollama",
+        "description": "Texto do link para obter Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "Digite sua chave de API do Google AI Studio",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Digite sua chave de API do Silicon Flow",
         "description": "Espaço reservado para a entrada da chave de API do Silicon Flow."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Digite a URL do seu servidor Ollama (ex., http://localhost:11434)",
+        "description": "Espaço reservado para a entrada da URL do Ollama."
     },
     "fetchModelsButton": {
         "message": "Buscar Modelos",
@@ -105,6 +117,10 @@
         "message": "Por favor, insira sua chave de API.",
         "description": "Mensagem de status solicitando ao usuário para inserir uma chave de API."
     },
+    "statusOllamaUrlNeeded": {
+        "message": "Por favor, insira a URL do seu servidor Ollama.",
+        "description": "Mensagem de status solicitando ao usuário para inserir a URL do Ollama."
+    },
     "statusFetchingModels": {
         "message": "Buscando lista de modelos...",
         "description": "Mensagem de status ao buscar modelos."
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "Chave de API salva. Buscando modelos...",
         "description": "Mensagem de status quando a chave de API é salva."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "URL do Ollama salva. Buscando modelos...",
+        "description": "Mensagem de status quando a URL do Ollama é salva."
     },
     "statusModelSaved": {
         "message": "O modelo '$model$' foi salvo automaticamente.",
@@ -271,15 +291,19 @@
         "description": "Rótulo para o botão de alternância para ativar/desativar a tradução de seleção na página."
     },
     "translationPrompt": {
-        "message": "Por favor, traduza o seguinte texto para $targetLanguage$. Por favor, retorne a tradução diretamente, sem qualquer explicação, descrição ou texto extra.\\n\\nTexto original:\\n\\\"$text$\\\"",
+        "message": "Por favor, traduza o seguinte texto para $targetLanguage$. Se o idioma de origem for o mesmo que o idioma de destino, por favor, traduza-o para $secondTargetLanguage$ em vez disso. Por favor, retorne o texto da tradução diretamente, sem qualquer explicação, descrição ou texto extra. Por favor, retorne apenas um idioma por vez.\n\nTexto original:\n\"$text$\"",
         "description": "Prompt para a API de tradução.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Chinês"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "Inglês"
+            },
+            "text": {
+                "content": "$3",
                 "example": "Olá, mundo!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "Chinês"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Configurações de Idioma de Destino",
+        "description": "Título da seção de configurações de idioma de destino."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Idioma de Destino Padrão",
+        "description": "Rótulo para a seleção do idioma de destino padrão."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "Esta configuração está sincronizada com a configuração de idioma da página pop-up.",
+        "description": "Dica explicando a configuração do idioma de destino padrão."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Segundo Idioma de Destino",
+        "description": "Rótulo para a seleção do segundo idioma de destino."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Idioma de destino adicional para alternância rápida.",
+        "description": "Dica explicando a configuração do segundo idioma de destino."
     }
 }

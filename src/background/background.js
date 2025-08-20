@@ -31,16 +31,19 @@ chrome.runtime.onInstalled.addListener(() => {
 // --- 消息监听 ---
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'translate') {
-        handleTranslation(request.text, request.targetLanguage, sendResponse);
+        handleTranslation(request.text, request.targetLanguage, request.secondTargetLanguage, sendResponse);
         return true; // 异步响应
     }
 });
 
 // --- 核心翻译处理 ---
-async function handleTranslation(text, targetLanguage, sendResponse) {
+async function handleTranslation(text, targetLanguage, secondTargetLanguage, sendResponse) {
     try {
         const { activeProvider } = await chrome.storage.local.get('activeProvider');
         const provider = activeProvider || 'gemini'; // 默认为 gemini
+        
+        // Detect source language and determine actual target language
+        const actualTargetLanguage = await determineTargetLanguage(text, targetLanguage, secondTargetLanguage);
         
 
 
@@ -83,11 +86,11 @@ async function handleTranslation(text, targetLanguage, sendResponse) {
 
         let translation;
         if (provider === 'gemini') {
-            translation = await callGeminiAPI(text, apiKey, modelName, targetLanguage);
+            translation = await callGeminiAPI(text, apiKey, modelName, actualTargetLanguage, secondTargetLanguage);
         } else if (provider === 'siliconflow') {
-            translation = await callSiliconFlowAPI(text, apiKey, modelName, targetLanguage);
+            translation = await callSiliconFlowAPI(text, apiKey, modelName, actualTargetLanguage, secondTargetLanguage);
         } else if (provider === 'ollama') {
-            translation = await callOllamaAPI(text, ollamaUrl, modelName, targetLanguage);
+            translation = await callOllamaAPI(text, ollamaUrl, modelName, actualTargetLanguage, secondTargetLanguage);
         } else {
             throw new Error(`未知的模型提供商: ${provider}`);
         }
@@ -99,14 +102,78 @@ async function handleTranslation(text, targetLanguage, sendResponse) {
     }
 }
 
+// --- 语言检测与目标语言确定 ---
+async function determineTargetLanguage(text, targetLanguage, secondTargetLanguage) {
+    return new Promise((resolve) => {
+        chrome.i18n.detectLanguage(text, (result) => {
+            if (result && result.languages && result.languages.length > 0) {
+                const detectedLanguage = result.languages[0].language;
+                const confidence = result.languages[0].percentage;
+                
+                // Map detected language to target language format
+                const detectedLangName = mapLanguageCodeToName(detectedLanguage);
+                
+                // If detected language matches target language, use second target language
+                if (detectedLangName === targetLanguage && confidence > 50) {
+                    console.log(`Source language (${detectedLangName}) matches target language (${targetLanguage}), using second target language (${secondTargetLanguage})`);
+                    resolve(secondTargetLanguage);
+                } else {
+                    console.log(`Using primary target language: ${targetLanguage}`);
+                    resolve(targetLanguage);
+                }
+            } else {
+                // If language detection fails, use primary target language
+                console.log(`Language detection failed, using primary target language: ${targetLanguage}`);
+                resolve(targetLanguage);
+            }
+        });
+    });
+}
+
+function mapLanguageCodeToName(languageCode) {
+    const languageMap = {
+        'en': 'English',
+        'zh': 'Simplified Chinese',
+        'zh-CN': 'Simplified Chinese',
+        'zh-TW': 'Traditional Chinese',
+        'fr': 'French',
+        'es': 'Spanish',
+        'ar': 'Arabic',
+        'ru': 'Russian',
+        'pt': 'Portuguese',
+        'de': 'German',
+        'it': 'Italian',
+        'nl': 'Dutch',
+        'da': 'Danish',
+        'ja': 'Japanese',
+        'ko': 'Korean',
+        'sv': 'Swedish',
+        'no': 'Norwegian Bokmål',
+        'pl': 'Polish',
+        'tr': 'Turkish',
+        'fi': 'Finnish',
+        'hu': 'Hungarian',
+        'cs': 'Czech',
+        'el': 'Greek',
+        'hi': 'Hindi',
+        'id': 'Indonesian',
+        'th': 'Thai',
+        'vi': 'Vietnamese',
+        'ro': 'Romanian',
+        'sk': 'Slovak'
+    };
+    
+    return languageMap[languageCode] || 'English';
+}
+
 // --- API 调用实现 ---
 
 /**
  * 调用 Google Gemini API
  */
-async function callGeminiAPI(text, apiKey, modelName, targetLanguage) {
+async function callGeminiAPI(text, apiKey, modelName, targetLanguage, secondTargetLanguage) {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
-    const prompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, text]);
+    const prompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
     
     const response = await fetch(url, {
         method: 'POST',
@@ -127,9 +194,10 @@ async function callGeminiAPI(text, apiKey, modelName, targetLanguage) {
 /**
  * 调用 Silicon Flow API (兼容 OpenAI 格式)
  */
-async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
+async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage, secondTargetLanguage) {
     const url = 'https://api.siliconflow.cn/v1/chat/completions';
     const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
+    const userPrompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
 
     const response = await fetch(url, {
         method: 'POST',
@@ -141,7 +209,7 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
             model: modelName,
             messages: [
                 { role: 'system', content: systemPrompt },
-                { role: 'user', content: text }
+                { role: 'user', content: userPrompt }
             ],
             max_tokens: 2048,
             temperature: 0.3,
@@ -159,10 +227,11 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage) {
 /**
  * 调用 Ollama API
  */
-async function callOllamaAPI(text, ollamaUrl, modelName, targetLanguage) {
+async function callOllamaAPI(text, ollamaUrl, modelName, targetLanguage, secondTargetLanguage) {
     const url = `${ollamaUrl}/api/generate`;
     const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
-    const prompt = `${systemPrompt}\n\n${text}`;
+    const userPrompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
+    const prompt = `${systemPrompt}\n\n${userPrompt}`;
     
     const response = await fetch(url, {
         method: 'POST',

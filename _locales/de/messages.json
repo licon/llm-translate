@@ -39,14 +39,6 @@
         "message": "Ollama",
         "description": "Beschriftung für den Ollama-Anbieter-Tab."
     },
-    "ollamaCorsHint": {
-        "message": "⚠️ Wichtig: Vor der Verwendung von Ollama setzen Sie die Umgebungsvariable OLLAMA_ORIGINS=\"*\" und starten Sie den Ollama-Dienst neu, um Browser-Zugriff zu ermöglichen.",
-        "description": "Hinweis zur CORS-Konfiguration für Ollama."
-    },
-    "recommendedModelsLink": {
-        "message": "📋 Empfohlene Modelle für jeden Anbieter anzeigen",
-        "description": "Link zum Abschnitt der empfohlenen Modelle in README."
-    },
     "geminiApiKeyLabel": {
         "message": "Gemini-API-Schlüssel",
         "description": "Beschriftung für die Gemini-API-Schlüsseleingabe."
@@ -55,9 +47,17 @@
         "message": "Silicon Flow-API-Schlüssel",
         "description": "Beschriftung für die Silicon Flow-API-Schlüsseleingabe."
     },
+    "ollamaUrlLabel": {
+        "message": "Ollama-Server-URL",
+        "description": "Beschriftung für die Ollama-URL-Eingabe."
+    },
     "getApiKeyLink": {
         "message": "API-Schlüssel erhalten",
         "description": "Linktext, um einen API-Schlüssel zu erhalten."
+    },
+    "getOllamaLink": {
+        "message": "Ollama erhalten",
+        "description": "Linktext, um Ollama zu erhalten."
     },
     "geminiApiPlaceholder": {
         "message": "Geben Sie Ihren Google AI Studio-API-Schlüssel ein",
@@ -66,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Geben Sie Ihren Silicon Flow-API-Schlüssel ein",
         "description": "Platzhalter für die Silicon Flow-API-Schlüsseleingabe."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Geben Sie Ihre Ollama-Server-URL ein (z. B. http://localhost:11434)",
+        "description": "Platzhalter für die Ollama-URL-Eingabe."
     },
     "fetchModelsButton": {
         "message": "Modelle abrufen",
@@ -82,6 +86,18 @@
     "siliconflowModelHint": {
         "message": "Es wird empfohlen, kostenlose Modelle wie z. B. Qwen zu wählen.",
         "description": "Hinweis zur Auswahl eines Silicon Flow-Modells."
+    },
+    "ollamaModelHint": {
+        "message": "Wählen Sie ein beliebiges Modell aus, das Sie lokal in Ollama installiert haben.",
+        "description": "Hinweis zur Auswahl eines Ollama-Modells."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Wichtig: Vor der Verwendung von Ollama setzen Sie die Umgebungsvariable OLLAMA_ORIGINS=\"*\" und starten Sie den Ollama-Dienst neu, um Browser-Zugriff zu ermöglichen.",
+        "description": "Hinweis zur CORS-Konfiguration für Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 Empfohlene Modelle für jeden Anbieter anzeigen",
+        "description": "Link zum Abschnitt der empfohlenen Modelle in README."
     },
     "statusTranslating": {
         "message": "Übersetze...",
@@ -100,6 +116,10 @@
     "statusApiKeyNeeded": {
         "message": "Bitte geben Sie Ihren API-Schlüssel ein.",
         "description": "Statusmeldung, die den Benutzer zur Eingabe eines API-Schlüssels auffordert."
+    },
+    "statusOllamaUrlNeeded": {
+        "message": "Bitte geben Sie Ihre Ollama-Server-URL ein.",
+        "description": "Statusmeldung, die den Benutzer zur Eingabe der Ollama-URL auffordert."
     },
     "statusFetchingModels": {
         "message": "Modellliste wird abgerufen...",
@@ -122,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "API-Schlüssel gespeichert. Modelle werden abgerufen...",
         "description": "Statusmeldung, wenn der API-Schlüssel gespeichert wird."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "Ollama-URL gespeichert. Modelle werden abgerufen...",
+        "description": "Statusmeldung, wenn die Ollama-URL gespeichert wird."
     },
     "statusModelSaved": {
         "message": "Modell '$model$' wurde automatisch gespeichert.",
@@ -267,15 +291,19 @@
         "description": "Beschriftung für den Umschalter zum Aktivieren/Deaktivieren der seiteninternen Auswahlübersetzung."
     },
     "translationPrompt": {
-        "message": "Bitte übersetzen Sie den folgenden Text ins $targetLanguage$. Bitte geben Sie die Übersetzung direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text.\\n\\nOriginaltext:\\n\\\"$text$\\\"",
+        "message": "Bitte übersetzen Sie den folgenden Text ins $targetLanguage$. Wenn die Quellsprache dieselbe wie die Zielsprache ist, übersetzen Sie bitte stattdessen ins $secondTargetLanguage$. Bitte geben Sie den Übersetzungstext direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text. Bitte geben Sie nur eine Sprache auf einmal zurück.\n\nOriginaltext:\n\"$text$\"",
         "description": "Aufforderung für die Übersetzungs-API.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Chinesisch"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "Englisch"
+            },
+            "text": {
+                "content": "$3",
                 "example": "Hallo, Welt!"
             }
         }
@@ -289,5 +317,25 @@
                 "example": "Chinesisch"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Zielsprache-Einstellungen",
+        "description": "Titel für den Abschnitt der Zielsprache-Einstellungen."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Standard-Zielsprache",
+        "description": "Beschriftung für die Auswahl der Standard-Zielsprache."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "Diese Einstellung ist mit der Spracheinstellung der Popup-Seite synchronisiert.",
+        "description": "Hinweis zur Erklärung der Standard-Zielsprache-Einstellung."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Zweite Zielsprache",
+        "description": "Beschriftung für die Auswahl der zweiten Zielsprache."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Zusätzliche Zielsprache für schnelles Umschalten.",
+        "description": "Hinweis zur Erklärung der zweiten Zielsprache-Einstellung."
     }
 }

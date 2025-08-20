@@ -67,3 +67,17 @@ label a:hover { text-decoration: underline; }
     color: #856404;
     line-height: 1.4;
 }
+
+/* --- Target Language Settings --- */
+.target-language-settings {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #dee2e6;
+}
+
+.target-language-settings h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}

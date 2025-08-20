@@ -47,9 +47,17 @@
         "message": "सिलिकॉन फ्लो एपीआई कुंजी",
         "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए लेबल।"
     },
+    "ollamaUrlLabel": {
+        "message": "ओलामा सर्वर URL",
+        "description": "ओलामा URL इनपुट के लिए लेबल।"
+    },
     "getApiKeyLink": {
         "message": "एपीआई कुंजी प्राप्त करें",
         "description": "एपीआई कुंजी प्राप्त करने के लिए लिंक टेक्स्ट।"
+    },
+    "getOllamaLink": {
+        "message": "ओलामा प्राप्त करें",
+        "description": "ओलामा प्राप्त करने के लिए लिंक टेक्स्ट।"
     },
     "geminiApiPlaceholder": {
         "message": "अपनी गूगल एआई स्टूडियो एपीआई कुंजी दर्ज करें",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "अपनी सिलिकॉन फ्लो एपीआई कुंजी दर्ज करें",
         "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए प्लेसहोल्डर।"
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "अपना ओलामा सर्वर URL दर्ज करें (जैसे, http://localhost:11434)",
+        "description": "ओलामा URL इनपुट के लिए प्लेसहोल्डर।"
     },
     "fetchModelsButton": {
         "message": "मॉडल प्राप्त करें",
@@ -105,6 +117,10 @@
         "message": "कृपया अपनी एपीआई कुंजी दर्ज करें।",
         "description": "उपयोगकर्ता से एपीआई कुंजी दर्ज करने के लिए कहने वाला स्थिति संदेश।"
     },
+    "statusOllamaUrlNeeded": {
+        "message": "कृपया अपना ओलामा सर्वर URL दर्ज करें।",
+        "description": "उपयोगकर्ता से ओलामा URL दर्ज करने के लिए कहने वाला स्थिति संदेश।"
+    },
     "statusFetchingModels": {
         "message": "मॉडल सूची प्राप्त हो रही है...",
         "description": "मॉडल प्राप्त करते समय स्थिति संदेश।"
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "एपीआई कुंजी सहेजी गई। मॉडल प्राप्त हो रहे हैं...",
         "description": "जब एपीआई कुंजी सहेजी जाती है तो स्थिति संदेश।"
+    },
+    "statusOllamaUrlSaved": {
+        "message": "ओलामा URL सहेजा गया। मॉडल प्राप्त हो रहे हैं...",
+        "description": "जब ओलामा URL सहेजा जाता है तो स्थिति संदेश।"
     },
     "statusModelSaved": {
         "message": "मॉडल '$model$' स्वचालित रूप से सहेजा गया है।",
@@ -271,15 +291,19 @@
         "description": "इन-पेज चयन अनुवाद को सक्षम/अक्षम करने के लिए टॉगल स्विच के लिए लेबल।"
     },
     "translationPrompt": {
-        "message": "कृपया निम्नलिखित पाठ का $targetLanguage$ में अनुवाद करें। कृपया अनुवाद सीधे लौटाएं, बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के।\\n\\nमूल पाठ:\\n\\\"$text$\\\"",
+        "message": "कृपया निम्नलिखित पाठ का $targetLanguage$ में अनुवाद करें। यदि स्रोत भाषा लक्ष्य भाषा के समान है, तो कृपया इसे $secondTargetLanguage$ में अनुवाद करें। कृपया अनुवाद पाठ सीधे लौटाएं, बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के। कृपया एक समय में केवल एक भाषा लौटाएं।\n\nमूल पाठ:\n\"$text$\"",
         "description": "अनुवाद एपीआई के लिए संकेत।",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "चीनी"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "अंग्रेजी"
+            },
+            "text": {
+                "content": "$3",
                 "example": "नमस्ते, दुनिया!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "चीनी"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "लक्ष्य भाषा सेटिंग्स",
+        "description": "लक्ष्य भाषा सेटिंग्स अनुभाग का शीर्षक।"
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "डिफ़ॉल्ट लक्ष्य भाषा",
+        "description": "डिफ़ॉल्ट लक्ष्य भाषा चयन के लिए लेबल।"
+    },
+    "defaultTargetLanguageHint": {
+        "message": "यह सेटिंग पॉपअप पृष्ठ की भाषा सेटिंग के साथ सिंक्रनाइज़ की गई है।",
+        "description": "डिफ़ॉल्ट लक्ष्य भाषा सेटिंग को समझाने के लिए संकेत।"
+    },
+    "secondTargetLanguageLabel": {
+        "message": "दूसरी लक्ष्य भाषा",
+        "description": "दूसरी लक्ष्य भाषा चयन के लिए लेबल।"
+    },
+    "secondTargetLanguageHint": {
+        "message": "त्वरित स्विचिंग के लिए अतिरिक्त लक्ष्य भाषा।",
+        "description": "दूसरी लक्ष्य भाषा सेटिंग को समझाने के लिए संकेत।"
     }
 }

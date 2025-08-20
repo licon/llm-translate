@@ -47,9 +47,17 @@
         "message": "Silicon Flow APIキー",
         "description": "Silicon Flow APIキー入力のラベル。"
     },
+    "ollamaUrlLabel": {
+        "message": "OllamaサーバーURL",
+        "description": "Ollama URL入力のラベル。"
+    },
     "getApiKeyLink": {
         "message": "APIキーを取得",
         "description": "APIキーを取得するためのリンクテキスト。"
+    },
+    "getOllamaLink": {
+        "message": "Ollamaを取得",
+        "description": "Ollamaを取得するためのリンクテキスト。"
     },
     "geminiApiPlaceholder": {
         "message": "Google AI Studio APIキーを入力してください",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Silicon Flow APIキーを入力してください",
         "description": "Silicon Flow APIキー入力のプレースホルダー。"
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "OllamaサーバーURLを入力してください（例：http://localhost:11434）",
+        "description": "Ollama URL入力のプレースホルダー。"
     },
     "fetchModelsButton": {
         "message": "モデルを取得",
@@ -105,6 +117,10 @@
         "message": "APIキーを入力してください。",
         "description": "ユーザーにAPIキーの入力を求めるステータスメッセージ。"
     },
+    "statusOllamaUrlNeeded": {
+        "message": "OllamaサーバーURLを入力してください。",
+        "description": "ユーザーにOllama URLの入力を求めるステータスメッセージ。"
+    },
     "statusFetchingModels": {
         "message": "モデルリストを取得中...",
         "description": "モデルを取得中のステータスメッセージ。"
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "APIキーが保存されました。モデルを取得中...",
         "description": "APIキーが保存されたときのステータスメッセージ。"
+    },
+    "statusOllamaUrlSaved": {
+        "message": "Ollama URLが保存されました。モデルを取得中...",
+        "description": "Ollama URLが保存されたときのステータスメッセージ。"
     },
     "statusModelSaved": {
         "message": "モデル「$model$」は自動的に保存されました。",
@@ -271,15 +291,19 @@
         "description": "ページ内選択翻訳を有効/無効にするためのトグルスイッチのラベル。"
     },
     "translationPrompt": {
-        "message": "次のテキストを$targetLanguage$に翻訳してください。説明、記述、または余分なテキストなしで、翻訳のみを返してください。\n\n元のテキスト：\n「$text$」",
+        "message": "次のテキストを$targetLanguage$に翻訳してください。元の言語が目標言語と同じ場合は、代わりに$secondTargetLanguage$に翻訳してください。説明、記述、または余分なテキストなしで、翻訳テキストのみを返してください。一度に1つの言語のみを返してください。\n\n元のテキスト：\n「$text$」",
         "description": "翻訳APIのプロンプト。",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "中国語"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "英語"
+            },
+            "text": {
+                "content": "$3",
                 "example": "こんにちは、世界！"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "中国語"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "目標言語設定",
+        "description": "目標言語設定セクションのタイトル。"
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "デフォルト目標言語",
+        "description": "デフォルト目標言語選択のラベル。"
+    },
+    "defaultTargetLanguageHint": {
+        "message": "この設定はポップアップページの言語設定と同期されます。",
+        "description": "デフォルト目標言語設定を説明するヒント。"
+    },
+    "secondTargetLanguageLabel": {
+        "message": "第二目標言語",
+        "description": "第二目標言語選択のラベル。"
+    },
+    "secondTargetLanguageHint": {
+        "message": "クイック切り替え用の追加目標言語。",
+        "description": "第二目標言語設定を説明するヒント。"
     }
 }

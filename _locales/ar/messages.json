@@ -47,9 +47,17 @@
         "message": "مفتاح Silicon Flow API",
         "description": "تسمية حقل إدخال مفتاح Silicon Flow API."
     },
+    "ollamaUrlLabel": {
+        "message": "رابط خادم Ollama",
+        "description": "تسمية حقل إدخال رابط Ollama."
+    },
     "getApiKeyLink": {
         "message": "الحصول على مفتاح API",
         "description": "نص رابط الحصول على مفتاح API."
+    },
+    "getOllamaLink": {
+        "message": "الحصول على Ollama",
+        "description": "نص رابط الحصول على Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "أدخل مفتاح Google AI Studio API الخاص بك",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "أدخل مفتاح Silicon Flow API الخاص بك",
         "description": "نص نائب لحقل إدخال مفتاح Silicon Flow API."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "أدخل رابط خادم Ollama الخاص بك (مثال: http://localhost:11434)",
+        "description": "نص نائب لحقل إدخال رابط Ollama."
     },
     "fetchModelsButton": {
         "message": "جلب النماذج",
@@ -105,6 +117,10 @@
         "message": "الرجاء إدخال مفتاح API الخاص بك.",
         "description": "رسالة الحالة التي تطلب من المستخدم إدخال مفتاح API."
     },
+    "statusOllamaUrlNeeded": {
+        "message": "الرجاء إدخال رابط خادم Ollama الخاص بك.",
+        "description": "رسالة الحالة التي تطلب من المستخدم إدخال رابط Ollama."
+    },
     "statusFetchingModels": {
         "message": "جارٍ جلب قائمة النماذج...",
         "description": "رسالة الحالة عند جلب النماذج."
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "تم حفظ مفتاح API. جارٍ جلب النماذج...",
         "description": "رسالة الحالة عند حفظ مفتاح API."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "تم حفظ رابط Ollama. جارٍ جلب النماذج...",
+        "description": "رسالة الحالة عند حفظ رابط Ollama."
     },
     "statusModelSaved": {
         "message": "تم حفظ النموذج '$model$' تلقائيًا.",
@@ -271,15 +291,19 @@
         "description": "تسمية مفتاح التبديل لتمكين/تعطيل ترجمة التحديد على الصفحة."
     },
     "translationPrompt": {
-        "message": "يرجى ترجمة النص التالي إلى $targetLanguage$. يرجى إعادة الترجمة مباشرة، دون أي شرح أو وصف أو نص إضافي.\\n\\nالنص الأصلي:\\n\\\"$text$\\\"",
+        "message": "يرجى ترجمة النص التالي إلى $targetLanguage$. إذا كانت اللغة الأصلية هي نفس اللغة المستهدفة، يرجى ترجمتها إلى $secondTargetLanguage$ بدلاً من ذلك. يرجى إعادة نص الترجمة مباشرة، دون أي شرح أو وصف أو نص إضافي. يرجى إعادة لغة واحدة فقط في كل مرة.\n\nالنص الأصلي:\n\"$text$\"",
         "description": "موجه لواجهة برمجة تطبيقات الترجمة.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "الصينية"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "الإنجليزية"
+            },
+            "text": {
+                "content": "$3",
                 "example": "أهلاً بالعالم!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "الصينية"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "إعدادات اللغة المستهدفة",
+        "description": "عنوان قسم إعدادات اللغة المستهدفة."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "اللغة المستهدفة الافتراضية",
+        "description": "تسمية اختيار اللغة المستهدفة الافتراضية."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "هذا الإعداد متزامن مع إعداد اللغة في صفحة النافذة المنبثقة.",
+        "description": "تلميح يوضح إعداد اللغة المستهدفة الافتراضية."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "اللغة المستهدفة الثانية",
+        "description": "تسمية اختيار اللغة المستهدفة الثانية."
+    },
+    "secondTargetLanguageHint": {
+        "message": "لغة مستهدفة إضافية للتبديل السريع.",
+        "description": "تلميح يوضح إعداد اللغة المستهدفة الثانية."
     }
 }

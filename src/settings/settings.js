@@ -11,6 +11,36 @@ function setupI18n() {
     document.title = chrome.i18n.getMessage('settingsTitle');
 }
 
+// --- Language Data ---
+const languageKeys = [
+    "langEnglish", "langSimplifiedChinese", "langTraditionalChinese", "langFrench", "langSpanish", "langArabic", "langRussian", "langPortuguese", "langGerman", "langItalian", "langDutch", "langDanish", "langIrish", "langWelsh", "langFinnish", "langIcelandic", "langSwedish", "langNorwegianNynorsk", "langNorwegianBokmal", "langJapanese", "langKorean", "langVietnamese", "langThai", "langIndonesian", "langMalay", "langBurmese", "langTagalog", "langKhmer", "langLao", "langHindi", "langBengali", "langUrdu", "langNepali", "langHebrew", "langTurkish", "langPersian", "langPolish", "langUkrainian", "langCzech", "langRomanian", "langBulgarian", "langSlovak", "langHungarian", "langSlovenian", "langLatvian", "langEstonian", "langLithuanian", "langBelarusian", "langGreek", "langCroatian", "langMacedonian", "langMaltese", "langSerbian", "langBosnian", "langGeorgian", "langArmenian", "langNorthAzerbaijani", "langKazakh", "langNorthernUzbek", "langTajik", "langSwahili", "langAfrikaans", "langCantonese", "langLuxembourgish", "langLimburgish", "langCatalan", "langGalician", "langAsturian", "langBasque", "langOccitan", "langVenetian", "langSardinian", "langSicilian", "langFriulian", "langLombard", "langLigurian", "langFaroese", "langToskAlbanian", "langSilesian", "langBashkir", "langTatar", "langMesopotamianArabic", "langNajdiArabic", "langEgyptianArabic", "langLevantineArabic", "langTaizziAdeniArabic", "langDari", "langTunisianArabic", "langMoroccanArabic", "langKabuverdianu", "langTokPisin", "langEasternYiddish", "langSindhi", "langSinhala", "langTelugu", "langPunjabi", "langTamil", "langGujarati", "langMalayalam", "langMarathi", "langKannada", "langMagahi", "langOriya", "langAwadhi", "langMaithili", "langAssamese", "langChhattisgarhi", "langBhojpuri", "langMinangkabau", "langBalinese", "langJavanese", "langBanjar", "langSundanese", "langCebuano", "langPangasinan", "langIloko", "langWarayPhilippines", "langHaitian", "langPapiamento"
+];
+
+function populateLanguages() {
+    const defaultTargetLanguageSelect = document.getElementById('default-target-language');
+    const secondTargetLanguageSelect = document.getElementById('second-target-language');
+    
+    // Clear existing options
+    defaultTargetLanguageSelect.innerHTML = '';
+    secondTargetLanguageSelect.innerHTML = '';
+
+    languageKeys.forEach(key => {
+        const message = chrome.i18n.getMessage(key);
+        
+        // Add to default target language select
+        const defaultOption = document.createElement('option');
+        defaultOption.value = key;
+        defaultOption.textContent = message;
+        defaultTargetLanguageSelect.appendChild(defaultOption);
+        
+        // Add to second target language select
+        const secondOption = document.createElement('option');
+        secondOption.value = key;
+        secondOption.textContent = message;
+        secondTargetLanguageSelect.appendChild(secondOption);
+    });
+}
+
 // --- Main Logic ---
 document.addEventListener('DOMContentLoaded', () => {
     setupI18n();
@@ -36,6 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 modelSelect: document.getElementById('ollama-model-select'),
                 fetchButton: document.querySelector('.fetch-models-button[data-provider="ollama"]'),
             },
+        },
+        targetLanguages: {
+            defaultTargetLanguageSelect: document.getElementById('default-target-language'),
+            secondTargetLanguageSelect: document.getElementById('second-target-language'),
         },
     };
 
@@ -157,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadAllSettings() {
-        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey', 'ollamaUrl', 'geminiSelectedModel', 'siliconflowSelectedModel', 'ollamaSelectedModel'];
+        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey', 'ollamaUrl', 'geminiSelectedModel', 'siliconflowSelectedModel', 'ollamaSelectedModel', 'targetLanguage', 'secondTargetLanguage'];
         chrome.storage.local.get(keys, (result) => {
             if (result.activeProvider) switchTab(result.activeProvider);
             if (result.geminiApiKey) {
@@ -175,7 +209,71 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Set default Ollama URL if not set
                 elements.providers.ollama.apiKeyInput.value = 'http://localhost:11434';
             }
+            
+            // Load target language settings
+            loadTargetLanguageSettings(result);
         });
+    }
+    
+    function loadTargetLanguageSettings(result) {
+        // Set default target language (synchronized with popup)
+        if (result.targetLanguage) {
+            elements.targetLanguages.defaultTargetLanguageSelect.value = result.targetLanguage;
+        } else {
+            // Set default based on browser language
+            const browserLang = chrome.i18n.getUILanguage();
+            const langCode = browserLang.split('-')[0];
+            const defaultLangKey = getDefaultLanguageKey(browserLang, langCode);
+            elements.targetLanguages.defaultTargetLanguageSelect.value = defaultLangKey;
+            chrome.storage.local.set({ targetLanguage: defaultLangKey });
+        }
+        
+        // Set second target language
+        if (result.secondTargetLanguage) {
+            elements.targetLanguages.secondTargetLanguageSelect.value = result.secondTargetLanguage;
+        } else {
+            // Set a default second language (e.g., English if default is Chinese, vice versa)
+            const defaultLang = elements.targetLanguages.defaultTargetLanguageSelect.value;
+            const secondLang = defaultLang === 'langSimplifiedChinese' ? 'langEnglish' : 'langSimplifiedChinese';
+            elements.targetLanguages.secondTargetLanguageSelect.value = secondLang;
+            chrome.storage.local.set({ secondTargetLanguage: secondLang });
+        }
+    }
+    
+    function getDefaultLanguageKey(browserLang, langCode) {
+        const browserLangToMsgKey = {
+            'en': 'langEnglish',
+            'zh': 'langSimplifiedChinese',
+            'zh-CN': 'langSimplifiedChinese',
+            'zh-TW': 'langTraditionalChinese',
+            'fr': 'langFrench',
+            'es': 'langSpanish',
+            'ar': 'langArabic',
+            'ru': 'langRussian',
+            'pt': 'langPortuguese',
+            'de': 'langGerman',
+            'it': 'langItalian',
+            'nl': 'langDutch',
+            'da': 'langDanish',
+            'ja': 'langJapanese',
+            'ko': 'langKorean',
+            'sv': 'langSwedish',
+            'no': 'langNorwegianBokmal',
+            'pl': 'langPolish',
+            'tr': 'langTurkish',
+            'fi': 'langFinnish',
+            'hu': 'langHungarian',
+            'cs': 'langCzech',
+            'el': 'langGreek',
+            'hi': 'langHindi',
+            'id': 'langIndonesian',
+            'th': 'langThai',
+            'vi': 'langVietnamese',
+            'ro': 'langRomanian',
+            'sk': 'langSlovak'
+        };
+        
+        return browserLangToMsgKey[browserLang] || browserLangToMsgKey[langCode] || 'langEnglish';
     }
     
     function loadSelectedModel(providerName) {
@@ -202,6 +300,22 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.providers[providerName].fetchButton.addEventListener('click', () => handleFetchModels(providerName));
         elements.providers[providerName].modelSelect.addEventListener('change', () => saveSelectedModel(providerName));
     }
+    
+    // Add event listeners for target language settings
+    elements.targetLanguages.defaultTargetLanguageSelect.addEventListener('change', () => {
+        const value = elements.targetLanguages.defaultTargetLanguageSelect.value;
+        chrome.storage.local.set({ targetLanguage: value }, () => {
+            showStatus(chrome.i18n.getMessage('statusModelSaved', [chrome.i18n.getMessage(value)]), 'success');
+        });
+    });
+    
+    elements.targetLanguages.secondTargetLanguageSelect.addEventListener('change', () => {
+        const value = elements.targetLanguages.secondTargetLanguageSelect.value;
+        chrome.storage.local.set({ secondTargetLanguage: value }, () => {
+            showStatus(chrome.i18n.getMessage('statusModelSaved', [chrome.i18n.getMessage(value)]), 'success');
+        });
+    });
 
     loadAllSettings();
+    populateLanguages();
 });

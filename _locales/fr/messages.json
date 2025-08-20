@@ -39,14 +39,6 @@
         "message": "Ollama",
         "description": "Étiquette de l'onglet du fournisseur Ollama."
     },
-    "ollamaCorsHint": {
-        "message": "⚠️ Important : Avant d'utiliser Ollama, définissez la variable d'environnement OLLAMA_ORIGINS=\"*\" et redémarrez le service Ollama pour permettre l'accès du navigateur.",
-        "description": "Conseil sur la configuration CORS pour Ollama."
-    },
-    "recommendedModelsLink": {
-        "message": "📋 Voir les modèles recommandés pour chaque fournisseur",
-        "description": "Lien vers la section des modèles recommandés dans README."
-    },
     "geminiApiKeyLabel": {
         "message": "Clé API Gemini",
         "description": "Étiquette pour le champ de saisie de la clé API Gemini."
@@ -55,9 +47,17 @@
         "message": "Clé API Silicon Flow",
         "description": "Étiquette pour le champ de saisie de la clé API Silicon Flow."
     },
+    "ollamaUrlLabel": {
+        "message": "URL du serveur Ollama",
+        "description": "Étiquette pour le champ de saisie de l'URL Ollama."
+    },
     "getApiKeyLink": {
         "message": "Obtenir une clé API",
         "description": "Texte du lien pour obtenir une clé API."
+    },
+    "getOllamaLink": {
+        "message": "Obtenir Ollama",
+        "description": "Texte du lien pour obtenir Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "Saisissez votre clé API Google AI Studio",
@@ -66,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Saisissez votre clé API Silicon Flow",
         "description": "Texte de remplacement pour le champ de saisie de la clé API Silicon Flow."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Saisissez l'URL de votre serveur Ollama (ex. http://localhost:11434)",
+        "description": "Texte de remplacement pour le champ de saisie de l'URL Ollama."
     },
     "fetchModelsButton": {
         "message": "Récupérer les modèles",
@@ -82,6 +86,18 @@
     "siliconflowModelHint": {
         "message": "Il est recommandé de choisir des modèles gratuits, par exemple, qwen.",
         "description": "Astuce pour la sélection d'un modèle Silicon Flow."
+    },
+    "ollamaModelHint": {
+        "message": "Sélectionnez n'importe quel modèle que vous avez installé localement dans Ollama.",
+        "description": "Astuce pour la sélection d'un modèle Ollama."
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ Important : Avant d'utiliser Ollama, définissez la variable d'environnement OLLAMA_ORIGINS=\"*\" et redémarrez le service Ollama pour permettre l'accès du navigateur.",
+        "description": "Conseil sur la configuration CORS pour Ollama."
+    },
+    "recommendedModelsLink": {
+        "message": "📋 Voir les modèles recommandés pour chaque fournisseur",
+        "description": "Lien vers la section des modèles recommandés dans README."
     },
     "statusTranslating": {
         "message": "Traduction en cours...",
@@ -100,6 +116,10 @@
     "statusApiKeyNeeded": {
         "message": "Veuillez saisir votre clé API.",
         "description": "Message d'état demandant à l'utilisateur de saisir une clé API."
+    },
+    "statusOllamaUrlNeeded": {
+        "message": "Veuillez saisir l'URL de votre serveur Ollama.",
+        "description": "Message d'état demandant à l'utilisateur de saisir l'URL Ollama."
     },
     "statusFetchingModels": {
         "message": "Récupération de la liste des modèles...",
@@ -122,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "Clé API enregistrée. Récupération des modèles...",
         "description": "Message d'état lorsque la clé API est enregistrée."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "URL Ollama enregistrée. Récupération des modèles...",
+        "description": "Message d'état lorsque l'URL Ollama est enregistrée."
     },
     "statusModelSaved": {
         "message": "Le modèle '$model$' a été enregistré automatiquement.",
@@ -267,15 +291,19 @@
         "description": "Étiquette du commutateur pour activer/désactiver la traduction de la sélection sur la page."
     },
     "translationPrompt": {
-        "message": "Veuillez traduire le texte suivant en $targetLanguage$. Veuillez retourner la traduction directement, sans aucune explication, description ou texte supplémentaire.\\n\\nTexte original :\\n\\\"$text$\\\"",
+        "message": "Veuillez traduire le texte suivant en $targetLanguage$. Si la langue source est la même que la langue cible, veuillez la traduire en $secondTargetLanguage$ à la place. Veuillez retourner le texte de traduction directement, sans aucune explication, description ou texte supplémentaire. Veuillez retourner une seule langue à la fois.\n\nTexte original :\n\"$text$\"",
         "description": "Invite pour l'API de traduction.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Chinois"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "Anglais"
+            },
+            "text": {
+                "content": "$3",
                 "example": "Bonjour, le monde !"
             }
         }
@@ -289,5 +317,25 @@
                 "example": "Chinois"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Paramètres de langue cible",
+        "description": "Titre de la section des paramètres de langue cible."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Langue cible par défaut",
+        "description": "Étiquette pour la sélection de la langue cible par défaut."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "Ce paramètre est synchronisé avec le paramètre de langue de la page pop-up.",
+        "description": "Astuce expliquant le paramètre de langue cible par défaut."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Deuxième langue cible",
+        "description": "Étiquette pour la sélection de la deuxième langue cible."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Langue cible supplémentaire pour un changement rapide.",
+        "description": "Astuce expliquant le paramètre de la deuxième langue cible."
     }
 }

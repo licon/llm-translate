@@ -86,9 +86,50 @@ function createTranslateIcon(x, y, text) {
     translateIcon.addEventListener('click', async (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const { targetLanguage } = await chrome.storage.local.get('targetLanguage');
+        const { targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['targetLanguage', 'secondTargetLanguage']);
+        const primaryTargetLanguage = targetLanguage || 'langSimplifiedChinese';
+        const secondaryTargetLanguage = secondTargetLanguage || 'langEnglish';
+        
+        // Convert language keys to language names
+        const langKeyToEnName = {
+            'langEnglish': 'English',
+            'langSimplifiedChinese': 'Simplified Chinese',
+            'langTraditionalChinese': 'Traditional Chinese',
+            'langFrench': 'French',
+            'langSpanish': 'Spanish',
+            'langArabic': 'Arabic',
+            'langRussian': 'Russian',
+            'langPortuguese': 'Portuguese',
+            'langGerman': 'German',
+            'langItalian': 'Italian',
+            'langDutch': 'Dutch',
+            'langDanish': 'Danish',
+            'langJapanese': 'Japanese',
+            'langKorean': 'Korean',
+            'langVietnamese': 'Vietnamese',
+            'langThai': 'Thai',
+            'langIndonesian': 'Indonesian',
+            'langHindi': 'Hindi',
+            'langTurkish': 'Turkish',
+            'langPolish': 'Polish',
+            'langFinnish': 'Finnish',
+            'langHungarian': 'Hungarian',
+            'langCzech': 'Czech',
+            'langGreek': 'Greek',
+            'langRomanian': 'Romanian',
+            'langSlovak': 'Slovak'
+        };
+        
+        const targetLanguageName = langKeyToEnName[primaryTargetLanguage] || 'English';
+        const secondTargetLanguageName = langKeyToEnName[secondaryTargetLanguage] || 'English';
+        
         showResultPopover(x, y, chrome.i18n.getMessage('statusTranslating'));
-        chrome.runtime.sendMessage({ type: 'translate', text, targetLanguage: targetLanguage || '中文' }, (response) => {
+        chrome.runtime.sendMessage({ 
+            type: 'translate', 
+            text, 
+            targetLanguage: targetLanguageName,
+            secondTargetLanguage: secondTargetLanguageName
+        }, (response) => {
             if (response.error) {
                 updateResultPopover(response.error);
             } else {

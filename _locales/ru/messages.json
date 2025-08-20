@@ -47,9 +47,17 @@
         "message": "Ключ API Silicon Flow",
         "description": "Надпись для ввода ключа API Silicon Flow."
     },
+    "ollamaUrlLabel": {
+        "message": "URL сервера Ollama",
+        "description": "Надпись для ввода URL Ollama."
+    },
     "getApiKeyLink": {
         "message": "Получить ключ API",
         "description": "Текст ссылки для получения ключа API."
+    },
+    "getOllamaLink": {
+        "message": "Получить Ollama",
+        "description": "Текст ссылки для получения Ollama."
     },
     "geminiApiPlaceholder": {
         "message": "Введите ваш ключ API Google AI Studio",
@@ -58,6 +66,10 @@
     "siliconflowApiPlaceholder": {
         "message": "Введите ваш ключ API Silicon Flow",
         "description": "Заполнитель для ввода ключа API Silicon Flow."
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "Введите URL вашего сервера Ollama (например, http://localhost:11434)",
+        "description": "Заполнитель для ввода URL Ollama."
     },
     "fetchModelsButton": {
         "message": "Получить модели",
@@ -105,6 +117,10 @@
         "message": "Пожалуйста, введите ваш ключ API.",
         "description": "Сообщение о статусе с просьбой ввести ключ API."
     },
+    "statusOllamaUrlNeeded": {
+        "message": "Пожалуйста, введите URL вашего сервера Ollama.",
+        "description": "Сообщение о статусе с просьбой ввести URL Ollama."
+    },
     "statusFetchingModels": {
         "message": "Получение списка моделей...",
         "description": "Сообщение о статусе при получении моделей."
@@ -126,6 +142,10 @@
     "statusApiKeySaved": {
         "message": "Ключ API сохранен. Получение моделей...",
         "description": "Сообщение о статусе при сохранении ключа API."
+    },
+    "statusOllamaUrlSaved": {
+        "message": "URL Ollama сохранен. Получение моделей...",
+        "description": "Сообщение о статусе при сохранении URL Ollama."
     },
     "statusModelSaved": {
         "message": "Модель '$model$' была сохранена автоматически.",
@@ -271,15 +291,19 @@
         "description": "Надпись для переключателя для включения/выключения перевода выделенного текста на странице."
     },
     "translationPrompt": {
-        "message": "Пожалуйста, переведите следующий текст на $targetLanguage$. Пожалуйста, верните перевод напрямую, без каких-либо объяснений, описаний или дополнительного текста.\\n\\nИсходный текст:\\n\\\"$text$\\\"",
+        "message": "Пожалуйста, переведите следующий текст на $targetLanguage$. Если исходный язык совпадает с целевым языком, пожалуйста, переведите его на $secondTargetLanguage$ вместо этого. Пожалуйста, верните текст перевода напрямую, без каких-либо объяснений, описаний или дополнительного текста. Пожалуйста, возвращайте только один язык за раз.\n\nИсходный текст:\n\"$text$\"",
         "description": "Запрос для API перевода.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
                 "example": "Китайский"
             },
-            "text": {
+            "secondTargetLanguage": {
                 "content": "$2",
+                "example": "Английский"
+            },
+            "text": {
+                "content": "$3",
                 "example": "Привет, мир!"
             }
         }
@@ -293,5 +317,25 @@
                 "example": "Китайский"
             }
         }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "Настройки целевого языка",
+        "description": "Заголовок раздела настроек целевого языка."
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "Язык по умолчанию",
+        "description": "Надпись для выбора языка по умолчанию."
+    },
+    "defaultTargetLanguageHint": {
+        "message": "Эта настройка синхронизирована с настройкой языка на странице всплывающего окна.",
+        "description": "Подсказка, объясняющая настройку языка по умолчанию."
+    },
+    "secondTargetLanguageLabel": {
+        "message": "Второй целевой язык",
+        "description": "Надпись для выбора второго целевого языка."
+    },
+    "secondTargetLanguageHint": {
+        "message": "Дополнительный целевой язык для быстрого переключения.",
+        "description": "Подсказка, объясняющая настройку второго целевого языка."
     }
 }
