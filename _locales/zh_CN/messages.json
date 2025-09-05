@@ -337,5 +337,45 @@
     "secondTargetLanguageHint": {
         "message": "用于快速切换的额外目标语言。",
         "description": "解释第二目标语言设置的提示。"
+    },
+    "contextMenuTranslate": {
+        "message": "LLM 翻译",
+        "description": "右键菜单翻译标题。"
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "翻译为 $targetLanguage$",
+        "description": "右键菜单项：翻译为主要目标语言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "简体中文"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "翻译为 $targetLanguage$",
+        "description": "右键菜单项：翻译为次要目标语言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "打开设置",
+        "description": "右键菜单项：打开设置。"
+    },
+    "originalText": {
+        "message": "原文",
+        "description": "翻译弹窗中原文的标签。"
+    },
+    "translationResult": {
+        "message": "翻译结果",
+        "description": "翻译弹窗中翻译结果的标签。"
+    },
+    "copyTranslation": {
+        "message": "复制翻译结果",
+        "description": "复制翻译结果按钮的提示文字。"
     }
 }

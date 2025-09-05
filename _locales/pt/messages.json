@@ -167,125 +167,363 @@
             }
         }
     },
-    "langEnglish": { "message": "Inglês" },
-    "langSimplifiedChinese": { "message": "Chinês Simplificado" },
-    "langTraditionalChinese": { "message": "Chinês Tradicional" },
-    "langFrench": { "message": "Francês" },
-    "langSpanish": { "message": "Espanhol" },
-    "langArabic": { "message": "Árabe" },
-    "langRussian": { "message": "Russo" },
-    "langPortuguese": { "message": "Português" },
-    "langGerman": { "message": "Alemão" },
-    "langItalian": { "message": "Italiano" },
-    "langDutch": { "message": "Holandês" },
-    "langDanish": { "message": "Dinamarquês" },
-    "langIrish": { "message": "Irlandês" },
-    "langWelsh": { "message": "Galês" },
-    "langFinnish": { "message": "Finlandês" },
-    "langIcelandic": { "message": "Islandês" },
-    "langSwedish": { "message": "Sueco" },
-    "langNorwegianNynorsk": { "message": "Norueguês Nynorsk" },
-    "langNorwegianBokmal": { "message": "Norueguês Bokmål" },
-    "langJapanese": { "message": "Japonês" },
-    "langKorean": { "message": "Coreano" },
-    "langVietnamese": { "message": "Vietnamita" },
-    "langThai": { "message": "Tailandês" },
-    "langIndonesian": { "message": "Indonésio" },
-    "langMalay": { "message": "Malaio" },
-    "langBurmese": { "message": "Birmanês" },
-    "langTagalog": { "message": "Tagalo" },
-    "langKhmer": { "message": "Khmer" },
-    "langLao": { "message": "Laosiano" },
-    "langHindi": { "message": "Hindi" },
-    "langBengali": { "message": "Bengali" },
-    "langUrdu": { "message": "Urdu" },
-    "langNepali": { "message": "Nepalês" },
-    "langHebrew": { "message": "Hebraico" },
-    "langTurkish": { "message": "Turco" },
-    "langPersian": { "message": "Persa" },
-    "langPolish": { "message": "Polonês" },
-    "langUkrainian": { "message": "Ucraniano" },
-    "langCzech": { "message": "Tcheco" },
-    "langRomanian": { "message": "Romeno" },
-    "langBulgarian": { "message": "Búlgaro" },
-    "langSlovak": { "message": "Eslovaco" },
-    "langHungarian": { "message": "Húngaro" },
-    "langSlovenian": { "message": "Esloveno" },
-    "langLatvian": { "message": "Letão" },
-    "langEstonian": { "message": "Estoniano" },
-    "langLithuanian": { "message": "Lituano" },
-    "langBelarusian": { "message": "Bielorrusso" },
-    "langGreek": { "message": "Grego" },
-    "langCroatian": { "message": "Croata" },
-    "langMacedonian": { "message": "Macedônio" },
-    "langMaltese": { "message": "Maltês" },
-    "langSerbian": { "message": "Sérvio" },
-    "langBosnian": { "message": "Bósnio" },
-    "langGeorgian": { "message": "Georgiano" },
-    "langArmenian": { "message": "Armênio" },
-    "langNorthAzerbaijani": { "message": "Azerbaijano do Norte" },
-    "langKazakh": { "message": "Cazaque" },
-    "langNorthernUzbek": { "message": "Uzbeque do Norte" },
-    "langTajik": { "message": "Tadjique" },
-    "langSwahili": { "message": "Suaíli" },
-    "langAfrikaans": { "message": "Africâner" },
-    "langCantonese": { "message": "Cantonês" },
-    "langLuxembourgish": { "message": "Luxemburguês" },
-    "langLimburgish": { "message": "Limburguês" },
-    "langCatalan": { "message": "Catalão" },
-    "langGalician": { "message": "Galego" },
-    "langAsturian": { "message": "Asturiano" },
-    "langBasque": { "message": "Basco" },
-    "langOccitan": { "message": "Occitano" },
-    "langVenetian": { "message": "Vêneto" },
-    "langSardinian": { "message": "Sardo" },
-    "langSicilian": { "message": "Siciliano" },
-    "langFriulian": { "message": "Friulano" },
-    "langLombard": { "message": "Lombardo" },
-    "langLigurian": { "message": "Lígure" },
-    "langFaroese": { "message": "Faroês" },
-    "langToskAlbanian": { "message": "Albanês Tosk" },
-    "langSilesian": { "message": "Silesiano" },
-    "langBashkir": { "message": "Bashkir" },
-    "langTatar": { "message": "Tártaro" },
-    "langMesopotamianArabic": { "message": "Árabe Mesopotâmico" },
-    "langNajdiArabic": { "message": "Árabe Najdi" },
-    "langEgyptianArabic": { "message": "Árabe Egípcio" },
-    "langLevantineArabic": { "message": "Árabe Levantino" },
-    "langTaizziAdeniArabic": { "message": "Árabe de Ta'izzi-Adeni" },
-    "langDari": { "message": "Dari" },
-    "langTunisianArabic": { "message": "Árabe Tunisiano" },
-    "langMoroccanArabic": { "message": "Árabe Marroquino" },
-    "langKabuverdianu": { "message": "Kabuverdianu" },
-    "langTokPisin": { "message": "Tok Pisin" },
-    "langEasternYiddish": { "message": "Iídiche Oriental" },
-    "langSindhi": { "message": "Sindi" },
-    "langSinhala": { "message": "Cingalês" },
-    "langTelugu": { "message": "Telugu" },
-    "langPunjabi": { "message": "Punjabi" },
-    "langTamil": { "message": "Tâmil" },
-    "langGujarati": { "message": "Gujarati" },
-    "langMalayalam": { "message": "Malaiala" },
-    "langMarathi": { "message": "Marati" },
-    "langKannada": { "message": "Canarês" },
-    "langMagahi": { "message": "Magahi" },
-    "langOriya": { "message": "Oriya" },
-    "langAwadhi": { "message": "Awadhi" },
-    "langMaithili": { "message": "Maithili" },
-    "langAssamese": { "message": "Assamês" },
-    "langChhattisgarhi": { "message": "Chhattisgarhi" },
-    "langBhojpuri": { "message": "Bhojpuri" },
-    "langMinangkabau": { "message": "Minangkabau" },
-    "langBalinese": { "message": "Balinês" },
-    "langJavanese": { "message": "Javanês" },
-    "langBanjar": { "message": "Banjar" },
-    "langSundanese": { "message": "Sundanês" },
-    "langCebuano": { "message": "Cebuano" },
-    "langPangasinan": { "message": "Pangasinan" },
-    "langIloko": { "message": "Ilocano" },
-    "langWarayPhilippines": { "message": "Waray (Filipinas)" },
-    "langHaitian": { "message": "Haitiano" },
-    "langPapiamento": { "message": "Papiamento" },
+    "langEnglish": {
+        "message": "Inglês"
+    },
+    "langSimplifiedChinese": {
+        "message": "Chinês Simplificado"
+    },
+    "langTraditionalChinese": {
+        "message": "Chinês Tradicional"
+    },
+    "langFrench": {
+        "message": "Francês"
+    },
+    "langSpanish": {
+        "message": "Espanhol"
+    },
+    "langArabic": {
+        "message": "Árabe"
+    },
+    "langRussian": {
+        "message": "Russo"
+    },
+    "langPortuguese": {
+        "message": "Português"
+    },
+    "langGerman": {
+        "message": "Alemão"
+    },
+    "langItalian": {
+        "message": "Italiano"
+    },
+    "langDutch": {
+        "message": "Holandês"
+    },
+    "langDanish": {
+        "message": "Dinamarquês"
+    },
+    "langIrish": {
+        "message": "Irlandês"
+    },
+    "langWelsh": {
+        "message": "Galês"
+    },
+    "langFinnish": {
+        "message": "Finlandês"
+    },
+    "langIcelandic": {
+        "message": "Islandês"
+    },
+    "langSwedish": {
+        "message": "Sueco"
+    },
+    "langNorwegianNynorsk": {
+        "message": "Norueguês Nynorsk"
+    },
+    "langNorwegianBokmal": {
+        "message": "Norueguês Bokmål"
+    },
+    "langJapanese": {
+        "message": "Japonês"
+    },
+    "langKorean": {
+        "message": "Coreano"
+    },
+    "langVietnamese": {
+        "message": "Vietnamita"
+    },
+    "langThai": {
+        "message": "Tailandês"
+    },
+    "langIndonesian": {
+        "message": "Indonésio"
+    },
+    "langMalay": {
+        "message": "Malaio"
+    },
+    "langBurmese": {
+        "message": "Birmanês"
+    },
+    "langTagalog": {
+        "message": "Tagalo"
+    },
+    "langKhmer": {
+        "message": "Khmer"
+    },
+    "langLao": {
+        "message": "Laosiano"
+    },
+    "langHindi": {
+        "message": "Hindi"
+    },
+    "langBengali": {
+        "message": "Bengali"
+    },
+    "langUrdu": {
+        "message": "Urdu"
+    },
+    "langNepali": {
+        "message": "Nepalês"
+    },
+    "langHebrew": {
+        "message": "Hebraico"
+    },
+    "langTurkish": {
+        "message": "Turco"
+    },
+    "langPersian": {
+        "message": "Persa"
+    },
+    "langPolish": {
+        "message": "Polonês"
+    },
+    "langUkrainian": {
+        "message": "Ucraniano"
+    },
+    "langCzech": {
+        "message": "Tcheco"
+    },
+    "langRomanian": {
+        "message": "Romeno"
+    },
+    "langBulgarian": {
+        "message": "Búlgaro"
+    },
+    "langSlovak": {
+        "message": "Eslovaco"
+    },
+    "langHungarian": {
+        "message": "Húngaro"
+    },
+    "langSlovenian": {
+        "message": "Esloveno"
+    },
+    "langLatvian": {
+        "message": "Letão"
+    },
+    "langEstonian": {
+        "message": "Estoniano"
+    },
+    "langLithuanian": {
+        "message": "Lituano"
+    },
+    "langBelarusian": {
+        "message": "Bielorrusso"
+    },
+    "langGreek": {
+        "message": "Grego"
+    },
+    "langCroatian": {
+        "message": "Croata"
+    },
+    "langMacedonian": {
+        "message": "Macedônio"
+    },
+    "langMaltese": {
+        "message": "Maltês"
+    },
+    "langSerbian": {
+        "message": "Sérvio"
+    },
+    "langBosnian": {
+        "message": "Bósnio"
+    },
+    "langGeorgian": {
+        "message": "Georgiano"
+    },
+    "langArmenian": {
+        "message": "Armênio"
+    },
+    "langNorthAzerbaijani": {
+        "message": "Azerbaijano do Norte"
+    },
+    "langKazakh": {
+        "message": "Cazaque"
+    },
+    "langNorthernUzbek": {
+        "message": "Uzbeque do Norte"
+    },
+    "langTajik": {
+        "message": "Tadjique"
+    },
+    "langSwahili": {
+        "message": "Suaíli"
+    },
+    "langAfrikaans": {
+        "message": "Africâner"
+    },
+    "langCantonese": {
+        "message": "Cantonês"
+    },
+    "langLuxembourgish": {
+        "message": "Luxemburguês"
+    },
+    "langLimburgish": {
+        "message": "Limburguês"
+    },
+    "langCatalan": {
+        "message": "Catalão"
+    },
+    "langGalician": {
+        "message": "Galego"
+    },
+    "langAsturian": {
+        "message": "Asturiano"
+    },
+    "langBasque": {
+        "message": "Basco"
+    },
+    "langOccitan": {
+        "message": "Occitano"
+    },
+    "langVenetian": {
+        "message": "Vêneto"
+    },
+    "langSardinian": {
+        "message": "Sardo"
+    },
+    "langSicilian": {
+        "message": "Siciliano"
+    },
+    "langFriulian": {
+        "message": "Friulano"
+    },
+    "langLombard": {
+        "message": "Lombardo"
+    },
+    "langLigurian": {
+        "message": "Lígure"
+    },
+    "langFaroese": {
+        "message": "Faroês"
+    },
+    "langToskAlbanian": {
+        "message": "Albanês Tosk"
+    },
+    "langSilesian": {
+        "message": "Silesiano"
+    },
+    "langBashkir": {
+        "message": "Bashkir"
+    },
+    "langTatar": {
+        "message": "Tártaro"
+    },
+    "langMesopotamianArabic": {
+        "message": "Árabe Mesopotâmico"
+    },
+    "langNajdiArabic": {
+        "message": "Árabe Najdi"
+    },
+    "langEgyptianArabic": {
+        "message": "Árabe Egípcio"
+    },
+    "langLevantineArabic": {
+        "message": "Árabe Levantino"
+    },
+    "langTaizziAdeniArabic": {
+        "message": "Árabe de Ta'izzi-Adeni"
+    },
+    "langDari": {
+        "message": "Dari"
+    },
+    "langTunisianArabic": {
+        "message": "Árabe Tunisiano"
+    },
+    "langMoroccanArabic": {
+        "message": "Árabe Marroquino"
+    },
+    "langKabuverdianu": {
+        "message": "Kabuverdianu"
+    },
+    "langTokPisin": {
+        "message": "Tok Pisin"
+    },
+    "langEasternYiddish": {
+        "message": "Iídiche Oriental"
+    },
+    "langSindhi": {
+        "message": "Sindi"
+    },
+    "langSinhala": {
+        "message": "Cingalês"
+    },
+    "langTelugu": {
+        "message": "Telugu"
+    },
+    "langPunjabi": {
+        "message": "Punjabi"
+    },
+    "langTamil": {
+        "message": "Tâmil"
+    },
+    "langGujarati": {
+        "message": "Gujarati"
+    },
+    "langMalayalam": {
+        "message": "Malaiala"
+    },
+    "langMarathi": {
+        "message": "Marati"
+    },
+    "langKannada": {
+        "message": "Canarês"
+    },
+    "langMagahi": {
+        "message": "Magahi"
+    },
+    "langOriya": {
+        "message": "Oriya"
+    },
+    "langAwadhi": {
+        "message": "Awadhi"
+    },
+    "langMaithili": {
+        "message": "Maithili"
+    },
+    "langAssamese": {
+        "message": "Assamês"
+    },
+    "langChhattisgarhi": {
+        "message": "Chhattisgarhi"
+    },
+    "langBhojpuri": {
+        "message": "Bhojpuri"
+    },
+    "langMinangkabau": {
+        "message": "Minangkabau"
+    },
+    "langBalinese": {
+        "message": "Balinês"
+    },
+    "langJavanese": {
+        "message": "Javanês"
+    },
+    "langBanjar": {
+        "message": "Banjar"
+    },
+    "langSundanese": {
+        "message": "Sundanês"
+    },
+    "langCebuano": {
+        "message": "Cebuano"
+    },
+    "langPangasinan": {
+        "message": "Pangasinan"
+    },
+    "langIloko": {
+        "message": "Ilocano"
+    },
+    "langWarayPhilippines": {
+        "message": "Waray (Filipinas)"
+    },
+    "langHaitian": {
+        "message": "Haitiano"
+    },
+    "langPapiamento": {
+        "message": "Papiamento"
+    },
     "selectionTranslateLabel": {
         "message": "Ativar Tradução na Página",
         "description": "Rótulo para o botão de alternância para ativar/desativar a tradução de seleção na página."
@@ -337,5 +575,45 @@
     "secondTargetLanguageHint": {
         "message": "Idioma de destino adicional para alternância rápida.",
         "description": "Dica explicando a configuração do segundo idioma de destino."
+    },
+    "contextMenuTranslate": {
+        "message": "LLM Traduzir",
+        "description": "Context menu title for translation."
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "Traduzir para $targetLanguage$",
+        "description": "Context menu item to translate to primary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "Traduzir para $targetLanguage$",
+        "description": "Context menu item to translate to secondary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "Abrir configurações",
+        "description": "Context menu item to open settings."
+    },
+    "originalText": {
+        "message": "Texto original",
+        "description": "Label for original text in translation popup."
+    },
+    "translationResult": {
+        "message": "Resultado da tradução",
+        "description": "Label for translation result in translation popup."
+    },
+    "copyTranslation": {
+        "message": "Copiar tradução",
+        "description": "Tooltip for copy translation button."
     }
 }

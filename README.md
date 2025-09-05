@@ -13,8 +13,10 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 
 *   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, and **Ollama**), allowing you to freely choose the most suitable model.
 *   **Instant Hover Translation:** Select text on any web page, and a translation icon will appear next to your mouse. Click it to see the translation result in place for a smooth and uninterrupted experience.
+*   **🆕 Context Menu Translation:** Right-click on selected text to access translation options directly from the context menu. Choose between your primary or secondary target language for instant translation in a centered popup window.
 *   **Quick Popup Translation:** Click the browser toolbar icon to quickly enter or paste text for translation in a popup window.
 *   **Smart Auto-fill:** After selecting text, open the popup, and the selected text will be automatically filled into the input box, simplifying the operation.
+*   **One-Click Copy:** Copy translation results instantly with the built-in copy button, complete with visual feedback and multi-language support.
 *   **Secure Local Storage:** All API keys are securely stored in your local browser and are never uploaded.
 *   **Read Aloud and Copy:** In the popup window, you can read the input and output text aloud, and you can also copy the translation result with one click for convenient operation.
 *   **Smart Target Language Settings:** Configure default and second target languages for intelligent translation switching.
@@ -53,6 +55,44 @@ LLM Translate now features intelligent target language management to enhance you
 - **English ↔ Chinese**: Set English as default, Chinese as second target
 - **Spanish ↔ Portuguese**: Set Spanish as default, Portuguese as second target  
 - **German ↔ English**: Set German as default, English as second target
+
+## Translation Methods
+
+LLM Translate offers multiple convenient ways to translate text on web pages:
+
+### 🖱️ **Context Menu Translation (NEW)**
+1. **Select text** on any webpage
+2. **Right-click** to open the context menu
+3. **Choose from translation options:**
+   - "Translate to [Primary Language]" - Uses your default target language
+   - "Translate to [Secondary Language]" - Uses your second target language
+   - "Open Settings" - Quick access to configuration
+4. **View results** in a centered popup with original text and translation
+5. **Copy instantly** using the built-in copy button
+
+**Benefits:**
+- Fastest translation method with minimal clicks
+- Direct access without additional UI elements
+- Dynamic menu labels showing current language settings
+- Professional popup design with copy functionality
+
+### 📍 **Hover Translation**
+1. **Select text** on any webpage
+2. **Translation icon appears** near your selection
+3. **Click the icon** to see translation results
+4. **Copy or interact** with the result as needed
+
+### 🔲 **Popup Translation**
+1. **Click the extension icon** in your browser toolbar
+2. **Enter or paste text** in the input field
+3. **Click translate** to get results
+4. **Use additional features** like text-to-speech
+
+### ⚡ **Smart Features**
+- **Auto-fill**: Selected text automatically fills popup input
+- **Language detection**: Automatically switches between target languages
+- **Copy protection**: Enhanced popup stability for text selection
+- **Keyboard shortcuts**: ESC key to close popups quickly
 
 ## Tech Stack
 

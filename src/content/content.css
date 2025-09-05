@@ -34,3 +34,124 @@
     color: #333;
     display: none; /* 默认隐藏 */
 }
+
+/* 右键菜单翻译弹窗样式 */
+#llm-translate-popover.context-menu-popup {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: block !important;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 0;
+}
+
+/* 弹窗头部 */
+.llm-translate-header {
+    background: #f5f5f5;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.llm-translate-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+.llm-translate-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.llm-translate-close:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* 弹窗内容 */
+.llm-translate-content {
+    padding: 16px;
+}
+
+.llm-translate-original,
+.llm-translate-result {
+    margin-bottom: 12px;
+}
+
+.llm-translate-original:last-child,
+.llm-translate-result:last-child {
+    margin-bottom: 0;
+}
+
+.llm-translate-text {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    user-select: text; /* 确保文本可以选择 */
+    cursor: text;
+}
+
+/* 翻译结果头部样式 */
+.llm-translate-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+/* 复制按钮样式 */
+.llm-translate-copy-btn {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s ease;
+    margin-left: 8px;
+}
+
+.llm-translate-copy-btn:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
+    color: #333;
+}
+
+.llm-translate-copy-btn:active {
+    background: #d0d0d0;
+    transform: translateY(1px);
+}
+
+/* 确保弹窗内的文本选择不会触发关闭 */
+#llm-translate-popover.context-menu-popup * {
+    pointer-events: auto;
+}
+
+/* 增强文本选择体验 */
+.llm-translate-text::selection {
+    background: #b3e5fc;
+    color: #0277bd;
+}

@@ -167,125 +167,363 @@
             }
         }
     },
-    "langEnglish": { "message": "الإنجليزية" },
-    "langSimplifiedChinese": { "message": "الصينية المبسطة" },
-    "langTraditionalChinese": { "message": "الصينية التقليدية" },
-    "langFrench": { "message": "الفرنسية" },
-    "langSpanish": { "message": "الإسبانية" },
-    "langArabic": { "message": "العربية" },
-    "langRussian": { "message": "الروسية" },
-    "langPortuguese": { "message": "البرتغالية" },
-    "langGerman": { "message": "الألمانية" },
-    "langItalian": { "message": "الإيطالية" },
-    "langDutch": { "message": "الهولندية" },
-    "langDanish": { "message": "الدانمركية" },
-    "langIrish": { "message": "الأيرلندية" },
-    "langWelsh": { "message": "الويلزية" },
-    "langFinnish": { "message": "الفنلندية" },
-    "langIcelandic": { "message": "الأيسلندية" },
-    "langSwedish": { "message": "السويدية" },
-    "langNorwegianNynorsk": { "message": "النرويجية نينورسك" },
-    "langNorwegianBokmal": { "message": "النرويجية بوكمال" },
-    "langJapanese": { "message": "اليابانية" },
-    "langKorean": { "message": "الكورية" },
-    "langVietnamese": { "message": "الفيتنامية" },
-    "langThai": { "message": "التايلاندية" },
-    "langIndonesian": { "message": "الإندونيسية" },
-    "langMalay": { "message": "الماليزية" },
-    "langBurmese": { "message": "البورمية" },
-    "langTagalog": { "message": "التاغالوغية" },
-    "langKhmer": { "message": "الخميرية" },
-    "langLao": { "message": "اللاوية" },
-    "langHindi": { "message": "الهندية" },
-    "langBengali": { "message": "البنغالية" },
-    "langUrdu": { "message": "الأردية" },
-    "langNepali": { "message": "النيبالية" },
-    "langHebrew": { "message": "العبرية" },
-    "langTurkish": { "message": "التركية" },
-    "langPersian": { "message": "الفارسية" },
-    "langPolish": { "message": "البولندية" },
-    "langUkrainian": { "message": "الأوكرانية" },
-    "langCzech": { "message": "التشيكية" },
-    "langRomanian": { "message": "الرومانية" },
-    "langBulgarian": { "message": "البلغارية" },
-    "langSlovak": { "message": "السلوفاكية" },
-    "langHungarian": { "message": "المجرية" },
-    "langSlovenian": { "message": "السلوفينية" },
-    "langLatvian": { "message": "اللاتفية" },
-    "langEstonian": { "message": "الإستونية" },
-    "langLithuanian": { "message": "الليتوانية" },
-    "langBelarusian": { "message": "البيلاروسية" },
-    "langGreek": { "message": "اليونانية" },
-    "langCroatian": { "message": "الكرواتية" },
-    "langMacedonian": { "message": "المقدونية" },
-    "langMaltese": { "message": "المالطية" },
-    "langSerbian": { "message": "الصربية" },
-    "langBosnian": { "message": "البوسنية" },
-    "langGeorgian": { "message": "الجورجية" },
-    "langArmenian": { "message": "الأرمينية" },
-    "langNorthAzerbaijani": { "message": "الأذربيجانية الشمالية" },
-    "langKazakh": { "message": "الكازاخستانية" },
-    "langNorthernUzbek": { "message": "الأوزبكية الشمالية" },
-    "langTajik": { "message": "الطاجيكية" },
-    "langSwahili": { "message": "السواحيلية" },
-    "langAfrikaans": { "message": "الأفريكانية" },
-    "langCantonese": { "message": "الكانتونية" },
-    "langLuxembourgish": { "message": "اللوكسمبرجية" },
-    "langLimburgish": { "message": "الليمبورغية" },
-    "langCatalan": { "message": "الكتالونية" },
-    "langGalician": { "message": "الجاليكية" },
-    "langAsturian": { "message": "الأستورية" },
-    "langBasque": { "message": "الباسكية" },
-    "langOccitan": { "message": "الأوكيتانية" },
-    "langVenetian": { "message": "البندقية" },
-    "langSardinian": { "message": "السردينية" },
-    "langSicilian": { "message": "الصقلية" },
-    "langFriulian": { "message": "الفريولية" },
-    "langLombard": { "message": "اللومباردية" },
-    "langLigurian": { "message": "الليغورية" },
-    "langFaroese": { "message": "الفاروية" },
-    "langToskAlbanian": { "message": "الألبانية التوسكية" },
-    "langSilesian": { "message": "السيليزية" },
-    "langBashkir": { "message": "الباشكيرية" },
-    "langTatar": { "message": "التتارية" },
-    "langMesopotamianArabic": { "message": "العربية الرافدينية" },
-    "langNajdiArabic": { "message": "العربية النجدية" },
-    "langEgyptianArabic": { "message": "العربية المصرية" },
-    "langLevantineArabic": { "message": "العربية الشامية" },
-    "langTaizziAdeniArabic": { "message": "العربية التعزية-العدنية" },
-    "langDari": { "message": "الدرية" },
-    "langTunisianArabic": { "message": "العربية التونسية" },
-    "langMoroccanArabic": { "message": "العربية المغربية" },
-    "langKabuverdianu": { "message": "الكابوفيرديانو" },
-    "langTokPisin": { "message": "التوك بيسين" },
-    "langEasternYiddish": { "message": "اليديشية الشرقية" },
-    "langSindhi": { "message": "السندية" },
-    "langSinhala": { "message": "السنهالية" },
-    "langTelugu": { "message": "التيلجو" },
-    "langPunjabi": { "message": "البنجابية" },
-    "langTamil": { "message": "التاميلية" },
-    "langGujarati": { "message": "الغوجاراتية" },
-    "langMalayalam": { "message": "المالايالامية" },
-    "langMarathi": { "message": "الماراثية" },
-    "langKannada": { "message": "الكنادية" },
-    "langMagahi": { "message": "الماجاهية" },
-    "langOriya": { "message": "الأوريا" },
-    "langAwadhi": { "message": "الأوادية" },
-    "langMaithili": { "message": "المايثيلية" },
-    "langAssamese": { "message": "الأسامية" },
-    "langChhattisgarhi": { "message": "التشهاتيسجارية" },
-    "langBhojpuri": { "message": "البوجبورية" },
-    "langMinangkabau": { "message": "المينانغكاباو" },
-    "langBalinese": { "message": "البالية" },
-    "langJavanese": { "message": "الجاوية" },
-    "langBanjar": { "message": "البنجرية" },
-    "langSundanese": { "message": "السوندانية" },
-    "langCebuano": { "message": "السيبوانية" },
-    "langPangasinan": { "message": "البانغاسينانية" },
-    "langIloko": { "message": "الإيلوكانو" },
-    "langWarayPhilippines": { "message": "الواراي (الفلبين)" },
-    "langHaitian": { "message": "الهايتية" },
-    "langPapiamento": { "message": "البابيامنتو" },
+    "langEnglish": {
+        "message": "الإنجليزية"
+    },
+    "langSimplifiedChinese": {
+        "message": "الصينية المبسطة"
+    },
+    "langTraditionalChinese": {
+        "message": "الصينية التقليدية"
+    },
+    "langFrench": {
+        "message": "الفرنسية"
+    },
+    "langSpanish": {
+        "message": "الإسبانية"
+    },
+    "langArabic": {
+        "message": "العربية"
+    },
+    "langRussian": {
+        "message": "الروسية"
+    },
+    "langPortuguese": {
+        "message": "البرتغالية"
+    },
+    "langGerman": {
+        "message": "الألمانية"
+    },
+    "langItalian": {
+        "message": "الإيطالية"
+    },
+    "langDutch": {
+        "message": "الهولندية"
+    },
+    "langDanish": {
+        "message": "الدانمركية"
+    },
+    "langIrish": {
+        "message": "الأيرلندية"
+    },
+    "langWelsh": {
+        "message": "الويلزية"
+    },
+    "langFinnish": {
+        "message": "الفنلندية"
+    },
+    "langIcelandic": {
+        "message": "الأيسلندية"
+    },
+    "langSwedish": {
+        "message": "السويدية"
+    },
+    "langNorwegianNynorsk": {
+        "message": "النرويجية نينورسك"
+    },
+    "langNorwegianBokmal": {
+        "message": "النرويجية بوكمال"
+    },
+    "langJapanese": {
+        "message": "اليابانية"
+    },
+    "langKorean": {
+        "message": "الكورية"
+    },
+    "langVietnamese": {
+        "message": "الفيتنامية"
+    },
+    "langThai": {
+        "message": "التايلاندية"
+    },
+    "langIndonesian": {
+        "message": "الإندونيسية"
+    },
+    "langMalay": {
+        "message": "الماليزية"
+    },
+    "langBurmese": {
+        "message": "البورمية"
+    },
+    "langTagalog": {
+        "message": "التاغالوغية"
+    },
+    "langKhmer": {
+        "message": "الخميرية"
+    },
+    "langLao": {
+        "message": "اللاوية"
+    },
+    "langHindi": {
+        "message": "الهندية"
+    },
+    "langBengali": {
+        "message": "البنغالية"
+    },
+    "langUrdu": {
+        "message": "الأردية"
+    },
+    "langNepali": {
+        "message": "النيبالية"
+    },
+    "langHebrew": {
+        "message": "العبرية"
+    },
+    "langTurkish": {
+        "message": "التركية"
+    },
+    "langPersian": {
+        "message": "الفارسية"
+    },
+    "langPolish": {
+        "message": "البولندية"
+    },
+    "langUkrainian": {
+        "message": "الأوكرانية"
+    },
+    "langCzech": {
+        "message": "التشيكية"
+    },
+    "langRomanian": {
+        "message": "الرومانية"
+    },
+    "langBulgarian": {
+        "message": "البلغارية"
+    },
+    "langSlovak": {
+        "message": "السلوفاكية"
+    },
+    "langHungarian": {
+        "message": "المجرية"
+    },
+    "langSlovenian": {
+        "message": "السلوفينية"
+    },
+    "langLatvian": {
+        "message": "اللاتفية"
+    },
+    "langEstonian": {
+        "message": "الإستونية"
+    },
+    "langLithuanian": {
+        "message": "الليتوانية"
+    },
+    "langBelarusian": {
+        "message": "البيلاروسية"
+    },
+    "langGreek": {
+        "message": "اليونانية"
+    },
+    "langCroatian": {
+        "message": "الكرواتية"
+    },
+    "langMacedonian": {
+        "message": "المقدونية"
+    },
+    "langMaltese": {
+        "message": "المالطية"
+    },
+    "langSerbian": {
+        "message": "الصربية"
+    },
+    "langBosnian": {
+        "message": "البوسنية"
+    },
+    "langGeorgian": {
+        "message": "الجورجية"
+    },
+    "langArmenian": {
+        "message": "الأرمينية"
+    },
+    "langNorthAzerbaijani": {
+        "message": "الأذربيجانية الشمالية"
+    },
+    "langKazakh": {
+        "message": "الكازاخستانية"
+    },
+    "langNorthernUzbek": {
+        "message": "الأوزبكية الشمالية"
+    },
+    "langTajik": {
+        "message": "الطاجيكية"
+    },
+    "langSwahili": {
+        "message": "السواحيلية"
+    },
+    "langAfrikaans": {
+        "message": "الأفريكانية"
+    },
+    "langCantonese": {
+        "message": "الكانتونية"
+    },
+    "langLuxembourgish": {
+        "message": "اللوكسمبرجية"
+    },
+    "langLimburgish": {
+        "message": "الليمبورغية"
+    },
+    "langCatalan": {
+        "message": "الكتالونية"
+    },
+    "langGalician": {
+        "message": "الجاليكية"
+    },
+    "langAsturian": {
+        "message": "الأستورية"
+    },
+    "langBasque": {
+        "message": "الباسكية"
+    },
+    "langOccitan": {
+        "message": "الأوكيتانية"
+    },
+    "langVenetian": {
+        "message": "البندقية"
+    },
+    "langSardinian": {
+        "message": "السردينية"
+    },
+    "langSicilian": {
+        "message": "الصقلية"
+    },
+    "langFriulian": {
+        "message": "الفريولية"
+    },
+    "langLombard": {
+        "message": "اللومباردية"
+    },
+    "langLigurian": {
+        "message": "الليغورية"
+    },
+    "langFaroese": {
+        "message": "الفاروية"
+    },
+    "langToskAlbanian": {
+        "message": "الألبانية التوسكية"
+    },
+    "langSilesian": {
+        "message": "السيليزية"
+    },
+    "langBashkir": {
+        "message": "الباشكيرية"
+    },
+    "langTatar": {
+        "message": "التتارية"
+    },
+    "langMesopotamianArabic": {
+        "message": "العربية الرافدينية"
+    },
+    "langNajdiArabic": {
+        "message": "العربية النجدية"
+    },
+    "langEgyptianArabic": {
+        "message": "العربية المصرية"
+    },
+    "langLevantineArabic": {
+        "message": "العربية الشامية"
+    },
+    "langTaizziAdeniArabic": {
+        "message": "العربية التعزية-العدنية"
+    },
+    "langDari": {
+        "message": "الدرية"
+    },
+    "langTunisianArabic": {
+        "message": "العربية التونسية"
+    },
+    "langMoroccanArabic": {
+        "message": "العربية المغربية"
+    },
+    "langKabuverdianu": {
+        "message": "الكابوفيرديانو"
+    },
+    "langTokPisin": {
+        "message": "التوك بيسين"
+    },
+    "langEasternYiddish": {
+        "message": "اليديشية الشرقية"
+    },
+    "langSindhi": {
+        "message": "السندية"
+    },
+    "langSinhala": {
+        "message": "السنهالية"
+    },
+    "langTelugu": {
+        "message": "التيلجو"
+    },
+    "langPunjabi": {
+        "message": "البنجابية"
+    },
+    "langTamil": {
+        "message": "التاميلية"
+    },
+    "langGujarati": {
+        "message": "الغوجاراتية"
+    },
+    "langMalayalam": {
+        "message": "المالايالامية"
+    },
+    "langMarathi": {
+        "message": "الماراثية"
+    },
+    "langKannada": {
+        "message": "الكنادية"
+    },
+    "langMagahi": {
+        "message": "الماجاهية"
+    },
+    "langOriya": {
+        "message": "الأوريا"
+    },
+    "langAwadhi": {
+        "message": "الأوادية"
+    },
+    "langMaithili": {
+        "message": "المايثيلية"
+    },
+    "langAssamese": {
+        "message": "الأسامية"
+    },
+    "langChhattisgarhi": {
+        "message": "التشهاتيسجارية"
+    },
+    "langBhojpuri": {
+        "message": "البوجبورية"
+    },
+    "langMinangkabau": {
+        "message": "المينانغكاباو"
+    },
+    "langBalinese": {
+        "message": "البالية"
+    },
+    "langJavanese": {
+        "message": "الجاوية"
+    },
+    "langBanjar": {
+        "message": "البنجرية"
+    },
+    "langSundanese": {
+        "message": "السوندانية"
+    },
+    "langCebuano": {
+        "message": "السيبوانية"
+    },
+    "langPangasinan": {
+        "message": "البانغاسينانية"
+    },
+    "langIloko": {
+        "message": "الإيلوكانو"
+    },
+    "langWarayPhilippines": {
+        "message": "الواراي (الفلبين)"
+    },
+    "langHaitian": {
+        "message": "الهايتية"
+    },
+    "langPapiamento": {
+        "message": "البابيامنتو"
+    },
     "selectionTranslateLabel": {
         "message": "تمكين الترجمة على الصفحة",
         "description": "تسمية مفتاح التبديل لتمكين/تعطيل ترجمة التحديد على الصفحة."
@@ -337,5 +575,45 @@
     "secondTargetLanguageHint": {
         "message": "لغة مستهدفة إضافية للتبديل السريع.",
         "description": "تلميح يوضح إعداد اللغة المستهدفة الثانية."
+    },
+    "contextMenuTranslate": {
+        "message": "LLM ترجمة",
+        "description": "Context menu title for translation."
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "ترجمة إلى $targetLanguage$",
+        "description": "Context menu item to translate to primary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "ترجمة إلى $targetLanguage$",
+        "description": "Context menu item to translate to secondary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "فتح الإعدادات",
+        "description": "Context menu item to open settings."
+    },
+    "originalText": {
+        "message": "النص الأصلي",
+        "description": "Label for original text in translation popup."
+    },
+    "translationResult": {
+        "message": "نتيجة الترجمة",
+        "description": "Label for translation result in translation popup."
+    },
+    "copyTranslation": {
+        "message": "نسخ الترجمة",
+        "description": "Tooltip for copy translation button."
     }
 }

@@ -337,5 +337,45 @@
     "secondTargetLanguageHint": {
         "message": "Additional target language for quick switching.",
         "description": "Hint explaining the second target language setting."
+    },
+    "contextMenuTranslate": {
+        "message": "LLM Translate",
+        "description": "Context menu title for translation."
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "Translate to $targetLanguage$",
+        "description": "Context menu item to translate to primary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "Translate to $targetLanguage$",
+        "description": "Context menu item to translate to secondary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "Open Settings",
+        "description": "Context menu item to open settings."
+    },
+    "originalText": {
+        "message": "Original",
+        "description": "Label for original text in translation popup."
+    },
+    "translationResult": {
+        "message": "Translation",
+        "description": "Label for translation result in translation popup."
+    },
+    "copyTranslation": {
+        "message": "Copy translation",
+        "description": "Tooltip for copy translation button."
     }
 }
