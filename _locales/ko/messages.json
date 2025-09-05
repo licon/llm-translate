@@ -291,7 +291,7 @@
         "description": "페이지 내 선택 번역을 활성화/비활성화하는 토글 스위치의 라벨입니다."
     },
     "translationPrompt": {
-        "message": "다음 텍스트를 $targetLanguage$로 번역해 주세요. 원본 언어가 대상 언어와 같다면 대신 $secondTargetLanguage$로 번역해 주세요. 설명, 묘사 또는 추가 텍스트 없이 번역 텍스트만 반환해 주세요. 한 번에 하나의 언어만 반환해 주세요.\n\n원본 텍스트:\n\"$text$\"",
+        "message": "<Input> 텍스트를 $targetLanguage$로 번역해 주세요. <Input> 텍스트가 이미 $targetLanguage$인 경우에는 대신 $secondTargetLanguage$로 번역해 주세요. 설명이나 추가 텍스트 없이 번역 결과만 반환해 주세요. 한 번에 하나의 언어만 반환해 주세요.\n\n<input>\n$text$\n</input>",
         "description": "번역 API에 대한 프롬프트입니다.",
         "placeholders": {
             "targetLanguage": {

@@ -87,10 +87,11 @@ function createTranslateIcon(x, y, text) {
         e.preventDefault();
         e.stopPropagation();
         const { targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['targetLanguage', 'secondTargetLanguage']);
-        const primaryTargetLanguage = targetLanguage || 'langSimplifiedChinese';
-        const secondaryTargetLanguage = secondTargetLanguage || 'langEnglish';
-        
-        // Convert language keys to language names
+        // 存储中保存的是语言键（如 langEnglish）。但为了兼容历史数据，做健壮处理。
+        const storedPrimary = targetLanguage || 'langSimplifiedChinese';
+        const storedSecondary = secondTargetLanguage || 'langEnglish';
+
+        // Convert language keys to language names（英文名传给后端提示词使用）
         const langKeyToEnName = {
             'langEnglish': 'English',
             'langSimplifiedChinese': 'Simplified Chinese',
@@ -119,9 +120,34 @@ function createTranslateIcon(x, y, text) {
             'langRomanian': 'Romanian',
             'langSlovak': 'Slovak'
         };
-        
-        const targetLanguageName = langKeyToEnName[primaryTargetLanguage] || 'English';
-        const secondTargetLanguageName = langKeyToEnName[secondaryTargetLanguage] || 'English';
+
+        // 兼容三种输入：语言键、英文名、其他（回退 English）
+        const normalizeToEnName = (input) => {
+            if (!input) return 'English';
+            if (langKeyToEnName[input]) return langKeyToEnName[input];
+            // 常见本地化/别名归一
+            const aliasToEnName = {
+                '中文': 'Simplified Chinese',
+                '简体中文': 'Simplified Chinese',
+                '繁體中文': 'Traditional Chinese',
+                '繁体中文': 'Traditional Chinese',
+                '英语': 'English',
+                '英文': 'English',
+                '日语': 'Japanese',
+                '日本語': 'Japanese',
+                '韩语': 'Korean',
+                '韓國語': 'Korean',
+                '한국어': 'Korean'
+            };
+            if (aliasToEnName[input]) return aliasToEnName[input];
+            // 若已是英文名称（来自旧版本或手动写入），直接使用
+            const values = Object.values(langKeyToEnName);
+            if (values.includes(input)) return input;
+            return 'English';
+        };
+
+        const targetLanguageName = normalizeToEnName(storedPrimary);
+        const secondTargetLanguageName = normalizeToEnName(storedSecondary);
         
         showResultPopover(x, y, chrome.i18n.getMessage('statusTranslating'));
         chrome.runtime.sendMessage({ 

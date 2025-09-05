@@ -291,7 +291,7 @@
         "description": "Beschriftung für den Umschalter zum Aktivieren/Deaktivieren der seiteninternen Auswahlübersetzung."
     },
     "translationPrompt": {
-        "message": "Bitte übersetzen Sie den folgenden Text ins $targetLanguage$. Wenn die Quellsprache dieselbe wie die Zielsprache ist, übersetzen Sie bitte stattdessen ins $secondTargetLanguage$. Bitte geben Sie den Übersetzungstext direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text. Bitte geben Sie nur eine Sprache auf einmal zurück.\n\nOriginaltext:\n\"$text$\"",
+        "message": "Bitte übersetzen Sie den <Input>-Text ins $targetLanguage$. Wenn der <Input>-Text bereits auf $targetLanguage$ ist, übersetzen Sie ihn stattdessen ins $secondTargetLanguage$. Bitte geben Sie den Übersetzungstext direkt zurück, ohne Erklärung, Beschreibung oder zusätzlichen Text. Bitte geben Sie jeweils nur eine Sprache zurück.\n\n<input>\n$text$\n</input>",
         "description": "Aufforderung für die Übersetzungs-API.",
         "placeholders": {
             "targetLanguage": {

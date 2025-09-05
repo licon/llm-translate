@@ -291,12 +291,12 @@
         "description": "Label for the toggle switch to enable/disable in-page selection translation."
     },
     "translationPrompt": {
-        "message": "Please translate the following text into $targetLanguage$. If the source language is the same as the target language, please translate it into $secondTargetLanguage$ instead. Please return the translation text directly, without any explanation, description, or extra text.Please return only one language at a time.\n\nOriginal text:\n\"$text$\"",
+        "message": "Please translate the <Input> text into $targetLanguage$. If the <Input> text is already in $targetLanguage$, please translate it into $secondTargetLanguage$ instead. Please return the translation text directly, without any explanation, description, or extra text. Please return only one language at a time.\n\n<input>\n$text$\n</input>",
         "description": "Prompt for the translation API.",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
-                "example": "Chinese"
+                "example": "Simplified Chinese"
             },
             "secondTargetLanguage": {
                 "content": "$2",
@@ -304,7 +304,7 @@
             },
             "text": {
                 "content": "$3",
-                "example": "Hello, world!"
+                "example": "indie hacker"
             }
         }
     },

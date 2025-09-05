@@ -291,7 +291,7 @@
         "description": "Étiquette du commutateur pour activer/désactiver la traduction de la sélection sur la page."
     },
     "translationPrompt": {
-        "message": "Veuillez traduire le texte suivant en $targetLanguage$. Si la langue source est la même que la langue cible, veuillez la traduire en $secondTargetLanguage$ à la place. Veuillez retourner le texte de traduction directement, sans aucune explication, description ou texte supplémentaire. Veuillez retourner une seule langue à la fois.\n\nTexte original :\n\"$text$\"",
+        "message": "Veuillez traduire le texte <Input> en $targetLanguage$. Si le texte <Input> est déjà en $targetLanguage$, veuillez le traduire en $secondTargetLanguage$ à la place. Veuillez retourner directement le texte de traduction, sans aucune explication, description ni texte supplémentaire. Veuillez ne retourner qu’une seule langue à la fois.\n\n<input>\n$text$\n</input>",
         "description": "Invite pour l'API de traduction.",
         "placeholders": {
             "targetLanguage": {

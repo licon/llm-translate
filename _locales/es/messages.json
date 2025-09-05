@@ -291,7 +291,7 @@
         "description": "Etiqueta para el interruptor para habilitar/deshabilitar la traducción de selección en la página."
     },
     "translationPrompt": {
-        "message": "Por favor, traduce el siguiente texto a $targetLanguage$. Si el idioma de origen es el mismo que el idioma de destino, por favor tradúcelo a $secondTargetLanguage$ en su lugar. Por favor, devuelve el texto de traducción directamente, sin ninguna explicación, descripción o texto extra. Por favor, devuelve solo un idioma a la vez.\n\nTexto original:\n\"$text$\"",
+        "message": "Por favor, traduce el texto de <Input> a $targetLanguage$. Si el texto de <Input> ya está en $targetLanguage$, por favor tradúcelo a $secondTargetLanguage$ en su lugar. Devuelve el texto de la traducción directamente, sin ninguna explicación, descripción ni texto adicional. Devuelve solo un idioma a la vez.\n\n<input>\n$text$\n</input>",
         "description": "Prompt para la API de traducción.",
         "placeholders": {
             "targetLanguage": {

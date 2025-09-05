@@ -291,7 +291,7 @@
         "description": "Rótulo para o botão de alternância para ativar/desativar a tradução de seleção na página."
     },
     "translationPrompt": {
-        "message": "Por favor, traduza o seguinte texto para $targetLanguage$. Se o idioma de origem for o mesmo que o idioma de destino, por favor, traduza-o para $secondTargetLanguage$ em vez disso. Por favor, retorne o texto da tradução diretamente, sem qualquer explicação, descrição ou texto extra. Por favor, retorne apenas um idioma por vez.\n\nTexto original:\n\"$text$\"",
+        "message": "Traduza o texto de <Input> para $targetLanguage$. Se o texto de <Input> já estiver em $targetLanguage$, traduza-o para $secondTargetLanguage$. Retorne o texto da tradução diretamente, sem explicações, descrições ou texto adicional. Retorne apenas um idioma por vez.\n\n<input>\n$text$\n</input>",
         "description": "Prompt para a API de tradução.",
         "placeholders": {
             "targetLanguage": {

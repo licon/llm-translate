@@ -13,7 +13,9 @@ chrome.runtime.onInstalled.addListener(() => {
             siliconflowSelectedModel: '',
             ollamaUrl: 'http://localhost:11434',
             ollamaSelectedModel: '',
-            targetLanguage: '中文'
+            // 使用语言键而不是本地化名称，确保与设置/弹窗保持一致
+            targetLanguage: 'langSimplifiedChinese',
+            secondTargetLanguage: 'langEnglish'
         };
         let itemsToSet = {};
         for (const key in defaults) {
@@ -196,7 +198,6 @@ async function callGeminiAPI(text, apiKey, modelName, targetLanguage, secondTarg
  */
 async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage, secondTargetLanguage) {
     const url = 'https://api.siliconflow.cn/v1/chat/completions';
-    const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
     const userPrompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
 
     const response = await fetch(url, {
@@ -208,7 +209,6 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage, secon
         body: JSON.stringify({
             model: modelName,
             messages: [
-                { role: 'system', content: systemPrompt },
                 { role: 'user', content: userPrompt }
             ],
             max_tokens: 2048,
@@ -229,9 +229,7 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage, secon
  */
 async function callOllamaAPI(text, ollamaUrl, modelName, targetLanguage, secondTargetLanguage) {
     const url = `${ollamaUrl}/api/generate`;
-    const systemPrompt = chrome.i18n.getMessage('systemPrompt', [targetLanguage]);
-    const userPrompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
-    const prompt = `${systemPrompt}\n\n${userPrompt}`;
+    const prompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
     
     const response = await fetch(url, {
         method: 'POST',

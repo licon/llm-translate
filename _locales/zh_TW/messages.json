@@ -1,155 +1,155 @@
 {
     "appName": {
         "message": "LLM Translate",
-        "description": "扩展程序的名称。"
+        "description": "擴充功能的名稱。"
     },
     "appDescription": {
-        "message": "一款支持多种大型语言模型（如 Gemini, Silicon Flow）的AI浏览器翻译插件，提供划词翻译和弹窗翻译功能。",
-        "description": "扩展程序的描述。"
+        "message": "一款支援多種大型語言模型（如 Gemini, Silicon Flow）的 AI 瀏覽器翻譯擴充功能，提供劃詞翻譯與彈出視窗翻譯。",
+        "description": "擴充功能的描述。"
     },
     "popupTitle": {
-        "message": "LLM 翻译",
-        "description": "弹出窗口的标题。"
+        "message": "LLM 翻譯",
+        "description": "彈出視窗的標題。"
     },
     "textInputPlaceholder": {
-        "message": "在此输入文本...",
-        "description": "弹窗中文字输入框的占位符。"
+        "message": "在此輸入文字...",
+        "description": "彈出視窗中文字輸入區的預留位置。"
     },
     "translateButton": {
-        "message": "翻译",
-        "description": "翻译按钮的标签。"
+        "message": "翻譯",
+        "description": "翻譯按鈕的標籤。"
     },
     "settingsLink": {
-        "message": "设置",
-        "description": "指向设置页面的链接文本。"
+        "message": "設定",
+        "description": "前往設定頁面的連結文字。"
     },
     "settingsTitle": {
-        "message": "设置",
-        "description": "设置页的标题。"
+        "message": "設定",
+        "description": "設定頁的標題。"
     },
     "geminiProvider": {
         "message": "Gemini",
-        "description": "Gemini 提供商的标签页标签。"
+        "description": "Gemini 提供商的標籤頁標題。"
     },
     "siliconflowProvider": {
         "message": "Silicon Flow",
-        "description": "Silicon Flow 提供商的标签页标签。"
+        "description": "Silicon Flow 提供商的標籤頁標題。"
     },
     "ollamaProvider": {
         "message": "Ollama",
-        "description": "Ollama 提供商的标签页标签。"
+        "description": "Ollama 提供商的標籤頁標題。"
     },
     "geminiApiKeyLabel": {
-        "message": "Gemini API 密钥",
-        "description": "Gemini API 密钥输入框的标签。"
+        "message": "Gemini API 金鑰",
+        "description": "Gemini API 金鑰輸入欄位的標籤。"
     },
     "siliconflowApiKeyLabel": {
-        "message": "Silicon Flow API 密钥",
-        "description": "Silicon Flow API 密钥输入框的标签。"
+        "message": "Silicon Flow API 金鑰",
+        "description": "Silicon Flow API 金鑰輸入欄位的標籤。"
     },
     "ollamaUrlLabel": {
-        "message": "Ollama 服务器地址",
-        "description": "Ollama URL 输入框的标签。"
+        "message": "Ollama 伺服器 URL",
+        "description": "Ollama URL 輸入欄位的標籤。"
     },
     "getApiKeyLink": {
-        "message": "点我获取",
-        "description": "获取 API 密钥的链接文本。"
+        "message": "取得 API 金鑰",
+        "description": "取得 API 金鑰的連結文字。"
     },
     "getOllamaLink": {
-        "message": "获取 Ollama",
-        "description": "获取 Ollama 的链接文本。"
+        "message": "取得 Ollama",
+        "description": "取得 Ollama 的連結文字。"
     },
     "geminiApiPlaceholder": {
-        "message": "输入您的 Google AI Studio API 密钥",
-        "description": "Gemini API 密钥输入框的占位符。"
+        "message": "輸入您的 Google AI Studio API 金鑰",
+        "description": "Gemini API 金鑰輸入欄位的預留文字。"
     },
     "siliconflowApiPlaceholder": {
-        "message": "输入您的 Silicon Flow API 密钥",
-        "description": "Silicon Flow API 密钥输入框的占位符。"
+        "message": "輸入您的 Silicon Flow API 金鑰",
+        "description": "Silicon Flow API 金鑰輸入欄位的預留文字。"
     },
     "ollamaUrlPlaceholder": {
-        "message": "输入您的 Ollama 服务器地址 (例如: http://localhost:11434)",
-        "description": "Ollama URL 输入框的占位符。"
+        "message": "輸入您的 Ollama 伺服器 URL（例如：http://localhost:11434）",
+        "description": "Ollama URL 輸入欄位的預留文字。"
     },
     "fetchModelsButton": {
-        "message": "获取模型",
-        "description": "获取模型按钮的标签。"
+        "message": "取得模型",
+        "description": "取得模型按鈕的標籤。"
     },
     "modelSelectLabel": {
-        "message": "选择模型",
-        "description": "模型选择下拉框的标签。"
+        "message": "選擇模型",
+        "description": "模型下拉選單的標籤。"
     },
     "geminiModelHint": {
-        "message": "建议选择免费模型，例如 gemma 等。",
-        "description": "选择 Gemini 模型的提示。"
+        "message": "建議選擇免費模型，例如 gemma。",
+        "description": "選擇 Gemini 模型的提示。"
     },
     "siliconflowModelHint": {
-        "message": "建议选择免费模型，例如 qwen 等。",
-        "description": "选择 Silicon Flow 模型的提示。"
+        "message": "建議選擇免費模型，例如 qwen。",
+        "description": "選擇 Silicon Flow 模型的提示。"
     },
     "ollamaModelHint": {
-        "message": "选择您本地安装的任何 Ollama 模型。",
-        "description": "选择 Ollama 模型的提示。"
+        "message": "選擇您在 Ollama 本機已安裝的任一模型。",
+        "description": "選擇 Ollama 模型的提示。"
     },
     "ollamaCorsHint": {
-        "message": "⚠️ 重要提示：使用 Ollama 前，请设置环境变量 OLLAMA_ORIGINS=\"*\" 并重启 Ollama 服务以允许浏览器访问。",
-        "description": "关于设置 Ollama CORS 的提示。"
+        "message": "⚠️ 重要提示：使用 Ollama 前，請設定環境變數 OLLAMA_ORIGINS=\"*\" 並重新啟動 Ollama 服務以允許瀏覽器存取。",
+        "description": "關於設定 Ollama CORS 的提示。"
     },
     "recommendedModelsLink": {
-        "message": "📋 查看各提供商推荐模型",
-        "description": "指向README中推荐模型部分的链接。"
+        "message": "📋 檢視各提供商推薦模型",
+        "description": "連往 README 推薦模型章節。"
     },
     "statusTranslating": {
-        "message": "翻译中...",
-        "description": "正在翻译时的状态消息。"
+        "message": "翻譯中...",
+        "description": "翻譯進行中的狀態訊息。"
     },
     "statusError": {
-        "message": "错误: $message$",
-        "description": "发生错误时的状态消息。",
+        "message": "錯誤：$message$",
+        "description": "發生錯誤時的狀態訊息。",
         "placeholders": {
             "message": {
                 "content": "$1",
-                "example": "API 密钥无效。"
+                "example": "API 金鑰無效。"
             }
         }
     },
     "statusApiKeyNeeded": {
-        "message": "请输入 API 密钥。",
-        "description": "提示用户输入 API 密钥的状态消息。"
+        "message": "請輸入您的 API 金鑰。",
+        "description": "提示使用者輸入 API 金鑰的狀態訊息。"
     },
     "statusOllamaUrlNeeded": {
-        "message": "请输入 Ollama 服务器地址。",
-        "description": "提示用户输入 Ollama 地址的状态消息。"
+        "message": "請輸入您的 Ollama 伺服器 URL。",
+        "description": "提示使用者輸入 Ollama URL 的狀態訊息。"
     },
     "statusFetchingModels": {
-        "message": "正在获取模型列表...",
-        "description": "正在获取模型时的状态消息。"
+        "message": "正在取得模型列表...",
+        "description": "正在取得模型時的狀態訊息。"
     },
     "statusModelsSuccess": {
-        "message": "模型列表获取成功！请选择一个模型。",
-        "description": "成功获取模型时的状态消息。"
+        "message": "模型列表取得成功！請選擇一個模型。",
+        "description": "成功取得模型時的狀態訊息。"
     },
     "statusModelsFailed": {
-        "message": "获取模型失败: $message$",
-        "description": "获取模型失败时的状态消息。",
+        "message": "取得模型失敗：$message$",
+        "description": "取得模型失敗時的狀態訊息。",
         "placeholders": {
             "message": {
                 "content": "$1",
-                "example": "网络错误。"
+                "example": "網路錯誤。"
             }
         }
     },
     "statusApiKeySaved": {
-        "message": "API 密钥已保存。正在获取模型...",
-        "description": "API 密钥已保存时的状态消息。"
+        "message": "API 金鑰已儲存。正在取得模型...",
+        "description": "API 金鑰已儲存時的狀態訊息。"
     },
     "statusOllamaUrlSaved": {
-        "message": "Ollama 地址已保存。正在获取模型...",
-        "description": "Ollama 地址已保存时的状态消息。"
+        "message": "Ollama URL 已儲存。正在取得模型...",
+        "description": "Ollama URL 已儲存時的狀態訊息。"
     },
     "statusModelSaved": {
-        "message": "模型 '$model$' 已自动保存。",
-        "description": "模型已保存时的状态消息。",
+        "message": "模型『$model$』已自動儲存。",
+        "description": "模型已儲存時的狀態訊息。",
         "placeholders": {
             "model": {
                 "content": "$1",
@@ -158,8 +158,8 @@
         }
     },
     "statusProviderSwitched": {
-        "message": "已切换到 $provider$",
-        "description": "切换提供商时的状态消息。",
+        "message": "已切換至 $provider$",
+        "description": "切換提供商時的狀態訊息。",
         "placeholders": {
             "provider": {
                 "content": "$1",
@@ -168,7 +168,7 @@
         }
     },
     "langEnglish": { "message": "English" },
-    "langSimplifiedChinese": { "message": "简体中文" },
+    "langSimplifiedChinese": { "message": "簡體中文" },
     "langTraditionalChinese": { "message": "繁體中文" },
     "langFrench": { "message": "Français" },
     "langSpanish": { "message": "Español" },
@@ -287,16 +287,16 @@
     "langHaitian": { "message": "Kreyòl Ayisyen" },
     "langPapiamento": { "message": "Papiamento" },
     "selectionTranslateLabel": {
-        "message": "开启页面划词翻译",
-        "description": "用于启用/禁用页面划词翻译功能的切换开关的标签。"
+        "message": "開啟頁面劃詞翻譯",
+        "description": "用於啟用/停用頁面劃詞翻譯功能的切換開關標籤。"
     },
     "translationPrompt": {
-        "message": "请将 <Input> 文本翻译成 $targetLanguage$。如果 <Input> 文本已经是 $targetLanguage$，请翻译成 $secondTargetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。请仅返回一种语言的译文。\n\n<input>\n$text$\n</input>",
-        "description": "翻译 API 的提示。",
+        "message": "請將 <Input> 文字翻譯成 $targetLanguage$。如果 <Input> 文字已經是 $targetLanguage$，請改為翻譯成 $secondTargetLanguage$。請直接返回譯文，不要包含任何解釋、說明或多餘的文字。請僅返回一種語言的譯文。\n\n<input>\n$text$\n</input>",
+        "description": "翻譯 API 的提示。",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
-                "example": "简体中文"
+                "example": "繁體中文"
             },
             "secondTargetLanguage": {
                 "content": "$2",
@@ -309,33 +309,35 @@
         }
     },
     "systemPrompt": {
-        "message": "请将以下文本翻译成$targetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。",
-        "description": "翻译 API 的系统提示。",
+        "message": "請將以下文字翻譯成 $targetLanguage$。請直接返回譯文，不要包含任何解釋、說明或多餘的文字。",
+        "description": "翻譯 API 的系統提示。",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
-                "example": "中文"
+                "example": "繁體中文"
             }
         }
     },
     "targetLanguageSettingsTitle": {
-        "message": "目标语言设置",
-        "description": "目标语言设置部分的标题。"
+        "message": "目標語言設定",
+        "description": "目標語言設定區塊的標題。"
     },
     "defaultTargetLanguageLabel": {
-        "message": "默认目标语言",
-        "description": "默认目标语言选择的标签。"
+        "message": "預設目標語言",
+        "description": "預設目標語言選擇的標籤。"
     },
     "defaultTargetLanguageHint": {
-        "message": "此设置与弹窗页面的语言设置同步。",
-        "description": "解释默认目标语言设置的提示。"
+        "message": "此設定與彈出視窗的語言設定同步。",
+        "description": "說明預設目標語言設定的提示。"
     },
     "secondTargetLanguageLabel": {
-        "message": "第二目标语言",
-        "description": "第二目标语言选择的标签。"
+        "message": "第二目標語言",
+        "description": "第二目標語言選擇的標籤。"
     },
     "secondTargetLanguageHint": {
-        "message": "用于快速切换的额外目标语言。",
-        "description": "解释第二目标语言设置的提示。"
+        "message": "用於快速切換的額外目標語言。",
+        "description": "說明第二目標語言設定的提示。"
     }
 }
+
+

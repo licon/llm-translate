@@ -291,7 +291,7 @@
         "description": "ページ内選択翻訳を有効/無効にするためのトグルスイッチのラベル。"
     },
     "translationPrompt": {
-        "message": "次のテキストを$targetLanguage$に翻訳してください。元の言語が目標言語と同じ場合は、代わりに$secondTargetLanguage$に翻訳してください。説明、記述、または余分なテキストなしで、翻訳テキストのみを返してください。一度に1つの言語のみを返してください。\n\n元のテキスト：\n「$text$」",
+        "message": "<Input> のテキストを $targetLanguage$ に翻訳してください。<Input> のテキストが既に $targetLanguage$ の場合は、代わりに $secondTargetLanguage$ に翻訳してください。説明や追加のテキストなしで、翻訳結果のみを返してください。返す言語は常に1つだけにしてください。\n\n<input>\n$text$\n</input>",
         "description": "翻訳APIのプロンプト。",
         "placeholders": {
             "targetLanguage": {
