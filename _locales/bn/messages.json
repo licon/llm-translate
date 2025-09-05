@@ -167,131 +167,369 @@
             }
         }
     },
-    "langEnglish": { "message": "ইংরেজি" },
-    "langSimplifiedChinese": { "message": "সরলীকৃত চীনা" },
-    "langTraditionalChinese": { "message": "ঐতিহ্যবাহী চীনা" },
-    "langFrench": { "message": "ফরাসি" },
-    "langSpanish": { "message": "স্প্যানিশ" },
-    "langArabic": { "message": "আরবি" },
-    "langRussian": { "message": "রাশিয়ান" },
-    "langPortuguese": { "message": "পর্তুগিজ" },
-    "langGerman": { "message": "জার্মান" },
-    "langItalian": { "message": "ইতালীয়" },
-    "langDutch": { "message": "ডাচ" },
-    "langDanish": { "message": "ডেনিশ" },
-    "langIrish": { "message": "আইরিশ" },
-    "langWelsh": { "message": "ওয়েলশ" },
-    "langFinnish": { "message": "ফিনিশ" },
-    "langIcelandic": { "message": "আইসল্যান্ডিক" },
-    "langSwedish": { "message": "সুইডিশ" },
-    "langNorwegianNynorsk": { "message": "নরওয়েজিয়ান নিনর্স্ক" },
-    "langNorwegianBokmal": { "message": "নরওয়েজিয়ান বোকমাল" },
-    "langJapanese": { "message": "জাপানি" },
-    "langKorean": { "message": "কোরিয়ান" },
-    "langVietnamese": { "message": "ভিয়েতনামী" },
-    "langThai": { "message": "থাই" },
-    "langIndonesian": { "message": "ইন্দোনেশিয়ান" },
-    "langMalay": { "message": "মালয়" },
-    "langBurmese": { "message": "বর্মি" },
-    "langTagalog": { "message": "তাগালগ" },
-    "langKhmer": { "message": "খমের" },
-    "langLao": { "message": "লাও" },
-    "langHindi": { "message": "হিন্দি" },
-    "langBengali": { "message": "বাংলা" },
-    "langUrdu": { "message": "উর্দু" },
-    "langNepali": { "message": "নেপালি" },
-    "langHebrew": { "message": "হিব্রু" },
-    "langTurkish": { "message": "তুর্কি" },
-    "langPersian": { "message": "ফার্সি" },
-    "langPolish": { "message": "পোলিশ" },
-    "langUkrainian": { "message": "ইউক্রেনীয়" },
-    "langCzech": { "message": "চেক" },
-    "langRomanian": { "message": "রোমানিয়ান" },
-    "langBulgarian": { "message": "বুলগেরিয়ান" },
-    "langSlovak": { "message": "স্লোভাক" },
-    "langHungarian": { "message": "হাঙ্গেরিয়ান" },
-    "langSlovenian": { "message": "স্লোভেনিয়ান" },
-    "langLatvian": { "message": "লাটভিয়ান" },
-    "langEstonian": { "message": "এস্তোনিয়ান" },
-    "langLithuanian": { "message": "লিথুয়ানিয়ান" },
-    "langBelarusian": { "message": "বেলারুশিয়ান" },
-    "langGreek": { "message": "গ্রিক" },
-    "langCroatian": { "message": "ক্রোয়েশিয়ান" },
-    "langMacedonian": { "message": "ম্যাসেডোনিয়ান" },
-    "langMaltese": { "message": "মাল্টিজ" },
-    "langSerbian": { "message": "সার্বিয়ান" },
-    "langBosnian": { "message": "বসনিয়ান" },
-    "langGeorgian": { "message": "জর্জিয়ান" },
-    "langArmenian": { "message": "আর্মেনিয়ান" },
-    "langNorthAzerbaijani": { "message": "উত্তর আজারবাইজানি" },
-    "langKazakh": { "message": "কাজাখ" },
-    "langNorthernUzbek": { "message": "উত্তর উজবেক" },
-    "langTajik": { "message": "তাজিক" },
-    "langSwahili": { "message": "সোয়াহিলি" },
-    "langAfrikaans": { "message": "আফ্রিকান্স" },
-    "langCantonese": { "message": "ক্যান্টনিজ" },
-    "langLuxembourgish": { "message": "লাক্সেমবার্গিশ" },
-    "langLimburgish": { "message": "লিম্বুর্গিশ" },
-    "langCatalan": { "message": "কাতালান" },
-    "langGalician": { "message": "গ্যালিসিয়ান" },
-    "langAsturian": { "message": "আস্তুরিয়ান" },
-    "langBasque": { "message": "বাস্ক" },
-    "langOccitan": { "message": "অক্সিটান" },
-    "langVenetian": { "message": "ভেনিসিয়ান" },
-    "langSardinian": { "message": "সার্ডিনিয়ান" },
-    "langSicilian": { "message": "সিসিলিয়ান" },
-    "langFriulian": { "message": "ফ্রিউলিয়ান" },
-    "langLombard": { "message": "লম্বার্ড" },
-    "langLigurian": { "message": "লিগুরিয়ান" },
-    "langFaroese": { "message": "ফ্যারোইজ" },
-    "langToskAlbanian": { "message": "তস্ক আলবেনিয়ান" },
-    "langSilesian": { "message": "সাইলেসিয়ান" },
-    "langBashkir": { "message": "বাশকির" },
-    "langTatar": { "message": "তাতার" },
-    "langMesopotamianArabic": { "message": "মেসোপটেমিয়ান আরবি" },
-    "langNajdiArabic": { "message": "নাজদি আরবি" },
-    "langEgyptianArabic": { "message": "মিশরীয় আরবি" },
-    "langLevantineArabic": { "message": "লেভানটাইন আরবি" },
-    "langTaizziAdeniArabic": { "message": "তাইজি-আদেনী আরবি" },
-    "langDari": { "message": "দারি" },
-    "langTunisianArabic": { "message": "তিউনিসিয়ান আরবি" },
-    "langMoroccanArabic": { "message": "মরোক্কান আরবি" },
-    "langKabuverdianu": { "message": "কাবুভেরদিয়ানু" },
-    "langTokPisin": { "message": "টোক পিসিন" },
-    "langEasternYiddish": { "message": "পূর্ব ইদ্দিশ" },
-    "langSindhi": { "message": "সিন্ধি" },
-    "langSinhala": { "message": "সিংহলি" },
-    "langTelugu": { "message": "তেলুগু" },
-    "langPunjabi": { "message": "পাঞ্জাবি" },
-    "langTamil": { "message": "তামিল" },
-    "langGujarati": { "message": "গুজরাটি" },
-    "langMalayalam": { "message": "মালায়ালম" },
-    "langMarathi": { "message": "মারাঠি" },
-    "langKannada": { "message": "কন্নড়" },
-    "langMagahi": { "message": "মাগাহি" },
-    "langOriya": { "message": "ওড়িয়া" },
-    "langAwadhi": { "message": " অবধি" },
-    "langMaithili": { "message": "মৈথিলী" },
-    "langAssamese": { "message": "অসমীয়া" },
-    "langChhattisgarhi": { "message": "ছত্তিশগড়ী" },
-    "langBhojpuri": { "message": "ভোজপুরি" },
-    "langMinangkabau": { "message": "মিনাংকাবাউ" },
-    "langBalinese": { "message": "বালিনিজ" },
-    "langJavanese": { "message": "জাভানিজ" },
-    "langBanjar": { "message": "বানজার" },
-    "langSundanese": { "message": "সুদানিজ" },
-    "langCebuano": { "message": "সেবুয়ানো" },
-    "langPangasinan": { "message": "পাঙ্গাসিনান" },
-    "langIloko": { "message": "ইলোকো" },
-    "langWarayPhilippines": { "message": "ওয়ারে (ফিলিপাইন)" },
-    "langHaitian": { "message": "হাইতিয়ান" },
-    "langPapiamento": { "message": "পাপিয়ামেন্টো" },
+    "langEnglish": {
+        "message": "ইংরেজি"
+    },
+    "langSimplifiedChinese": {
+        "message": "সরলীকৃত চীনা"
+    },
+    "langTraditionalChinese": {
+        "message": "ঐতিহ্যবাহী চীনা"
+    },
+    "langFrench": {
+        "message": "ফরাসি"
+    },
+    "langSpanish": {
+        "message": "স্প্যানিশ"
+    },
+    "langArabic": {
+        "message": "আরবি"
+    },
+    "langRussian": {
+        "message": "রাশিয়ান"
+    },
+    "langPortuguese": {
+        "message": "পর্তুগিজ"
+    },
+    "langGerman": {
+        "message": "জার্মান"
+    },
+    "langItalian": {
+        "message": "ইতালীয়"
+    },
+    "langDutch": {
+        "message": "ডাচ"
+    },
+    "langDanish": {
+        "message": "ডেনিশ"
+    },
+    "langIrish": {
+        "message": "আইরিশ"
+    },
+    "langWelsh": {
+        "message": "ওয়েলশ"
+    },
+    "langFinnish": {
+        "message": "ফিনিশ"
+    },
+    "langIcelandic": {
+        "message": "আইসল্যান্ডিক"
+    },
+    "langSwedish": {
+        "message": "সুইডিশ"
+    },
+    "langNorwegianNynorsk": {
+        "message": "নরওয়েজিয়ান নিনর্স্ক"
+    },
+    "langNorwegianBokmal": {
+        "message": "নরওয়েজিয়ান বোকমাল"
+    },
+    "langJapanese": {
+        "message": "জাপানি"
+    },
+    "langKorean": {
+        "message": "কোরিয়ান"
+    },
+    "langVietnamese": {
+        "message": "ভিয়েতনামী"
+    },
+    "langThai": {
+        "message": "থাই"
+    },
+    "langIndonesian": {
+        "message": "ইন্দোনেশিয়ান"
+    },
+    "langMalay": {
+        "message": "মালয়"
+    },
+    "langBurmese": {
+        "message": "বর্মি"
+    },
+    "langTagalog": {
+        "message": "তাগালগ"
+    },
+    "langKhmer": {
+        "message": "খমের"
+    },
+    "langLao": {
+        "message": "লাও"
+    },
+    "langHindi": {
+        "message": "হিন্দি"
+    },
+    "langBengali": {
+        "message": "বাংলা"
+    },
+    "langUrdu": {
+        "message": "উর্দু"
+    },
+    "langNepali": {
+        "message": "নেপালি"
+    },
+    "langHebrew": {
+        "message": "হিব্রু"
+    },
+    "langTurkish": {
+        "message": "তুর্কি"
+    },
+    "langPersian": {
+        "message": "ফার্সি"
+    },
+    "langPolish": {
+        "message": "পোলিশ"
+    },
+    "langUkrainian": {
+        "message": "ইউক্রেনীয়"
+    },
+    "langCzech": {
+        "message": "চেক"
+    },
+    "langRomanian": {
+        "message": "রোমানিয়ান"
+    },
+    "langBulgarian": {
+        "message": "বুলগেরিয়ান"
+    },
+    "langSlovak": {
+        "message": "স্লোভাক"
+    },
+    "langHungarian": {
+        "message": "হাঙ্গেরিয়ান"
+    },
+    "langSlovenian": {
+        "message": "স্লোভেনিয়ান"
+    },
+    "langLatvian": {
+        "message": "লাটভিয়ান"
+    },
+    "langEstonian": {
+        "message": "এস্তোনিয়ান"
+    },
+    "langLithuanian": {
+        "message": "লিথুয়ানিয়ান"
+    },
+    "langBelarusian": {
+        "message": "বেলারুশিয়ান"
+    },
+    "langGreek": {
+        "message": "গ্রিক"
+    },
+    "langCroatian": {
+        "message": "ক্রোয়েশিয়ান"
+    },
+    "langMacedonian": {
+        "message": "ম্যাসেডোনিয়ান"
+    },
+    "langMaltese": {
+        "message": "মাল্টিজ"
+    },
+    "langSerbian": {
+        "message": "সার্বিয়ান"
+    },
+    "langBosnian": {
+        "message": "বসনিয়ান"
+    },
+    "langGeorgian": {
+        "message": "জর্জিয়ান"
+    },
+    "langArmenian": {
+        "message": "আর্মেনিয়ান"
+    },
+    "langNorthAzerbaijani": {
+        "message": "উত্তর আজারবাইজানি"
+    },
+    "langKazakh": {
+        "message": "কাজাখ"
+    },
+    "langNorthernUzbek": {
+        "message": "উত্তর উজবেক"
+    },
+    "langTajik": {
+        "message": "তাজিক"
+    },
+    "langSwahili": {
+        "message": "সোয়াহিলি"
+    },
+    "langAfrikaans": {
+        "message": "আফ্রিকান্স"
+    },
+    "langCantonese": {
+        "message": "ক্যান্টনিজ"
+    },
+    "langLuxembourgish": {
+        "message": "লাক্সেমবার্গিশ"
+    },
+    "langLimburgish": {
+        "message": "লিম্বুর্গিশ"
+    },
+    "langCatalan": {
+        "message": "কাতালান"
+    },
+    "langGalician": {
+        "message": "গ্যালিসিয়ান"
+    },
+    "langAsturian": {
+        "message": "আস্তুরিয়ান"
+    },
+    "langBasque": {
+        "message": "বাস্ক"
+    },
+    "langOccitan": {
+        "message": "অক্সিটান"
+    },
+    "langVenetian": {
+        "message": "ভেনিসিয়ান"
+    },
+    "langSardinian": {
+        "message": "সার্ডিনিয়ান"
+    },
+    "langSicilian": {
+        "message": "সিসিলিয়ান"
+    },
+    "langFriulian": {
+        "message": "ফ্রিউলিয়ান"
+    },
+    "langLombard": {
+        "message": "লম্বার্ড"
+    },
+    "langLigurian": {
+        "message": "লিগুরিয়ান"
+    },
+    "langFaroese": {
+        "message": "ফ্যারোইজ"
+    },
+    "langToskAlbanian": {
+        "message": "তস্ক আলবেনিয়ান"
+    },
+    "langSilesian": {
+        "message": "সাইলেসিয়ান"
+    },
+    "langBashkir": {
+        "message": "বাশকির"
+    },
+    "langTatar": {
+        "message": "তাতার"
+    },
+    "langMesopotamianArabic": {
+        "message": "মেসোপটেমিয়ান আরবি"
+    },
+    "langNajdiArabic": {
+        "message": "নাজদি আরবি"
+    },
+    "langEgyptianArabic": {
+        "message": "মিশরীয় আরবি"
+    },
+    "langLevantineArabic": {
+        "message": "লেভানটাইন আরবি"
+    },
+    "langTaizziAdeniArabic": {
+        "message": "তাইজি-আদেনী আরবি"
+    },
+    "langDari": {
+        "message": "দারি"
+    },
+    "langTunisianArabic": {
+        "message": "তিউনিসিয়ান আরবি"
+    },
+    "langMoroccanArabic": {
+        "message": "মরোক্কান আরবি"
+    },
+    "langKabuverdianu": {
+        "message": "কাবুভেরদিয়ানু"
+    },
+    "langTokPisin": {
+        "message": "টোক পিসিন"
+    },
+    "langEasternYiddish": {
+        "message": "পূর্ব ইদ্দিশ"
+    },
+    "langSindhi": {
+        "message": "সিন্ধি"
+    },
+    "langSinhala": {
+        "message": "সিংহলি"
+    },
+    "langTelugu": {
+        "message": "তেলুগু"
+    },
+    "langPunjabi": {
+        "message": "পাঞ্জাবি"
+    },
+    "langTamil": {
+        "message": "তামিল"
+    },
+    "langGujarati": {
+        "message": "গুজরাটি"
+    },
+    "langMalayalam": {
+        "message": "মালায়ালম"
+    },
+    "langMarathi": {
+        "message": "মারাঠি"
+    },
+    "langKannada": {
+        "message": "কন্নড়"
+    },
+    "langMagahi": {
+        "message": "মাগাহি"
+    },
+    "langOriya": {
+        "message": "ওড়িয়া"
+    },
+    "langAwadhi": {
+        "message": " অবধি"
+    },
+    "langMaithili": {
+        "message": "মৈথিলী"
+    },
+    "langAssamese": {
+        "message": "অসমীয়া"
+    },
+    "langChhattisgarhi": {
+        "message": "ছত্তিশগড়ী"
+    },
+    "langBhojpuri": {
+        "message": "ভোজপুরি"
+    },
+    "langMinangkabau": {
+        "message": "মিনাংকাবাউ"
+    },
+    "langBalinese": {
+        "message": "বালিনিজ"
+    },
+    "langJavanese": {
+        "message": "জাভানিজ"
+    },
+    "langBanjar": {
+        "message": "বানজার"
+    },
+    "langSundanese": {
+        "message": "সুদানিজ"
+    },
+    "langCebuano": {
+        "message": "সেবুয়ানো"
+    },
+    "langPangasinan": {
+        "message": "পাঙ্গাসিনান"
+    },
+    "langIloko": {
+        "message": "ইলোকো"
+    },
+    "langWarayPhilippines": {
+        "message": "ওয়ারে (ফিলিপাইন)"
+    },
+    "langHaitian": {
+        "message": "হাইতিয়ান"
+    },
+    "langPapiamento": {
+        "message": "পাপিয়ামেন্টো"
+    },
     "selectionTranslateLabel": {
         "message": "ইন-পেজ অনুবাদ সক্ষম করুন",
         "description": "ইন-পেজ নির্বাচন অনুবাদ সক্ষম/অক্ষম করার জন্য টগল সুইচের জন্য লেবেল।"
     },
     "translationPrompt": {
-        "message": "অনুগ্রহ করে নিম্নলিখিত পাঠ্যটি $targetLanguage$ এ অনুবাদ করুন। যদি উৎস ভাষা লক্ষ্য ভাষার মতো হয়, অনুগ্রহ করে এটিকে $secondTargetLanguage$ এ অনুবাদ করুন। অনুগ্রহ করে কোনো ব্যাখ্যা, বর্ণনা বা অতিরিক্ত পাঠ্য ছাড়াই সরাসরি অনুবাদ পাঠ্য ফেরত দিন। অনুগ্রহ করে একবারে শুধুমাত্র একটি ভাষা ফেরত দিন।\n\nমূল পাঠ্য:\n\"$text$\"",
+        "message": "অনুগ্রহ করে <Input> পাঠ্যটি $targetLanguage$ এ অনুবাদ করুন। যদি <Input> পাঠ্যটি ইতিমধ্যে $targetLanguage$ এ থাকে, অনুগ্রহ করে সেটিকে $secondTargetLanguage$ এ অনুবাদ করুন। অনুগ্রহ করে কোনো ব্যাখ্যা, বর্ণনা বা অতিরিক্ত পাঠ্য ছাড়াই সরাসরি অনুবাদ পাঠ্য ফেরত দিন। অনুগ্রহ করে একবারে শুধুমাত্র একটি ভাষা ফেরত দিন।\n\n<input>\n$text$\n</input>",
         "description": "অনুবাদ এপিআই-এর জন্য প্রম্পট।",
         "placeholders": {
             "targetLanguage": {
@@ -337,5 +575,45 @@
     "secondTargetLanguageHint": {
         "message": "দ্রুত পরিবর্তনের জন্য অতিরিক্ত লক্ষ্য ভাষা।",
         "description": "দ্বিতীয় লক্ষ্য ভাষা সেটিং ব্যাখ্যা করার জন্য ইঙ্গিত।"
+    },
+    "contextMenuTranslate": {
+        "message": "LLM অনুবাদ",
+        "description": "Context menu title for translation."
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "$targetLanguage$ এ অনুবাদ করুন",
+        "description": "Context menu item to translate to primary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "$targetLanguage$ এ অনুবাদ করুন",
+        "description": "Context menu item to translate to secondary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "সেটিংস খুলুন",
+        "description": "Context menu item to open settings."
+    },
+    "originalText": {
+        "message": "মূল টেক্সট",
+        "description": "Label for original text in translation popup."
+    },
+    "translationResult": {
+        "message": "অনুবাদের ফলাফল",
+        "description": "Label for translation result in translation popup."
+    },
+    "copyTranslation": {
+        "message": "অনুবাদ কপি করুন",
+        "description": "Tooltip for copy translation button."
     }
 }

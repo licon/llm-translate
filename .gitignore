@@ -2,3 +2,6 @@
 .env
 screenshot/
 *.zip
+
+generate-translation-report.js
+translation-reports/

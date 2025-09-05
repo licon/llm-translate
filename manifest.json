@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
   "name": "__MSG_appName__",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "__MSG_appDescription__",
   "default_locale": "en",
   "permissions": [
-    "storage"
+    "storage",
+    "contextMenus"
   ],
   "host_permissions": [
     "<all_urls>"

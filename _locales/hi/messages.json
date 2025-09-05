@@ -167,131 +167,369 @@
             }
         }
     },
-    "langEnglish": { "message": "अंग्रेजी" },
-    "langSimplifiedChinese": { "message": "सरलीकृत चीनी" },
-    "langTraditionalChinese": { "message": "पारंपरिक चीनी" },
-    "langFrench": { "message": "फ्रेंच" },
-    "langSpanish": { "message": "स्पेनिश" },
-    "langArabic": { "message": "अरबी" },
-    "langRussian": { "message": "रूसी" },
-    "langPortuguese": { "message": "पुर्तगाली" },
-    "langGerman": { "message": "जर्मन" },
-    "langItalian": { "message": "इतालवी" },
-    "langDutch": { "message": "डच" },
-    "langDanish": { "message": "डेनिश" },
-    "langIrish": { "message": "आयरिश" },
-    "langWelsh": { "message": "वेल्श" },
-    "langFinnish": { "message": "फिनिश" },
-    "langIcelandic": { "message": "आइसलैंडिक" },
-    "langSwedish": { "message": "स्वीडिश" },
-    "langNorwegianNynorsk": { "message": "नॉर्वेजियन निनोर्स्क" },
-    "langNorwegianBokmal": { "message": "नॉर्वेजियन बोकमाल" },
-    "langJapanese": { "message": "जापानी" },
-    "langKorean": { "message": "कोरियाई" },
-    "langVietnamese": { "message": "वियतनामी" },
-    "langThai": { "message": "थाई" },
-    "langIndonesian": { "message": "इंडोनेशियाई" },
-    "langMalay": { "message": "मलय" },
-    "langBurmese": { "message": "बर्मी" },
-    "langTagalog": { "message": "तागालोग" },
-    "langKhmer": { "message": "खमेर" },
-    "langLao": { "message": "लाओ" },
-    "langHindi": { "message": "हिंदी" },
-    "langBengali": { "message": "बंगाली" },
-    "langUrdu": { "message": "उर्दू" },
-    "langNepali": { "message": "नेपाली" },
-    "langHebrew": { "message": "हिब्रू" },
-    "langTurkish": { "message": "तुर्की" },
-    "langPersian": { "message": "फारसी" },
-    "langPolish": { "message": "पोलिश" },
-    "langUkrainian": { "message": "यूक्रेनी" },
-    "langCzech": { "message": "चेक" },
-    "langRomanian": { "message": "रोमानियाई" },
-    "langBulgarian": { "message": "बल्गेरियाई" },
-    "langSlovak": { "message": "स्लोवाक" },
-    "langHungarian": { "message": "हंगेरियन" },
-    "langSlovenian": { "message": "स्लोवेनियाई" },
-    "langLatvian": { "message": "लातवियाई" },
-    "langEstonian": { "message": "एस्टोनियाई" },
-    "langLithuanian": { "message": "लिथुआनियाई" },
-    "langBelarusian": { "message": "बेलारूसी" },
-    "langGreek": { "message": "यूनानी" },
-    "langCroatian": { "message": "क्रोएशियाई" },
-    "langMacedonian": { "message": "मेसेडोनियन" },
-    "langMaltese": { "message": "मालटिस्" },
-    "langSerbian": { "message": "सर्बियाई" },
-    "langBosnian": { "message": "बोस्नियाई" },
-    "langGeorgian": { "message": "जॉर्जियाई" },
-    "langArmenian": { "message": "अर्मेनियाई" },
-    "langNorthAzerbaijani": { "message": "उत्तरी अज़रबैजानी" },
-    "langKazakh": { "message": "कज़ाख" },
-    "langNorthernUzbek": { "message": "उत्तरी उज़्बेक" },
-    "langTajik": { "message": "ताजिक" },
-    "langSwahili": { "message": "स्वाहिली" },
-    "langAfrikaans": { "message": "अफ्रीकी" },
-    "langCantonese": { "message": "कैंटोनीज़" },
-    "langLuxembourgish": { "message": "लक्ज़मबर्गिश" },
-    "langLimburgish": { "message": "लिंबर्गिश" },
-    "langCatalan": { "message": "कैटलन" },
-    "langGalician": { "message": "गैलिशियन" },
-    "langAsturian": { "message": "अस्तुरियन" },
-    "langBasque": { "message": "बास्क" },
-    "langOccitan": { "message": "ओसीटान" },
-    "langVenetian": { "message": "विनीशियन" },
-    "langSardinian": { "message": "सार्डिनियन" },
-    "langSicilian": { "message": "सिसिलियन" },
-    "langFriulian": { "message": "फ्रूलियन" },
-    "langLombard": { "message": "लोम्बार्ड" },
-    "langLigurian": { "message": "लिगुरियन" },
-    "langFaroese": { "message": "फिरोज़ी" },
-    "langToskAlbanian": { "message": "तोस्क अल्बानियाई" },
-    "langSilesian": { "message": "सिलेसियन" },
-    "langBashkir": { "message": "बशख़िर" },
-    "langTatar": { "message": "तातार" },
-    "langMesopotamianArabic": { "message": "मेसोपोटामियन अरबी" },
-    "langNajdiArabic": { "message": "नज्दी अरबी" },
-    "langEgyptianArabic": { "message": "मिस्र की अरबी" },
-    "langLevantineArabic": { "message": "लेवेंटाइन अरबी" },
-    "langTaizziAdeniArabic": { "message": "ताइज़ी-अदेनी अरबी" },
-    "langDari": { "message": "दारी" },
-    "langTunisianArabic": { "message": "ट्यूनीशियाई अरबी" },
-    "langMoroccanArabic": { "message": "मोरक्कन अरबी" },
-    "langKabuverdianu": { "message": "काबुवेर्दियानु" },
-    "langTokPisin": { "message": "टोक पिसिन" },
-    "langEasternYiddish": { "message": "पूर्वी यिडिश" },
-    "langSindhi": { "message": "सिंधी" },
-    "langSinhala": { "message": "सिंहल" },
-    "langTelugu": { "message": "तेलुगु" },
-    "langPunjabi": { "message": "पंजाबी" },
-    "langTamil": { "message": "तमिल" },
-    "langGujarati": { "message": "गुजराती" },
-    "langMalayalam": { "message": "मलयालम" },
-    "langMarathi": { "message": "मराठी" },
-    "langKannada": { "message": "कन्नड़" },
-    "langMagahi": { "message": "मगही" },
-    "langOriya": { "message": "उड़िया" },
-    "langAwadhi": { "message": "अवधी" },
-    "langMaithili": { "message": "मैथिली" },
-    "langAssamese": { "message": "असमिया" },
-    "langChhattisgarhi": { "message": "छत्तीसगढ़ी" },
-    "langBhojpuri": { "message": "भोजपुरी" },
-    "langMinangkabau": { "message": "मिनांगकाबाउ" },
-    "langBalinese": { "message": "बालीनीज़" },
-    "langJavanese": { "message": "जावानीस" },
-    "langBanjar": { "message": "बंजार" },
-    "langSundanese": { "message": "सुंडानी" },
-    "langCebuano": { "message": "सिबुआनो" },
-    "langPangasinan": { "message": "पंगासिनन" },
-    "langIloko": { "message": "इलोको" },
-    "langWarayPhilippines": { "message": "वाराय (फिलीपींस)" },
-    "langHaitian": { "message": "हाईटियन" },
-    "langPapiamento": { "message": "पापियामेंटो" },
+    "langEnglish": {
+        "message": "अंग्रेजी"
+    },
+    "langSimplifiedChinese": {
+        "message": "सरलीकृत चीनी"
+    },
+    "langTraditionalChinese": {
+        "message": "पारंपरिक चीनी"
+    },
+    "langFrench": {
+        "message": "फ्रेंच"
+    },
+    "langSpanish": {
+        "message": "स्पेनिश"
+    },
+    "langArabic": {
+        "message": "अरबी"
+    },
+    "langRussian": {
+        "message": "रूसी"
+    },
+    "langPortuguese": {
+        "message": "पुर्तगाली"
+    },
+    "langGerman": {
+        "message": "जर्मन"
+    },
+    "langItalian": {
+        "message": "इतालवी"
+    },
+    "langDutch": {
+        "message": "डच"
+    },
+    "langDanish": {
+        "message": "डेनिश"
+    },
+    "langIrish": {
+        "message": "आयरिश"
+    },
+    "langWelsh": {
+        "message": "वेल्श"
+    },
+    "langFinnish": {
+        "message": "फिनिश"
+    },
+    "langIcelandic": {
+        "message": "आइसलैंडिक"
+    },
+    "langSwedish": {
+        "message": "स्वीडिश"
+    },
+    "langNorwegianNynorsk": {
+        "message": "नॉर्वेजियन निनोर्स्क"
+    },
+    "langNorwegianBokmal": {
+        "message": "नॉर्वेजियन बोकमाल"
+    },
+    "langJapanese": {
+        "message": "जापानी"
+    },
+    "langKorean": {
+        "message": "कोरियाई"
+    },
+    "langVietnamese": {
+        "message": "वियतनामी"
+    },
+    "langThai": {
+        "message": "थाई"
+    },
+    "langIndonesian": {
+        "message": "इंडोनेशियाई"
+    },
+    "langMalay": {
+        "message": "मलय"
+    },
+    "langBurmese": {
+        "message": "बर्मी"
+    },
+    "langTagalog": {
+        "message": "तागालोग"
+    },
+    "langKhmer": {
+        "message": "खमेर"
+    },
+    "langLao": {
+        "message": "लाओ"
+    },
+    "langHindi": {
+        "message": "हिंदी"
+    },
+    "langBengali": {
+        "message": "बंगाली"
+    },
+    "langUrdu": {
+        "message": "उर्दू"
+    },
+    "langNepali": {
+        "message": "नेपाली"
+    },
+    "langHebrew": {
+        "message": "हिब्रू"
+    },
+    "langTurkish": {
+        "message": "तुर्की"
+    },
+    "langPersian": {
+        "message": "फारसी"
+    },
+    "langPolish": {
+        "message": "पोलिश"
+    },
+    "langUkrainian": {
+        "message": "यूक्रेनी"
+    },
+    "langCzech": {
+        "message": "चेक"
+    },
+    "langRomanian": {
+        "message": "रोमानियाई"
+    },
+    "langBulgarian": {
+        "message": "बल्गेरियाई"
+    },
+    "langSlovak": {
+        "message": "स्लोवाक"
+    },
+    "langHungarian": {
+        "message": "हंगेरियन"
+    },
+    "langSlovenian": {
+        "message": "स्लोवेनियाई"
+    },
+    "langLatvian": {
+        "message": "लातवियाई"
+    },
+    "langEstonian": {
+        "message": "एस्टोनियाई"
+    },
+    "langLithuanian": {
+        "message": "लिथुआनियाई"
+    },
+    "langBelarusian": {
+        "message": "बेलारूसी"
+    },
+    "langGreek": {
+        "message": "यूनानी"
+    },
+    "langCroatian": {
+        "message": "क्रोएशियाई"
+    },
+    "langMacedonian": {
+        "message": "मेसेडोनियन"
+    },
+    "langMaltese": {
+        "message": "मालटिस्"
+    },
+    "langSerbian": {
+        "message": "सर्बियाई"
+    },
+    "langBosnian": {
+        "message": "बोस्नियाई"
+    },
+    "langGeorgian": {
+        "message": "जॉर्जियाई"
+    },
+    "langArmenian": {
+        "message": "अर्मेनियाई"
+    },
+    "langNorthAzerbaijani": {
+        "message": "उत्तरी अज़रबैजानी"
+    },
+    "langKazakh": {
+        "message": "कज़ाख"
+    },
+    "langNorthernUzbek": {
+        "message": "उत्तरी उज़्बेक"
+    },
+    "langTajik": {
+        "message": "ताजिक"
+    },
+    "langSwahili": {
+        "message": "स्वाहिली"
+    },
+    "langAfrikaans": {
+        "message": "अफ्रीकी"
+    },
+    "langCantonese": {
+        "message": "कैंटोनीज़"
+    },
+    "langLuxembourgish": {
+        "message": "लक्ज़मबर्गिश"
+    },
+    "langLimburgish": {
+        "message": "लिंबर्गिश"
+    },
+    "langCatalan": {
+        "message": "कैटलन"
+    },
+    "langGalician": {
+        "message": "गैलिशियन"
+    },
+    "langAsturian": {
+        "message": "अस्तुरियन"
+    },
+    "langBasque": {
+        "message": "बास्क"
+    },
+    "langOccitan": {
+        "message": "ओसीटान"
+    },
+    "langVenetian": {
+        "message": "विनीशियन"
+    },
+    "langSardinian": {
+        "message": "सार्डिनियन"
+    },
+    "langSicilian": {
+        "message": "सिसिलियन"
+    },
+    "langFriulian": {
+        "message": "फ्रूलियन"
+    },
+    "langLombard": {
+        "message": "लोम्बार्ड"
+    },
+    "langLigurian": {
+        "message": "लिगुरियन"
+    },
+    "langFaroese": {
+        "message": "फिरोज़ी"
+    },
+    "langToskAlbanian": {
+        "message": "तोस्क अल्बानियाई"
+    },
+    "langSilesian": {
+        "message": "सिलेसियन"
+    },
+    "langBashkir": {
+        "message": "बशख़िर"
+    },
+    "langTatar": {
+        "message": "तातार"
+    },
+    "langMesopotamianArabic": {
+        "message": "मेसोपोटामियन अरबी"
+    },
+    "langNajdiArabic": {
+        "message": "नज्दी अरबी"
+    },
+    "langEgyptianArabic": {
+        "message": "मिस्र की अरबी"
+    },
+    "langLevantineArabic": {
+        "message": "लेवेंटाइन अरबी"
+    },
+    "langTaizziAdeniArabic": {
+        "message": "ताइज़ी-अदेनी अरबी"
+    },
+    "langDari": {
+        "message": "दारी"
+    },
+    "langTunisianArabic": {
+        "message": "ट्यूनीशियाई अरबी"
+    },
+    "langMoroccanArabic": {
+        "message": "मोरक्कन अरबी"
+    },
+    "langKabuverdianu": {
+        "message": "काबुवेर्दियानु"
+    },
+    "langTokPisin": {
+        "message": "टोक पिसिन"
+    },
+    "langEasternYiddish": {
+        "message": "पूर्वी यिडिश"
+    },
+    "langSindhi": {
+        "message": "सिंधी"
+    },
+    "langSinhala": {
+        "message": "सिंहल"
+    },
+    "langTelugu": {
+        "message": "तेलुगु"
+    },
+    "langPunjabi": {
+        "message": "पंजाबी"
+    },
+    "langTamil": {
+        "message": "तमिल"
+    },
+    "langGujarati": {
+        "message": "गुजराती"
+    },
+    "langMalayalam": {
+        "message": "मलयालम"
+    },
+    "langMarathi": {
+        "message": "मराठी"
+    },
+    "langKannada": {
+        "message": "कन्नड़"
+    },
+    "langMagahi": {
+        "message": "मगही"
+    },
+    "langOriya": {
+        "message": "उड़िया"
+    },
+    "langAwadhi": {
+        "message": "अवधी"
+    },
+    "langMaithili": {
+        "message": "मैथिली"
+    },
+    "langAssamese": {
+        "message": "असमिया"
+    },
+    "langChhattisgarhi": {
+        "message": "छत्तीसगढ़ी"
+    },
+    "langBhojpuri": {
+        "message": "भोजपुरी"
+    },
+    "langMinangkabau": {
+        "message": "मिनांगकाबाउ"
+    },
+    "langBalinese": {
+        "message": "बालीनीज़"
+    },
+    "langJavanese": {
+        "message": "जावानीस"
+    },
+    "langBanjar": {
+        "message": "बंजार"
+    },
+    "langSundanese": {
+        "message": "सुंडानी"
+    },
+    "langCebuano": {
+        "message": "सिबुआनो"
+    },
+    "langPangasinan": {
+        "message": "पंगासिनन"
+    },
+    "langIloko": {
+        "message": "इलोको"
+    },
+    "langWarayPhilippines": {
+        "message": "वाराय (फिलीपींस)"
+    },
+    "langHaitian": {
+        "message": "हाईटियन"
+    },
+    "langPapiamento": {
+        "message": "पापियामेंटो"
+    },
     "selectionTranslateLabel": {
         "message": "इन-पेज अनुवाद सक्षम करें",
         "description": "इन-पेज चयन अनुवाद को सक्षम/अक्षम करने के लिए टॉगल स्विच के लिए लेबल।"
     },
     "translationPrompt": {
-        "message": "कृपया निम्नलिखित पाठ का $targetLanguage$ में अनुवाद करें। यदि स्रोत भाषा लक्ष्य भाषा के समान है, तो कृपया इसे $secondTargetLanguage$ में अनुवाद करें। कृपया अनुवाद पाठ सीधे लौटाएं, बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के। कृपया एक समय में केवल एक भाषा लौटाएं।\n\nमूल पाठ:\n\"$text$\"",
+        "message": "कृपया <Input> पाठ का $targetLanguage$ में अनुवाद करें। यदि <Input> पाठ पहले से $targetLanguage$ में है, तो कृपया इसे $secondTargetLanguage$ में अनुवाद करें। कृपया बिना किसी स्पष्टीकरण, विवरण या अतिरिक्त पाठ के सीधे अनुवादित पाठ लौटाएं। कृपया एक समय में केवल एक भाषा लौटाएं।\n\n<input>\n$text$\n</input>",
         "description": "अनुवाद एपीआई के लिए संकेत।",
         "placeholders": {
             "targetLanguage": {
@@ -337,5 +575,45 @@
     "secondTargetLanguageHint": {
         "message": "त्वरित स्विचिंग के लिए अतिरिक्त लक्ष्य भाषा।",
         "description": "दूसरी लक्ष्य भाषा सेटिंग को समझाने के लिए संकेत।"
+    },
+    "contextMenuTranslate": {
+        "message": "LLM अनुवाद",
+        "description": "Context menu title for translation."
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "$targetLanguage$ में अनुवाद करें",
+        "description": "Context menu item to translate to primary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "$targetLanguage$ में अनुवाद करें",
+        "description": "Context menu item to translate to secondary target language.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "सेटिंग्स खोलें",
+        "description": "Context menu item to open settings."
+    },
+    "originalText": {
+        "message": "मूल पाठ",
+        "description": "Label for original text in translation popup."
+    },
+    "translationResult": {
+        "message": "अनुवाद परिणाम",
+        "description": "Label for translation result in translation popup."
+    },
+    "copyTranslation": {
+        "message": "अनुवाद कॉपी करें",
+        "description": "Tooltip for copy translation button."
     }
 }

@@ -1,0 +1,619 @@
+{
+    "appName": {
+        "message": "LLM Translate",
+        "description": "擴充功能的名稱。"
+    },
+    "appDescription": {
+        "message": "一款支援多種大型語言模型（如 Gemini, Silicon Flow）的 AI 瀏覽器翻譯擴充功能，提供劃詞翻譯與彈出視窗翻譯。",
+        "description": "擴充功能的描述。"
+    },
+    "popupTitle": {
+        "message": "LLM 翻譯",
+        "description": "彈出視窗的標題。"
+    },
+    "textInputPlaceholder": {
+        "message": "在此輸入文字...",
+        "description": "彈出視窗中文字輸入區的預留位置。"
+    },
+    "translateButton": {
+        "message": "翻譯",
+        "description": "翻譯按鈕的標籤。"
+    },
+    "settingsLink": {
+        "message": "設定",
+        "description": "前往設定頁面的連結文字。"
+    },
+    "settingsTitle": {
+        "message": "設定",
+        "description": "設定頁的標題。"
+    },
+    "geminiProvider": {
+        "message": "Gemini",
+        "description": "Gemini 提供商的標籤頁標題。"
+    },
+    "siliconflowProvider": {
+        "message": "Silicon Flow",
+        "description": "Silicon Flow 提供商的標籤頁標題。"
+    },
+    "ollamaProvider": {
+        "message": "Ollama",
+        "description": "Ollama 提供商的標籤頁標題。"
+    },
+    "geminiApiKeyLabel": {
+        "message": "Gemini API 金鑰",
+        "description": "Gemini API 金鑰輸入欄位的標籤。"
+    },
+    "siliconflowApiKeyLabel": {
+        "message": "Silicon Flow API 金鑰",
+        "description": "Silicon Flow API 金鑰輸入欄位的標籤。"
+    },
+    "ollamaUrlLabel": {
+        "message": "Ollama 伺服器 URL",
+        "description": "Ollama URL 輸入欄位的標籤。"
+    },
+    "getApiKeyLink": {
+        "message": "取得 API 金鑰",
+        "description": "取得 API 金鑰的連結文字。"
+    },
+    "getOllamaLink": {
+        "message": "取得 Ollama",
+        "description": "取得 Ollama 的連結文字。"
+    },
+    "geminiApiPlaceholder": {
+        "message": "輸入您的 Google AI Studio API 金鑰",
+        "description": "Gemini API 金鑰輸入欄位的預留文字。"
+    },
+    "siliconflowApiPlaceholder": {
+        "message": "輸入您的 Silicon Flow API 金鑰",
+        "description": "Silicon Flow API 金鑰輸入欄位的預留文字。"
+    },
+    "ollamaUrlPlaceholder": {
+        "message": "輸入您的 Ollama 伺服器 URL（例如：http://localhost:11434）",
+        "description": "Ollama URL 輸入欄位的預留文字。"
+    },
+    "fetchModelsButton": {
+        "message": "取得模型",
+        "description": "取得模型按鈕的標籤。"
+    },
+    "modelSelectLabel": {
+        "message": "選擇模型",
+        "description": "模型下拉選單的標籤。"
+    },
+    "geminiModelHint": {
+        "message": "建議選擇免費模型，例如 gemma。",
+        "description": "選擇 Gemini 模型的提示。"
+    },
+    "siliconflowModelHint": {
+        "message": "建議選擇免費模型，例如 qwen。",
+        "description": "選擇 Silicon Flow 模型的提示。"
+    },
+    "ollamaModelHint": {
+        "message": "選擇您在 Ollama 本機已安裝的任一模型。",
+        "description": "選擇 Ollama 模型的提示。"
+    },
+    "ollamaCorsHint": {
+        "message": "⚠️ 重要提示：使用 Ollama 前，請設定環境變數 OLLAMA_ORIGINS=\"*\" 並重新啟動 Ollama 服務以允許瀏覽器存取。",
+        "description": "關於設定 Ollama CORS 的提示。"
+    },
+    "recommendedModelsLink": {
+        "message": "📋 檢視各提供商推薦模型",
+        "description": "連往 README 推薦模型章節。"
+    },
+    "statusTranslating": {
+        "message": "翻譯中...",
+        "description": "翻譯進行中的狀態訊息。"
+    },
+    "statusError": {
+        "message": "錯誤：$message$",
+        "description": "發生錯誤時的狀態訊息。",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "API 金鑰無效。"
+            }
+        }
+    },
+    "statusApiKeyNeeded": {
+        "message": "請輸入您的 API 金鑰。",
+        "description": "提示使用者輸入 API 金鑰的狀態訊息。"
+    },
+    "statusOllamaUrlNeeded": {
+        "message": "請輸入您的 Ollama 伺服器 URL。",
+        "description": "提示使用者輸入 Ollama URL 的狀態訊息。"
+    },
+    "statusFetchingModels": {
+        "message": "正在取得模型列表...",
+        "description": "正在取得模型時的狀態訊息。"
+    },
+    "statusModelsSuccess": {
+        "message": "模型列表取得成功！請選擇一個模型。",
+        "description": "成功取得模型時的狀態訊息。"
+    },
+    "statusModelsFailed": {
+        "message": "取得模型失敗：$message$",
+        "description": "取得模型失敗時的狀態訊息。",
+        "placeholders": {
+            "message": {
+                "content": "$1",
+                "example": "網路錯誤。"
+            }
+        }
+    },
+    "statusApiKeySaved": {
+        "message": "API 金鑰已儲存。正在取得模型...",
+        "description": "API 金鑰已儲存時的狀態訊息。"
+    },
+    "statusOllamaUrlSaved": {
+        "message": "Ollama URL 已儲存。正在取得模型...",
+        "description": "Ollama URL 已儲存時的狀態訊息。"
+    },
+    "statusModelSaved": {
+        "message": "模型『$model$』已自動儲存。",
+        "description": "模型已儲存時的狀態訊息。",
+        "placeholders": {
+            "model": {
+                "content": "$1",
+                "example": "gemini-pro"
+            }
+        }
+    },
+    "statusProviderSwitched": {
+        "message": "已切換至 $provider$",
+        "description": "切換提供商時的狀態訊息。",
+        "placeholders": {
+            "provider": {
+                "content": "$1",
+                "example": "Gemini"
+            }
+        }
+    },
+    "langEnglish": {
+        "message": "English"
+    },
+    "langSimplifiedChinese": {
+        "message": "簡體中文"
+    },
+    "langTraditionalChinese": {
+        "message": "繁體中文"
+    },
+    "langFrench": {
+        "message": "Français"
+    },
+    "langSpanish": {
+        "message": "Español"
+    },
+    "langArabic": {
+        "message": "العربية"
+    },
+    "langRussian": {
+        "message": "Русский"
+    },
+    "langPortuguese": {
+        "message": "Português"
+    },
+    "langGerman": {
+        "message": "Deutsch"
+    },
+    "langItalian": {
+        "message": "Italiano"
+    },
+    "langDutch": {
+        "message": "Nederlands"
+    },
+    "langDanish": {
+        "message": "Dansk"
+    },
+    "langIrish": {
+        "message": "Gaeilge"
+    },
+    "langWelsh": {
+        "message": "Cymraeg"
+    },
+    "langFinnish": {
+        "message": "Suomi"
+    },
+    "langIcelandic": {
+        "message": "Íslenska"
+    },
+    "langSwedish": {
+        "message": "Svenska"
+    },
+    "langNorwegianNynorsk": {
+        "message": "Norsk Nynorsk"
+    },
+    "langNorwegianBokmal": {
+        "message": "Norsk Bokmål"
+    },
+    "langJapanese": {
+        "message": "日本語"
+    },
+    "langKorean": {
+        "message": "한국어"
+    },
+    "langVietnamese": {
+        "message": "Tiếng Việt"
+    },
+    "langThai": {
+        "message": "ไทย"
+    },
+    "langIndonesian": {
+        "message": "Bahasa Indonesia"
+    },
+    "langMalay": {
+        "message": "Bahasa Melayu"
+    },
+    "langBurmese": {
+        "message": "မြန်မာဘာသာ"
+    },
+    "langTagalog": {
+        "message": "Tagalog"
+    },
+    "langKhmer": {
+        "message": "ភាសាខ្មែរ"
+    },
+    "langLao": {
+        "message": "ພາສາລາວ"
+    },
+    "langHindi": {
+        "message": "हिन्दी"
+    },
+    "langBengali": {
+        "message": "বাংলা"
+    },
+    "langUrdu": {
+        "message": "اردو"
+    },
+    "langNepali": {
+        "message": "नेपाली"
+    },
+    "langHebrew": {
+        "message": "עברית"
+    },
+    "langTurkish": {
+        "message": "Türkçe"
+    },
+    "langPersian": {
+        "message": "فارسی"
+    },
+    "langPolish": {
+        "message": "Polski"
+    },
+    "langUkrainian": {
+        "message": "Українська"
+    },
+    "langCzech": {
+        "message": "Čeština"
+    },
+    "langRomanian": {
+        "message": "Română"
+    },
+    "langBulgarian": {
+        "message": "Български"
+    },
+    "langSlovak": {
+        "message": "Slovenčina"
+    },
+    "langHungarian": {
+        "message": "Magyar"
+    },
+    "langSlovenian": {
+        "message": "Slovenščina"
+    },
+    "langLatvian": {
+        "message": "Latviešu"
+    },
+    "langEstonian": {
+        "message": "Eesti"
+    },
+    "langLithuanian": {
+        "message": "Lietuvių"
+    },
+    "langBelarusian": {
+        "message": "Беларуская"
+    },
+    "langGreek": {
+        "message": "Ελληνικά"
+    },
+    "langCroatian": {
+        "message": "Hrvatski"
+    },
+    "langMacedonian": {
+        "message": "Македонски"
+    },
+    "langMaltese": {
+        "message": "Malti"
+    },
+    "langSerbian": {
+        "message": "Српски"
+    },
+    "langBosnian": {
+        "message": "Bosanski"
+    },
+    "langGeorgian": {
+        "message": "ქართული"
+    },
+    "langArmenian": {
+        "message": "Հայերեն"
+    },
+    "langNorthAzerbaijani": {
+        "message": "Azərbaycan"
+    },
+    "langKazakh": {
+        "message": "Қазақ"
+    },
+    "langNorthernUzbek": {
+        "message": "O'zbek"
+    },
+    "langTajik": {
+        "message": "Тоҷикӣ"
+    },
+    "langSwahili": {
+        "message": "Kiswahili"
+    },
+    "langAfrikaans": {
+        "message": "Afrikaans"
+    },
+    "langCantonese": {
+        "message": "粵語"
+    },
+    "langLuxembourgish": {
+        "message": "Lëtzebuergesch"
+    },
+    "langLimburgish": {
+        "message": "Limburgs"
+    },
+    "langCatalan": {
+        "message": "Català"
+    },
+    "langGalician": {
+        "message": "Galego"
+    },
+    "langAsturian": {
+        "message": "Asturianu"
+    },
+    "langBasque": {
+        "message": "Euskara"
+    },
+    "langOccitan": {
+        "message": "Occitan"
+    },
+    "langVenetian": {
+        "message": "Vèneto"
+    },
+    "langSardinian": {
+        "message": "Sardu"
+    },
+    "langSicilian": {
+        "message": "Sicilianu"
+    },
+    "langFriulian": {
+        "message": "Furlan"
+    },
+    "langLombard": {
+        "message": "Lombard"
+    },
+    "langLigurian": {
+        "message": "Ligure"
+    },
+    "langFaroese": {
+        "message": "Føroyskt"
+    },
+    "langToskAlbanian": {
+        "message": "Shqip"
+    },
+    "langSilesian": {
+        "message": "Ślōnski"
+    },
+    "langBashkir": {
+        "message": "Башҡорт"
+    },
+    "langTatar": {
+        "message": "Татар"
+    },
+    "langMesopotamianArabic": {
+        "message": "اللهجة العراقية"
+    },
+    "langNajdiArabic": {
+        "message": "اللهجة النجدية"
+    },
+    "langEgyptianArabic": {
+        "message": "اللهجة المصرية"
+    },
+    "langLevantineArabic": {
+        "message": "اللهجة الشامية"
+    },
+    "langTaizziAdeniArabic": {
+        "message": "اللهجة التهامية"
+    },
+    "langDari": {
+        "message": "دری"
+    },
+    "langTunisianArabic": {
+        "message": "اللهجة التونسية"
+    },
+    "langMoroccanArabic": {
+        "message": "اللهجة المغربية"
+    },
+    "langKabuverdianu": {
+        "message": "Kabuverdianu"
+    },
+    "langTokPisin": {
+        "message": "Tok Pisin"
+    },
+    "langEasternYiddish": {
+        "message": "יידיש"
+    },
+    "langSindhi": {
+        "message": "سنڌي"
+    },
+    "langSinhala": {
+        "message": "සිංහල"
+    },
+    "langTelugu": {
+        "message": "తెలుగు"
+    },
+    "langPunjabi": {
+        "message": "ਪੰਜਾਬੀ"
+    },
+    "langTamil": {
+        "message": "தமிழ்"
+    },
+    "langGujarati": {
+        "message": "ગુજરાતી"
+    },
+    "langMalayalam": {
+        "message": "മലയാളം"
+    },
+    "langMarathi": {
+        "message": "मराठी"
+    },
+    "langKannada": {
+        "message": "ಕನ್ನಡ"
+    },
+    "langMagahi": {
+        "message": "मगही"
+    },
+    "langOriya": {
+        "message": "ଓଡ଼ିଆ"
+    },
+    "langAwadhi": {
+        "message": "अवधी"
+    },
+    "langMaithili": {
+        "message": "मैथिली"
+    },
+    "langAssamese": {
+        "message": "অসমীয়া"
+    },
+    "langChhattisgarhi": {
+        "message": "छत्तीसगढ़ी"
+    },
+    "langBhojpuri": {
+        "message": "भोजपुरी"
+    },
+    "langMinangkabau": {
+        "message": "Baso Minangkabau"
+    },
+    "langBalinese": {
+        "message": "Basa Bali"
+    },
+    "langJavanese": {
+        "message": "Basa Jawa"
+    },
+    "langBanjar": {
+        "message": "Bahasa Banjar"
+    },
+    "langSundanese": {
+        "message": "Basa Sunda"
+    },
+    "langCebuano": {
+        "message": "Binisaya"
+    },
+    "langPangasinan": {
+        "message": "Salitan Pangasinan"
+    },
+    "langIloko": {
+        "message": "Pagsasao nga Ilokano"
+    },
+    "langWarayPhilippines": {
+        "message": "Winaray"
+    },
+    "langHaitian": {
+        "message": "Kreyòl Ayisyen"
+    },
+    "langPapiamento": {
+        "message": "Papiamento"
+    },
+    "selectionTranslateLabel": {
+        "message": "開啟頁面劃詞翻譯",
+        "description": "用於啟用/停用頁面劃詞翻譯功能的切換開關標籤。"
+    },
+    "translationPrompt": {
+        "message": "請將 <Input> 文字翻譯成 $targetLanguage$。如果 <Input> 文字已經是 $targetLanguage$，請改為翻譯成 $secondTargetLanguage$。請直接返回譯文，不要包含任何解釋、說明或多餘的文字。請僅返回一種語言的譯文。\n\n<input>\n$text$\n</input>",
+        "description": "翻譯 API 的提示。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "繁體中文"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            },
+            "text": {
+                "content": "$3",
+                "example": "indie hacker"
+            }
+        }
+    },
+    "systemPrompt": {
+        "message": "請將以下文字翻譯成 $targetLanguage$。請直接返回譯文，不要包含任何解釋、說明或多餘的文字。",
+        "description": "翻譯 API 的系統提示。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "繁體中文"
+            }
+        }
+    },
+    "targetLanguageSettingsTitle": {
+        "message": "目標語言設定",
+        "description": "目標語言設定區塊的標題。"
+    },
+    "defaultTargetLanguageLabel": {
+        "message": "預設目標語言",
+        "description": "預設目標語言選擇的標籤。"
+    },
+    "defaultTargetLanguageHint": {
+        "message": "此設定與彈出視窗的語言設定同步。",
+        "description": "說明預設目標語言設定的提示。"
+    },
+    "secondTargetLanguageLabel": {
+        "message": "第二目標語言",
+        "description": "第二目標語言選擇的標籤。"
+    },
+    "secondTargetLanguageHint": {
+        "message": "用於快速切換的額外目標語言。",
+        "description": "說明第二目標語言設定的提示。"
+    },
+    "contextMenuTranslate": {
+        "message": "LLM 翻譯",
+        "description": "右鍵選單翻譯標題。"
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "翻譯為 $targetLanguage$",
+        "description": "右鍵選單項目：翻譯為主要目標語言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "繁體中文"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "翻譯為 $targetLanguage$",
+        "description": "右鍵選單項目：翻譯為次要目標語言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "開啟設定",
+        "description": "右鍵選單項目：開啟設定。"
+    },
+    "originalText": {
+        "message": "原文",
+        "description": "翻譯彈窗中原文的標籤。"
+    },
+    "translationResult": {
+        "message": "翻譯結果",
+        "description": "翻譯彈窗中翻譯結果的標籤。"
+    },
+    "copyTranslation": {
+        "message": "複製翻譯結果",
+        "description": "Tooltip for copy translation button."
+    }
+}

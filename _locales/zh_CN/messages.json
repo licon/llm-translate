@@ -291,12 +291,12 @@
         "description": "用于启用/禁用页面划词翻译功能的切换开关的标签。"
     },
     "translationPrompt": {
-        "message": "请将以下文本翻译成$targetLanguage$。如果原文语言与目标语言相同，请翻译成$secondTargetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字.\n\n原文:\n\"$text$\"",
+        "message": "请将 <Input> 文本翻译成 $targetLanguage$。如果 <Input> 文本已经是 $targetLanguage$，请翻译成 $secondTargetLanguage$。请直接返回译文，不要包含任何解释、说明或多余的文字。请仅返回一种语言的译文。\n\n<input>\n$text$\n</input>",
         "description": "翻译 API 的提示。",
         "placeholders": {
             "targetLanguage": {
                 "content": "$1",
-                "example": "中文"
+                "example": "简体中文"
             },
             "secondTargetLanguage": {
                 "content": "$2",
@@ -304,7 +304,7 @@
             },
             "text": {
                 "content": "$3",
-                "example": "你好，世界！"
+                "example": "indie hacker"
             }
         }
     },
@@ -337,5 +337,45 @@
     "secondTargetLanguageHint": {
         "message": "用于快速切换的额外目标语言。",
         "description": "解释第二目标语言设置的提示。"
+    },
+    "contextMenuTranslate": {
+        "message": "LLM 翻译",
+        "description": "右键菜单翻译标题。"
+    },
+    "contextMenuTranslateToPrimary": {
+        "message": "翻译为 $targetLanguage$",
+        "description": "右键菜单项：翻译为主要目标语言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "简体中文"
+            }
+        }
+    },
+    "contextMenuTranslateToSecondary": {
+        "message": "翻译为 $targetLanguage$",
+        "description": "右键菜单项：翻译为次要目标语言。",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "English"
+            }
+        }
+    },
+    "contextMenuOpenSettings": {
+        "message": "打开设置",
+        "description": "右键菜单项：打开设置。"
+    },
+    "originalText": {
+        "message": "原文",
+        "description": "翻译弹窗中原文的标签。"
+    },
+    "translationResult": {
+        "message": "翻译结果",
+        "description": "翻译弹窗中翻译结果的标签。"
+    },
+    "copyTranslation": {
+        "message": "复制翻译结果",
+        "description": "复制翻译结果按钮的提示文字。"
     }
 }
