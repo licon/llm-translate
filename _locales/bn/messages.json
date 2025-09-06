@@ -615,5 +615,31 @@
     "copyTranslation": {
         "message": "অনুবাদ কপি করুন",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "ছবি অনুবাদ",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "অনুবাদ",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "বাতিল",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "দয়া করে ছবিতে লেখাটি পড়ুন এবং এটিকে $targetLanguage$-এ অনুবাদ করুন। যদি লেখাটি ইতিমধ্যে $targetLanguage$-এ থাকে, তাহলে এটিকে $secondTargetLanguage$-এ অনুবাদ করুন। শুধুমাত্র অনুবাদটি ফেরত দিন, কোনো ব্যাখ্যা ছাড়াই।",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
     }
 }

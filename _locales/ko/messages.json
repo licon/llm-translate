@@ -615,5 +615,31 @@
     "copyTranslation": {
         "message": "번역 복사",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "이미지 번역",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "번역",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "취소",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "이미지의 텍스트를 읽고 $targetLanguage$로 번역해 주세요. 텍스트가 이미 $targetLanguage$인 경우, 대신 $secondTargetLanguage$로 번역해 주세요. 설명 없이 번역만 반환해 주세요.",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
     }
 }

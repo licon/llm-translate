@@ -615,5 +615,31 @@
     "copyTranslation": {
         "message": "Copiar traducción",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "Traducir imagen",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "Traducir",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "Cancelar",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "Por favor lea el texto en la imagen y tradúzcalo al $targetLanguage$. Si el texto ya está en $targetLanguage$, tradúzcalo al $secondTargetLanguage$ en su lugar. Devuelva solo la traducción sin explicaciones.",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
     }
 }

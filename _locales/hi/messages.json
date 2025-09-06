@@ -615,5 +615,31 @@
     "copyTranslation": {
         "message": "अनुवाद कॉपी करें",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "छवि अनुवाद",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "अनुवाद",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "रद्द करें",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "कृपया छवि में पाठ पढ़ें और इसे $targetLanguage$ में अनुवाद करें। यदि पाठ पहले से ही $targetLanguage$ में है, तो इसे $secondTargetLanguage$ में अनुवाद करें। केवल अनुवाद वापस करें, बिना किसी स्पष्टीकरण के।",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
     }
 }

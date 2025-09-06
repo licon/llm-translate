@@ -615,5 +615,31 @@
     "copyTranslation": {
         "message": "複製翻譯結果",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "圖片翻譯",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "翻譯",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "取消",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "請讀取圖片中的文字並將其翻譯成$targetLanguage$。如果文字已經是$targetLanguage$，請改為翻譯成$secondTargetLanguage$。只返回翻譯結果，不要任何解釋。",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
     }
 }
