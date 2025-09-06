@@ -8,7 +8,7 @@
         "description": "拡張機能の説明。"
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "ポップアップウィンドウのタイトル。"
     },
     "textInputPlaceholder": {

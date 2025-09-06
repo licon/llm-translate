@@ -8,7 +8,7 @@
         "description": "扩展程序的描述。"
     },
     "popupTitle": {
-        "message": "LLM 翻译",
+        "message": "EZ Translate",
         "description": "弹出窗口的标题。"
     },
     "textInputPlaceholder": {

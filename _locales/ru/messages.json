@@ -8,7 +8,7 @@
         "description": "Описание расширения."
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "Заголовок всплывающего окна."
     },
     "textInputPlaceholder": {

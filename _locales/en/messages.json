@@ -8,7 +8,7 @@
         "description": "The description of the extension."
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "Title for the popup window."
     },
     "textInputPlaceholder": {

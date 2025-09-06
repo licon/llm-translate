@@ -8,7 +8,7 @@
         "description": "확장 프로그램의 설명입니다."
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "팝업 창의 제목입니다."
     },
     "textInputPlaceholder": {
