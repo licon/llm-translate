@@ -89,6 +89,26 @@ function createContextMenus() {
     });
 }
 
+// --- 快捷键监听 ---
+chrome.commands.onCommand.addListener((command) => {
+    console.log('[LLM-Translate] Command received:', command);
+    
+    if (command === 'capture-selected-area') {
+        // 获取当前活动标签页
+        chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+            if (tabs[0]) {
+                console.log('[LLM-Translate] Sending startScreenshotSelection to tab:', tabs[0].id);
+                // 向当前活动标签页发送开始截图选择的消息
+                chrome.tabs.sendMessage(tabs[0].id, {
+                    type: 'startScreenshotSelection'
+                }).catch((error) => {
+                    console.error('[LLM-Translate] Error sending startScreenshotSelection:', error);
+                });
+            }
+        });
+    }
+});
+
 // --- 消息监听 ---
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'translate') {

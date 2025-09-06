@@ -641,5 +641,9 @@
                 "example": "English"
             }
         }
+    },
+    "shortcutCaptureDescription": {
+        "message": "捕获 > 选择区域",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

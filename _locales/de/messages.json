@@ -641,5 +641,9 @@
                 "example": "English"
             }
         }
+    },
+    "shortcutCaptureDescription": {
+        "message": "Erfassen > Ausgewählter Bereich",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

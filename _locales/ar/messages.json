@@ -641,5 +641,9 @@
                 "example": "English"
             }
         }
+    },
+    "shortcutCaptureDescription": {
+        "message": "التقاط > المنطقة المحددة",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

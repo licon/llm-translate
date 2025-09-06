@@ -641,5 +641,9 @@
                 "example": "English"
             }
         }
+    },
+    "shortcutCaptureDescription": {
+        "message": "캡처 > 선택 영역",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

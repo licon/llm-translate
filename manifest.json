@@ -9,6 +9,15 @@
     "contextMenus",
     "tabs"
   ],
+  "commands": {
+    "capture-selected-area": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Capture > Selected Area"
+    }
+  },
   "host_permissions": [
     "<all_urls>"
   ],

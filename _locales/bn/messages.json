@@ -641,5 +641,9 @@
                 "example": "English"
             }
         }
+    },
+    "shortcutCaptureDescription": {
+        "message": "ক্যাপচার > নির্বাচিত এলাকা",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }
