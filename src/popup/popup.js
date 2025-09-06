@@ -143,6 +143,8 @@ const speakButton = document.getElementById('speak-button');
 const speakInputButton = document.getElementById('speak-input-button');
 const copyButton = document.getElementById('copy-button');
 const selectionTranslateToggle = document.getElementById('selection-translate-toggle');
+const screenshotTranslateButton = document.getElementById('screenshot-translate-button');
+const settingsIconButton = document.getElementById('settings-icon-button');
 
 textInput.addEventListener('input', () => {
     speakInputButton.style.display = textInput.value.trim() ? 'block' : 'none';
@@ -256,4 +258,22 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         textInput.value = request.text;
         translateButton.click();
     }
+});
+
+// --- Screenshot Translate ---
+screenshotTranslateButton.addEventListener('click', async () => {
+    try {
+        // notify content script to start selection overlay
+        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+        if (!tab || !tab.id) return;
+        chrome.tabs.sendMessage(tab.id, { type: 'startScreenshotSelection' });
+        window.close();
+    } catch (e) {
+        console.error('Failed to start screenshot selection:', e);
+    }
+});
+
+settingsIconButton.addEventListener('click', () => {
+    // open options page in new tab
+    chrome.runtime.openOptionsPage();
 });

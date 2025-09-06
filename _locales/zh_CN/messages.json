@@ -377,5 +377,25 @@
     "copyTranslation": {
         "message": "复制翻译结果",
         "description": "复制翻译结果按钮的提示文字。"
+    },
+    "screenshotTranslateButton": {
+        "message": "图片翻译",
+        "description": "弹窗中的截图翻译按钮标签。"
+    },
+    "selectionTranslateButton": {
+        "message": "翻译",
+        "description": "翻译所选图片区域的按钮。"
+    },
+    "cancelButton": {
+        "message": "取消",
+        "description": "取消按钮标签。"
+    },
+    "imageTranslationPrompt": {
+        "message": "请阅读图片中的文字并将其翻译成 $targetLanguage$。如果图片中的文字已经是 $targetLanguage$，请改为翻译成 $secondTargetLanguage$。请直接返回译文，不要包含任何解释。",
+        "description": "用于图片 OCR + 翻译的提示词。",
+        "placeholders": {
+            "targetLanguage": { "content": "$1", "example": "简体中文" },
+            "secondTargetLanguage": { "content": "$2", "example": "English" }
+        }
     }
 }
