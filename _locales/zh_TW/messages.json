@@ -1,10 +1,10 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "擴充功能的名稱。"
     },
     "appDescription": {
-        "message": "一款支援多種大型語言模型（如 Gemini, Silicon Flow）的 AI 瀏覽器翻譯擴充功能，提供劃詞翻譯與彈出視窗翻譯。",
+        "message": "一款免費的AI翻譯插件，使用大語言模型（如 Gemini）進行頁面內、彈窗和截圖翻譯。",
         "description": "擴充功能的描述。"
     },
     "popupTitle": {

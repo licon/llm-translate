@@ -1,10 +1,10 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "اسم الإضافة."
     },
     "appDescription": {
-        "message": "إضافة للترجمة تستخدم نماذج اللغة الكبيرة (مثل Gemini) للترجمة على الصفحة وفي النوافذ المنبثقة.",
+        "message": "إضافة ترجمة ذكية مجانية تستخدم نماذج اللغة الكبيرة (مثل Gemini) للترجمة على الصفحة وفي النوافذ المنبثقة وترجمة الصور.",
         "description": "وصف الإضافة."
     },
     "popupTitle": {

@@ -1,10 +1,10 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "拡張機能の名前。"
     },
     "appDescription": {
-        "message": "LLM（例：Gemini）を使用して、ページ内およびポップアップでの翻訳を行う翻訳プラグイン。",
+        "message": "LLM（例：Gemini）を使用した無料のAI翻訳プラグインで、ページ内、ポップアップ、スクリーンショット翻訳に対応。",
         "description": "拡張機能の説明。"
     },
     "popupTitle": {

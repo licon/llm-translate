@@ -1,10 +1,10 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "एक्सटेंशन का नाम।"
     },
     "appDescription": {
-        "message": "एलएलएम (जैसे, जेमिनी) का उपयोग करके ऑन-पेज और पॉपअप अनुवाद के लिए एक अनुवाद प्लगइन।",
+        "message": "एक मुफ्त AI अनुवाद प्लगइन जो LLM (जैसे Gemini) का उपयोग पेज पर, पॉपअप और स्क्रीनशॉट अनुवाद के लिए करता है।",
         "description": "एक्सटेंशन का विवरण।"
     },
     "popupTitle": {
