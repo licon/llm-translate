@@ -35,6 +35,18 @@
     display: none; /* 默认隐藏 */
 }
 
+/* Screenshot selection overlay */
+#llm-translate-screenshot-overlay {
+    cursor: crosshair;
+}
+
+#llm-translate-selection-toolbar button {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* 右键菜单翻译弹窗样式 */
 #llm-translate-popover.context-menu-popup {
     position: fixed !important;

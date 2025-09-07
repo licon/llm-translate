@@ -14,6 +14,8 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 *   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, and **Ollama**), allowing you to freely choose the most suitable model.
 *   **Instant Hover Translation:** Select text on any web page, and a translation icon will appear next to your mouse. Click it to see the translation result in place for a smooth and uninterrupted experience.
 *   **🆕 Context Menu Translation:** Right-click on selected text to access translation options directly from the context menu. Choose between your primary or secondary target language for instant translation in a centered popup window.
+*   **📸 Screenshot Translation:** Capture any area of the webpage and translate text within images using AI vision capabilities. Perfect for translating text in images, PDFs, or screenshots.
+*   **⌨️ Keyboard Shortcuts:** Use `Ctrl+Shift+S` (Windows/Linux) or `Command+Shift+S` (Mac) to quickly activate screenshot translation mode.
 *   **Quick Popup Translation:** Click the browser toolbar icon to quickly enter or paste text for translation in a popup window.
 *   **Smart Auto-fill:** After selecting text, open the popup, and the selected text will be automatically filled into the input box, simplifying the operation.
 *   **One-Click Copy:** Copy translation results instantly with the built-in copy button, complete with visual feedback and multi-language support.
@@ -26,11 +28,10 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 ## Features to Implement
 *   **Custom Translation Styles:** Allow users to customize translation tone (formal, casual, technical, etc.).
 *   **Translation History:** Track and manage translation history with search and export capabilities.
-*   **Keyboard Shortcuts:** Add customizable keyboard shortcuts for quick translation actions.
+*   **Customizable Keyboard Shortcuts:** Allow users to customize keyboard shortcuts for different actions.
 *   **Offline Mode:** Enable basic translation functionality when internet connection is unavailable.
 *   **Advanced Settings Panel:** Enhanced configuration options for power users.
 *   **Dark Mode:** Implement dark theme support for better user experience in low-light environments.
-*   **Capture Screen to Translate:** Enhanced capability to translate the image captured from the screen.
 
 ## Target Language Settings
 
@@ -88,11 +89,25 @@ LLM Translate offers multiple convenient ways to translate text on web pages:
 3. **Click translate** to get results
 4. **Use additional features** like text-to-speech
 
+### 📸 **Screenshot Translation (NEW)**
+1. **Click the screenshot icon** in the popup or use keyboard shortcut `Ctrl+Shift+S` / `Command+Shift+S`
+2. **Select an area** on the webpage by dragging your mouse
+3. **Click "Translate"** in the selection toolbar
+4. **View results** in a popup with recognized text and translation
+5. **Copy the translation** using the built-in copy button
+
+**Benefits:**
+- Translate text in images, PDFs, and screenshots
+- AI-powered multimodal recognition for accurate text understanding
+- Works with any visual content on web pages
+- Quick keyboard shortcut for instant access
+
 ### ⚡ **Smart Features**
 - **Auto-fill**: Selected text automatically fills popup input
 - **Language detection**: Automatically switches between target languages
 - **Copy protection**: Enhanced popup stability for text selection
 - **Keyboard shortcuts**: ESC key to close popups quickly
+- **Screenshot shortcuts**: `Ctrl+Shift+S` / `Command+Shift+S` for instant screenshot mode
 
 ## Tech Stack
 
@@ -117,7 +132,7 @@ LLM Translate offers multiple convenient ways to translate text on web pages:
 * **For Privacy**: Use Ollama with local models
 * **For Cost**: All listed models are free to use
 
-*Last updated: December 19, 2024*
+*Last updated: August 15, 2025*
 
 ## Translation Quality Comparison
 

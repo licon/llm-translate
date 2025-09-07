@@ -1,14 +1,14 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "এক্সটেনশনের নাম।"
     },
     "appDescription": {
-        "message": "এলএলএম (যেমন, জেমিনি) ব্যবহার করে অন-পেজ এবং পপআপ অনুবাদের জন্য একটি অনুবাদ প্লাগইন।",
+        "message": "একটি বিনামূল্যের AI অনুবাদ প্লাগইন যা LLM (যেমন Gemini) ব্যবহার করে পেজে, পপআপ এবং স্ক্রিনশট অনুবাদের জন্য।",
         "description": "এক্সটেনশনের বর্ণনা।"
     },
     "popupTitle": {
-        "message": "এলএলএম-অনুবাদ",
+        "message": "EZ Translate",
         "description": "পপআপ উইন্ডোর জন্য শিরোনাম।"
     },
     "textInputPlaceholder": {
@@ -615,5 +615,35 @@
     "copyTranslation": {
         "message": "অনুবাদ কপি করুন",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "ছবি অনুবাদ",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "অনুবাদ",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "বাতিল",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "দয়া করে ছবিতে লেখাটি পড়ুন এবং এটিকে $targetLanguage$-এ অনুবাদ করুন। যদি লেখাটি ইতিমধ্যে $targetLanguage$-এ থাকে, তাহলে এটিকে $secondTargetLanguage$-এ অনুবাদ করুন। শুধুমাত্র অনুবাদটি ফেরত দিন, কোনো ব্যাখ্যা ছাড়াই।",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
+    },
+    "shortcutCaptureDescription": {
+        "message": "ক্যাপচার > নির্বাচিত এলাকা",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

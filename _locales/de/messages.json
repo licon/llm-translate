@@ -1,14 +1,14 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "Der Name der Erweiterung."
     },
     "appDescription": {
-        "message": "Ein Übersetzungs-Plugin, das LLMs (z. B. Gemini) für Übersetzungen auf der Seite und in Popups verwendet.",
+        "message": "Ein kostenloses KI-Übersetzungs-Plugin, das LLMs (z. B. Gemini) für Übersetzungen auf der Seite, in Popups und in Screenshots verwendet.",
         "description": "Die Beschreibung der Erweiterung."
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "Titel für das Popup-Fenster."
     },
     "textInputPlaceholder": {
@@ -615,5 +615,35 @@
     "copyTranslation": {
         "message": "Übersetzung kopieren",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "Bildübersetzung",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "Übersetzen",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "Abbrechen",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "Bitte lesen Sie den Text im Bild und übersetzen Sie ihn ins $targetLanguage$. Wenn der Text bereits auf $targetLanguage$ ist, übersetzen Sie ihn stattdessen ins $secondTargetLanguage$. Geben Sie nur die Übersetzung zurück, ohne Erklärungen.",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
+    },
+    "shortcutCaptureDescription": {
+        "message": "Erfassen > Ausgewählter Bereich",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

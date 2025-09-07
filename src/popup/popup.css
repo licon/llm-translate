@@ -102,6 +102,15 @@ button:hover {
     text-decoration: underline;
 }
 
+.icon-button {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 .actions {
     display: flex;
     justify-content: space-between;
@@ -115,8 +124,25 @@ button:hover {
 }
 
 .actions button {
-    flex-grow: 1;
     margin-left: 10px;
+}
+
+#translate-button {
+    flex: 1 1 auto;
+}
+
+#screenshot-translate-button {
+    flex: 0 0 auto;
+    padding: 6px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.footer-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 .settings-container {
@@ -130,6 +156,11 @@ button:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.right-icons {
+    display: flex;
+    gap: 8px;
 }
 
 /* The switch - https://www.w3schools.com/howto/howto_css_switch.asp */

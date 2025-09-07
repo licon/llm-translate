@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>LLM-Translate</h1>
+        <h1>EZ Translate</h1>
         <div class="input-container">
             <textarea id="text-input" rows="5" data-i18n-placeholder="textInputPlaceholder"></textarea>
             <button id="speak-input-button" class="speak-button" style="display: none;">&#128266;</button>
@@ -32,7 +32,10 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <a href="../settings/settings.html" target="_blank" class="settings-link" data-i18n="settingsLink"></a>
+            <div class="right-icons">
+                <button id="screenshot-translate-button" class="icon-button" data-i18n-title="screenshotTranslateButton" title="Image Translate">📸</button>
+                <button id="settings-icon-button" class="icon-button" data-i18n-title="settingsLink" title="Settings">⚙️</button>
+            </div>
         </div>
     </div>
     <script src="popup.js"></script>

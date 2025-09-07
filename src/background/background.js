@@ -89,11 +89,35 @@ function createContextMenus() {
     });
 }
 
+// --- 快捷键监听 ---
+chrome.commands.onCommand.addListener((command) => {
+    console.log('[LLM-Translate] Command received:', command);
+    
+    if (command === 'capture-selected-area') {
+        // 获取当前活动标签页
+        chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+            if (tabs[0]) {
+                console.log('[LLM-Translate] Sending startScreenshotSelection to tab:', tabs[0].id);
+                // 向当前活动标签页发送开始截图选择的消息
+                chrome.tabs.sendMessage(tabs[0].id, {
+                    type: 'startScreenshotSelection'
+                }).catch((error) => {
+                    console.error('[LLM-Translate] Error sending startScreenshotSelection:', error);
+                });
+            }
+        });
+    }
+});
+
 // --- 消息监听 ---
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === 'translate') {
         handleTranslation(request.text, request.targetLanguage, request.secondTargetLanguage, sendResponse);
         return true; // 异步响应
+    } else if (request.type === 'captureAndTranslateImage') {
+        console.log('[LLM-Translate] captureAndTranslateImage received', request.rect);
+        handleCaptureAndTranslateImage(request.rect, sender, sendResponse);
+        return true;
     }
 });
 
@@ -659,6 +683,120 @@ function mapLanguageCodeToName(languageCode) {
     };
     
     return languageMap[languageCode] || 'English';
+}
+
+// --- 截图并翻译图片内文字 ---
+async function handleCaptureAndTranslateImage(rect, sender, sendResponse) {
+    try {
+        // Capture visible tab
+        const dataUrl = await chrome.tabs.captureVisibleTab({ format: 'png' });
+        console.log('[LLM-Translate] captureVisibleTab success');
+        // Crop to rect using OffscreenCanvas
+        const croppedDataUrl = await cropImageDataUrl(dataUrl, rect);
+        console.log('[LLM-Translate] cropImageDataUrl success');
+
+        const { activeProvider } = await chrome.storage.local.get('activeProvider');
+        const provider = activeProvider || 'gemini';
+
+        let translation;
+        if (provider === 'gemini') {
+            translation = await visionTranslateGemini(croppedDataUrl);
+        } else if (provider === 'siliconflow') {
+            translation = await visionTranslateOpenAICompatible(croppedDataUrl);
+        } else if (provider === 'ollama') {
+            translation = await visionTranslateOllama(croppedDataUrl);
+        } else {
+            throw new Error(`未知的模型提供商: ${provider}`);
+        }
+
+        // Send to content script to show result popover with copy
+        if (sender && sender.tab && sender.tab.id) {
+            console.log('[LLM-Translate] sending showImageTranslationResult');
+            chrome.tabs.sendMessage(sender.tab.id, { type: 'showImageTranslationResult', translation });
+        }
+        sendResponse({ translation });
+    } catch (e) {
+        console.error('[LLM-Translate] handleCaptureAndTranslateImage failed:', e);
+        sendResponse({ error: e.message });
+    }
+}
+
+async function cropImageDataUrl(dataUrl, rect) {
+    // Use createImageBitmap in service worker
+    const resp = await fetch(dataUrl);
+    const blob = await resp.blob();
+    const bitmap = await createImageBitmap(blob);
+    const dpr = rect.devicePixelRatio || 1;
+    const sx = Math.max(0, Math.round(rect.x * dpr));
+    const sy = Math.max(0, Math.round(rect.y * dpr));
+    const sw = Math.min(bitmap.width - sx, Math.round(rect.width * dpr));
+    const sh = Math.min(bitmap.height - sy, Math.round(rect.height * dpr));
+    const canvas = new OffscreenCanvas(sw, sh);
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(bitmap, sx, sy, sw, sh, 0, 0, sw, sh);
+    const outBlob = await canvas.convertToBlob({ type: 'image/png' });
+    return await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(outBlob);
+    });
+}
+
+async function visionTranslateGemini(imageDataUrl) {
+    const { geminiApiKey, geminiSelectedModel, targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['geminiApiKey', 'geminiSelectedModel', 'targetLanguage', 'secondTargetLanguage']);
+    const apiKey = geminiApiKey; const modelName = geminiSelectedModel;
+    if (!apiKey || !modelName) throw new Error('Gemini API 或模型未配置');
+    const target = mapLangKeyToEnName(targetLanguage || 'langSimplifiedChinese');
+    const second = mapLangKeyToEnName(secondTargetLanguage || 'langEnglish');
+    const prompt = chrome.i18n.getMessage('imageTranslationPrompt', [target, second]);
+
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+    const parts = [{ text: prompt }, { inline_data: { mime_type: 'image/png', data: imageDataUrl.split(',')[1] } }];
+    const resp = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents: [{ parts }] }) });
+    if (!resp.ok) throw new Error('Gemini Vision 请求失败');
+    const data = await resp.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
+}
+
+async function visionTranslateOpenAICompatible(imageDataUrl) {
+    const { siliconflowApiKey, siliconflowSelectedModel, targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['siliconflowApiKey', 'siliconflowSelectedModel', 'targetLanguage', 'secondTargetLanguage']);
+    const apiKey = siliconflowApiKey; const modelName = siliconflowSelectedModel;
+    if (!apiKey || !modelName) throw new Error('SiliconFlow API 或模型未配置');
+    const target = mapLangKeyToEnName(targetLanguage || 'langSimplifiedChinese');
+    const second = mapLangKeyToEnName(secondTargetLanguage || 'langEnglish');
+    const userPrompt = chrome.i18n.getMessage('imageTranslationPrompt', [target, second]);
+
+    const url = 'https://api.siliconflow.cn/v1/chat/completions';
+    const messages = [
+        { role: 'user', content: [
+            { type: 'text', text: userPrompt },
+            { type: 'image_url', image_url: { url: imageDataUrl } }
+        ]}
+    ];
+    const resp = await fetch(url, { method: 'POST', headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ model: modelName, messages, max_tokens: 2048, temperature: 0.2 }) });
+    if (!resp.ok) throw new Error('SiliconFlow Vision 请求失败');
+    const data = await resp.json();
+    return data.choices?.[0]?.message?.content?.trim() || '';
+}
+
+async function visionTranslateOllama(imageDataUrl) {
+    const { ollamaUrl, ollamaSelectedModel, targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['ollamaUrl', 'ollamaSelectedModel', 'targetLanguage', 'secondTargetLanguage']);
+    const url = ollamaUrl; const modelName = ollamaSelectedModel;
+    if (!url || !modelName) throw new Error('Ollama URL 或模型未配置');
+    const target = mapLangKeyToEnName(targetLanguage || 'langSimplifiedChinese');
+    const second = mapLangKeyToEnName(secondTargetLanguage || 'langEnglish');
+    const prompt = chrome.i18n.getMessage('imageTranslationPrompt', [target, second]);
+    // Note: Many Ollama models don't support vision; this is a best-effort text prompt
+    const resp = await fetch(`${url}/api/generate`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: modelName, prompt: `${prompt}\n[Image as data URL]\n${imageDataUrl}`, stream: false }) });
+    if (!resp.ok) throw new Error('Ollama Vision 请求失败');
+    const data = await resp.json();
+    return data.response?.trim() || '';
+}
+
+function mapLangKeyToEnName(key) {
+    const map = { 'langEnglish':'English','langSimplifiedChinese':'Simplified Chinese','langTraditionalChinese':'Traditional Chinese' };
+    return map[key] || 'English';
 }
 
 // --- API 调用实现 ---

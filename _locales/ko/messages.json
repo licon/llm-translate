@@ -1,14 +1,14 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "확장 프로그램의 이름입니다."
     },
     "appDescription": {
-        "message": "LLM(예: Gemini)을 사용하여 페이지 내 및 팝업 번역을 위한 번역 플러グイン입니다.",
+        "message": "LLM(예: Gemini)을 사용하는 무료 AI 번역 플러그인으로 페이지 내, 팝업, 스크린샷 번역을 지원합니다.",
         "description": "확장 프로그램의 설명입니다."
     },
     "popupTitle": {
-        "message": "LLM-Translate",
+        "message": "EZ Translate",
         "description": "팝업 창의 제목입니다."
     },
     "textInputPlaceholder": {
@@ -615,5 +615,35 @@
     "copyTranslation": {
         "message": "번역 복사",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "이미지 번역",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "번역",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "취소",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "이미지의 텍스트를 읽고 $targetLanguage$로 번역해 주세요. 텍스트가 이미 $targetLanguage$인 경우, 대신 $secondTargetLanguage$로 번역해 주세요. 설명 없이 번역만 반환해 주세요.",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
+    },
+    "shortcutCaptureDescription": {
+        "message": "캡처 > 선택 영역",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }

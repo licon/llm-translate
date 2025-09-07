@@ -1,14 +1,14 @@
 {
     "appName": {
-        "message": "LLM Translate",
+        "message": "EZ Translate - Easy & Free AI Translator",
         "description": "एक्सटेंशन का नाम।"
     },
     "appDescription": {
-        "message": "एलएलएम (जैसे, जेमिनी) का उपयोग करके ऑन-पेज और पॉपअप अनुवाद के लिए एक अनुवाद प्लगइन।",
+        "message": "एक मुफ्त AI अनुवाद प्लगइन जो LLM (जैसे Gemini) का उपयोग पेज पर, पॉपअप और स्क्रीनशॉट अनुवाद के लिए करता है।",
         "description": "एक्सटेंशन का विवरण।"
     },
     "popupTitle": {
-        "message": "एलएलएम-अनुवाद",
+        "message": "EZ Translate",
         "description": "पॉपअप विंडो के लिए शीर्षक।"
     },
     "textInputPlaceholder": {
@@ -615,5 +615,35 @@
     "copyTranslation": {
         "message": "अनुवाद कॉपी करें",
         "description": "Tooltip for copy translation button."
+    },
+    "screenshotTranslateButton": {
+        "message": "छवि अनुवाद",
+        "description": "Button label for screenshot translate in popup."
+    },
+    "selectionTranslateButton": {
+        "message": "अनुवाद",
+        "description": "Button to translate selected image region."
+    },
+    "cancelButton": {
+        "message": "रद्द करें",
+        "description": "Cancel button label."
+    },
+    "imageTranslationPrompt": {
+        "message": "कृपया छवि में पाठ पढ़ें और इसे $targetLanguage$ में अनुवाद करें। यदि पाठ पहले से ही $targetLanguage$ में है, तो इसे $secondTargetLanguage$ में अनुवाद करें। केवल अनुवाद वापस करें, बिना किसी स्पष्टीकरण के।",
+        "description": "Prompt for image OCR + translation.",
+        "placeholders": {
+            "targetLanguage": {
+                "content": "$1",
+                "example": "Simplified Chinese"
+            },
+            "secondTargetLanguage": {
+                "content": "$2",
+                "example": "English"
+            }
+        }
+    },
+    "shortcutCaptureDescription": {
+        "message": "कैप्चर > चयनित क्षेत्र",
+        "description": "Keyboard shortcut description for capture selected area feature."
     }
 }
