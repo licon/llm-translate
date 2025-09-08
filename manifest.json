@@ -7,7 +7,7 @@
   "permissions": [
     "storage",
     "contextMenus",
-    "tabs"
+    "activeTab"
   ],
   "commands": {
     "capture-selected-area": {
