@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="icons/icon128.png" alt="LLM Translate Logo" width="128" height="128">
-  <h1>LLM Translate: Smart Browser Translation Plugin</h1>
+  <img src="icons/icon128.png" alt="EZ Translate Logo" width="128" height="128">
+  <h1>EZ Translate: Smart Browser Translation Plugin</h1>
 </div>
 
-LLM Translate is a modern browser translation plugin that harnesses the power of Large Language Models (LLMs) to provide you with a more accurate, fluent, and context-aware web page translation experience.
+EZ Translate is a modern browser translation plugin that harnesses the power of Large Language Models (LLMs) to provide you with a more accurate, fluent, and context-aware web page translation experience.
 
 Unlike traditional machine translation, this plugin aims to understand the nuances of language through advanced AI technology, generating high-quality translations to help you easily overcome language barriers and efficiently access global information.
 
@@ -35,7 +35,7 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 
 ## Target Language Settings
 
-LLM Translate now features intelligent target language management to enhance your translation experience:
+EZ Translate now features intelligent target language management to enhance your translation experience:
 
 ### **Default Target Language**
 - Set your preferred target language that syncs with the popup interface
@@ -59,7 +59,7 @@ LLM Translate now features intelligent target language management to enhance you
 
 ## Translation Methods
 
-LLM Translate offers multiple convenient ways to translate text on web pages:
+EZ Translate offers multiple convenient ways to translate text on web pages:
 
 ### 🖱️ **Context Menu Translation (NEW)**
 1. **Select text** on any webpage
@@ -136,11 +136,11 @@ LLM Translate offers multiple convenient ways to translate text on web pages:
 
 ## Translation Quality Comparison
 
-See how LLM-Translate compares to other translation tools in terms of accuracy and fluency:
+See how EZ Translate compares to other translation tools in terms of accuracy and fluency:
 
 ### English to Chinese Translation Examples
 
-| Original Text | Google Translate API | LLM Translate |
+| Original Text | Google Translate API | EZ Translate |
 |---------------|------------------|---------------|
 | "Supports one-time, recurring, and usage-based pricing models. Learn more about Subscriptions, Usage-based billing, and Invoicing." | "支持一次性，经常性和基于用法的定价模型。了解有关订阅，基于使用的计费和发票的更多信息。" | ✅ "支持一次性、周期性和基于使用情况的定价模型。了解更多关于订阅、基于使用情况的计费和发票的信息。" |
 | "If you're residing in one of China's territories, please select an option for your specific location. You won't be able to change it later." | "如果您居住在中国的一个领土之一，请为您的特定位置选择一个选项。您将稍后再进行更改。" | ✅ "如果您居住在中国的某个地区，请选择您所在的具体位置。您将无法在之后更改它。" |
@@ -148,7 +148,7 @@ See how LLM-Translate compares to other translation tools in terms of accuracy a
 
 ### Key Advantages
 
-* **Context Awareness**: LLM-Translate understands context better than traditional MT
+* **Context Awareness**: EZ Translate understands context better than traditional MT
 * **Natural Fluency**: More natural and fluent translations that sound human-written
 * **Cultural Nuances**: Better handling of cultural expressions and idioms
 * **Technical Accuracy**: Superior translation of technical and specialized content

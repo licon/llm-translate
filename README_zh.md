@@ -1,8 +1,8 @@
-# LLM Translate: 智能浏览器翻译插件
+# EZ Translate: 智能浏览器翻译插件
 
 [View English Version (查看英文版本)](README.md)
 
-LLM Translate 是一款现代化的浏览器翻译插件，它利用大型语言模型（LLM）的强大能力，为您提供更加精准、流畅且贴近上下文的网页翻译体验。
+EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言模型（LLM）的强大能力，为您提供更加精准、流畅且贴近上下文的网页翻译体验。
 
 与传统的机器翻译不同，本插件旨在通过先进的 AI 技术理解语言的细微差别，生成高质量的译文，帮助您轻松跨越语言障碍，高效获取全球信息。
 
@@ -48,7 +48,7 @@ LLM Translate 是一款现代化的浏览器翻译插件，它利用大型语言
 
 ## 翻译方式
 
-LLM Translate 提供多种便捷的网页文本翻译方式：
+EZ Translate 提供多种便捷的网页文本翻译方式：
 
 ### 🖱️ **右键菜单翻译（新功能）**
 1. **选中文字** - 在任意网页上选中要翻译的文本
@@ -100,11 +100,11 @@ LLM Translate 提供多种便捷的网页文本翻译方式：
 
 ## 翻译质量对比
 
-看看 LLM-Translate 与其他翻译工具在准确性和流畅性方面的对比：
+看看 EZ Translate 与其他翻译工具在准确性和流畅性方面的对比：
 
 ### 英文到中文翻译示例
 
-| 原文 | Google 翻译 | LLM-Translate |
+| 原文 | Google 翻译 | EZ Translate |
 |------|-------------|---------------|
 | "Supports one-time, recurring, and usage-based pricing models. Learn more about Subscriptions, Usage-based billing, and Invoicing." | "支持一次性，经常性和基于用法的定价模型。了解有关订阅，基于使用的计费和发票的更多信息。" | ✅ "支持一次性、周期性和基于使用情况的定价模型。了解更多关于订阅、基于使用情况的计费和发票的信息。" |
 | "If you're residing in one of China's territories, please select an option for your specific location. You won't be able to change it later." | "如果您居住在中国的一个领土之一，请为您的特定位置选择一个选项。您将稍后再进行更改。" | ✅ "如果您居住在中国的某个地区，请选择您所在的具体位置。您将无法在之后更改它。" |
@@ -113,7 +113,7 @@ LLM Translate 提供多种便捷的网页文本翻译方式：
 
 ### 主要优势
 
-* **上下文理解**: LLM-Translate 比传统机器翻译更好地理解上下文
+* **上下文理解**: EZ Translate 比传统机器翻译更好地理解上下文
 * **自然流畅**: 更自然流畅的翻译，听起来像人工撰写
 * **文化细微差别**: 更好地处理文化表达和习语
 * **技术准确性**: 对技术和专业内容的翻译更准确
