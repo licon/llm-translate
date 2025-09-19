@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Надпись для вкладки провайдера Silicon Flow."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "Надпись для вкладки провайдера OpenRouter."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Надпись для вкладки провайдера Ollama."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Ключ API Silicon Flow",
         "description": "Надпись для ввода ключа API Silicon Flow."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "Ключ API OpenRouter",
+        "description": "Надпись для ввода ключа API OpenRouter."
     },
     "ollamaUrlLabel": {
         "message": "URL сервера Ollama",
@@ -67,6 +75,10 @@
         "message": "Введите ваш ключ API Silicon Flow",
         "description": "Заполнитель для ввода ключа API Silicon Flow."
     },
+    "openrouterApiPlaceholder": {
+        "message": "Введите ваш ключ API OpenRouter",
+        "description": "Заполнитель для ввода ключа API OpenRouter."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Введите URL вашего сервера Ollama (например, http://localhost:11434)",
         "description": "Заполнитель для ввода URL Ollama."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "Рекомендуется выбирать бесплатные модели, например, qwen.",
         "description": "Подсказка по выбору модели Silicon Flow."
+    },
+    "openrouterModelHint": {
+        "message": "Показываются только бесплатные модели, поддерживающие ввод изображений.",
+        "description": "Подсказка по выбору модели OpenRouter."
     },
     "ollamaModelHint": {
         "message": "Выберите любую модель, установленную локально в Ollama.",

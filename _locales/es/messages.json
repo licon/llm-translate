@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Etiqueta para la pestaña del proveedor Silicon Flow."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "Etiqueta para la pestaña del proveedor OpenRouter."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Etiqueta para la pestaña del proveedor Ollama."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Clave de API de Silicon Flow",
         "description": "Etiqueta para la entrada de la clave de API de Silicon Flow."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "Clave de API de OpenRouter",
+        "description": "Etiqueta para la entrada de la clave de API de OpenRouter."
     },
     "ollamaUrlLabel": {
         "message": "URL del Servidor Ollama",
@@ -67,6 +75,10 @@
         "message": "Introduce tu clave de API de Silicon Flow",
         "description": "Marcador de posición para la entrada de la clave de API de Silicon Flow."
     },
+    "openrouterApiPlaceholder": {
+        "message": "Introduce tu clave de API de OpenRouter",
+        "description": "Marcador de posición para la entrada de la clave de API de OpenRouter."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Introduce la URL de tu servidor Ollama (ej., http://localhost:11434)",
         "description": "Marcador de posición para la entrada de URL de Ollama."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "Se recomienda elegir modelos gratuitos, por ejemplo, qwen.",
         "description": "Sugerencia para seleccionar un modelo de Silicon Flow."
+    },
+    "openrouterModelHint": {
+        "message": "Solo se muestran modelos gratuitos que admiten entrada de imágenes.",
+        "description": "Sugerencia para seleccionar un modelo de OpenRouter."
     },
     "ollamaModelHint": {
         "message": "Selecciona cualquier modelo que tengas instalado localmente en Ollama.",

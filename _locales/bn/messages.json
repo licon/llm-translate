@@ -35,6 +35,10 @@
         "message": "সিলিকন ফ্লো",
         "description": "সিলিকন ফ্লো প্রদানকারী ট্যাবের জন্য লেবেল।"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter প্রদানকারী ট্যাবের জন্য লেবেল।"
+    },
     "ollamaProvider": {
         "message": "ওলামা",
         "description": "ওলামা প্রদানকারী ট্যাবের জন্য লেবেল।"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "সিলিকন ফ্লো এপিআই কী",
         "description": "সিলিকন ফ্লো এপিআই কী ইনপুটের জন্য লেবেল।"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API কী",
+        "description": "OpenRouter API কী ইনপুটের জন্য লেবেল।"
     },
     "ollamaUrlLabel": {
         "message": "ওলামা সার্ভার URL",
@@ -67,6 +75,10 @@
         "message": "আপনার সিলিকন ফ্লো এপিআই কী লিখুন",
         "description": "সিলিকন ফ্লো এপিআই কী ইনপুটের জন্য স্থানধারক।"
     },
+    "openrouterApiPlaceholder": {
+        "message": "আপনার OpenRouter API কী লিখুন",
+        "description": "OpenRouter API কী ইনপুটের জন্য স্থানধারক।"
+    },
     "ollamaUrlPlaceholder": {
         "message": "আপনার ওলামা সার্ভার URL লিখুন (যেমন, http://localhost:11434)",
         "description": "ওলামা URL ইনপুটের জন্য স্থানধারক।"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "বিনামূল্যের মডেল বেছে নেওয়ার পরামর্শ দেওয়া হচ্ছে, যেমন, কোয়েন।",
         "description": "একটি সিলিকন ফ্লো মডেল নির্বাচন করার জন্য ইঙ্গিত।"
+    },
+    "openrouterModelHint": {
+        "message": "শুধুমাত্র বিনামূল্যের মডেল যা চিত্র ইনপুট সমর্থন করে সেগুলি দেখানো হয়।",
+        "description": "OpenRouter মডেল নির্বাচন করার জন্য ইঙ্গিত।"
     },
     "ollamaModelHint": {
         "message": "ওলামায় স্থানীয়ভাবে ইনস্টল করা যেকোনো মডেল নির্বাচন করুন।",

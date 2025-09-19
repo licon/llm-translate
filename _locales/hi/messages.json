@@ -35,6 +35,10 @@
         "message": "सिलिकॉन फ्लो",
         "description": "सिलिकॉन फ्लो प्रदाता टैब के लिए लेबल।"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter प्रदाता टैब के लिए लेबल।"
+    },
     "ollamaProvider": {
         "message": "ओलामा",
         "description": "ओलामा प्रदाता टैब के लिए लेबल।"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "सिलिकॉन फ्लो एपीआई कुंजी",
         "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए लेबल।"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API कुंजी",
+        "description": "OpenRouter API कुंजी इनपुट के लिए लेबल।"
     },
     "ollamaUrlLabel": {
         "message": "ओलामा सर्वर URL",
@@ -67,6 +75,10 @@
         "message": "अपनी सिलिकॉन फ्लो एपीआई कुंजी दर्ज करें",
         "description": "सिलिकॉन फ्लो एपीआई कुंजी इनपुट के लिए प्लेसहोल्डर।"
     },
+    "openrouterApiPlaceholder": {
+        "message": "अपनी OpenRouter API कुंजी दर्ज करें",
+        "description": "OpenRouter API कुंजी इनपुट के लिए प्लेसहोल्डर।"
+    },
     "ollamaUrlPlaceholder": {
         "message": "अपना ओलामा सर्वर URL दर्ज करें (जैसे, http://localhost:11434)",
         "description": "ओलामा URL इनपुट के लिए प्लेसहोल्डर।"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "मुफ्त मॉडल चुनने की सिफारिश की जाती है, जैसे, क्वेन।",
         "description": "सिलिकॉन फ्लो मॉडल चुनने के लिए संकेत।"
+    },
+    "openrouterModelHint": {
+        "message": "केवल मुफ्त मॉडल जो छवि इनपुट का समर्थन करते हैं, दिखाए जाते हैं।",
+        "description": "OpenRouter मॉडल चुनने के लिए संकेत।"
     },
     "ollamaModelHint": {
         "message": "ओलामा में स्थानीय रूप से इंस्टॉल किए गए किसी भी मॉडल का चयन करें।",

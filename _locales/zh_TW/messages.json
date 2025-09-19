@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flow 提供商的標籤頁標題。"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter 提供商的標籤頁標題。"
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Ollama 提供商的標籤頁標題。"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow API 金鑰",
         "description": "Silicon Flow API 金鑰輸入欄位的標籤。"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API 金鑰",
+        "description": "OpenRouter API 金鑰輸入欄位的標籤。"
     },
     "ollamaUrlLabel": {
         "message": "Ollama 伺服器 URL",
@@ -67,6 +75,10 @@
         "message": "輸入您的 Silicon Flow API 金鑰",
         "description": "Silicon Flow API 金鑰輸入欄位的預留文字。"
     },
+    "openrouterApiPlaceholder": {
+        "message": "輸入您的 OpenRouter API 金鑰",
+        "description": "OpenRouter API 金鑰輸入欄位的預留文字。"
+    },
     "ollamaUrlPlaceholder": {
         "message": "輸入您的 Ollama 伺服器 URL（例如：http://localhost:11434）",
         "description": "Ollama URL 輸入欄位的預留文字。"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "建議選擇免費模型，例如 qwen。",
         "description": "選擇 Silicon Flow 模型的提示。"
+    },
+    "openrouterModelHint": {
+        "message": "僅顯示免費且支援圖片輸入的模型。",
+        "description": "選擇 OpenRouter 模型的提示。"
     },
     "ollamaModelHint": {
         "message": "選擇您在 Ollama 本機已安裝的任一模型。",

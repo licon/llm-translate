@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flow 공급자 탭의 라벨입니다."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter 공급자 탭의 라벨입니다."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Ollama 공급자 탭의 라벨입니다."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow API 키",
         "description": "Silicon Flow API 키 입력에 대한 라벨입니다."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API 키",
+        "description": "OpenRouter API 키 입력에 대한 라벨입니다."
     },
     "ollamaUrlLabel": {
         "message": "Ollama 서버 URL",
@@ -67,6 +75,10 @@
         "message": "Silicon Flow API 키를 입력하세요",
         "description": "Silicon Flow API 키 입력에 대한 자리 표시자입니다."
     },
+    "openrouterApiPlaceholder": {
+        "message": "OpenRouter API 키를 입력하세요",
+        "description": "OpenRouter API 키 입력에 대한 자리 표시자입니다."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Ollama 서버 URL을 입력하세요 (예: http://localhost:11434)",
         "description": "Ollama URL 입력에 대한 자리 표시자입니다."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "무료 모델(예: qwen)을 선택하는 것이 좋습니다.",
         "description": "Silicon Flow 모델 선택에 대한 힌트입니다."
+    },
+    "openrouterModelHint": {
+        "message": "이미지 입력을 지원하는 무료 모델만 표시됩니다.",
+        "description": "OpenRouter 모델 선택에 대한 힌트입니다."
     },
     "ollamaModelHint": {
         "message": "Ollama에 로컬로 설치된 모든 모델을 선택하세요.",

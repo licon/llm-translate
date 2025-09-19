@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Beschriftung für den Silicon Flow-Anbieter-Tab."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "Beschriftung für den OpenRouter-Anbieter-Tab."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Beschriftung für den Ollama-Anbieter-Tab."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow-API-Schlüssel",
         "description": "Beschriftung für die Silicon Flow-API-Schlüsseleingabe."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter-API-Schlüssel",
+        "description": "Beschriftung für die OpenRouter-API-Schlüsseleingabe."
     },
     "ollamaUrlLabel": {
         "message": "Ollama-Server-URL",
@@ -67,6 +75,10 @@
         "message": "Geben Sie Ihren Silicon Flow-API-Schlüssel ein",
         "description": "Platzhalter für die Silicon Flow-API-Schlüsseleingabe."
     },
+    "openrouterApiPlaceholder": {
+        "message": "Geben Sie Ihren OpenRouter-API-Schlüssel ein",
+        "description": "Platzhalter für die OpenRouter-API-Schlüsseleingabe."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Geben Sie Ihre Ollama-Server-URL ein (z. B. http://localhost:11434)",
         "description": "Platzhalter für die Ollama-URL-Eingabe."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "Es wird empfohlen, kostenlose Modelle wie z. B. Qwen zu wählen.",
         "description": "Hinweis zur Auswahl eines Silicon Flow-Modells."
+    },
+    "openrouterModelHint": {
+        "message": "Es werden nur kostenlose Modelle angezeigt, die Bildeingaben unterstützen.",
+        "description": "Hinweis zur Auswahl eines OpenRouter-Modells."
     },
     "ollamaModelHint": {
         "message": "Wählen Sie ein beliebiges Modell aus, das Sie lokal in Ollama installiert haben.",

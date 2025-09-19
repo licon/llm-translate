@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flowプロバイダータブのラベル。"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouterプロバイダータブのラベル。"
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Ollamaプロバイダータブのラベル。"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow APIキー",
         "description": "Silicon Flow APIキー入力のラベル。"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter APIキー",
+        "description": "OpenRouter APIキー入力のラベル。"
     },
     "ollamaUrlLabel": {
         "message": "OllamaサーバーURL",
@@ -67,6 +75,10 @@
         "message": "Silicon Flow APIキーを入力してください",
         "description": "Silicon Flow APIキー入力のプレースホルダー。"
     },
+    "openrouterApiPlaceholder": {
+        "message": "OpenRouter APIキーを入力してください",
+        "description": "OpenRouter APIキー入力のプレースホルダー。"
+    },
     "ollamaUrlPlaceholder": {
         "message": "OllamaサーバーURLを入力してください（例：http://localhost:11434）",
         "description": "Ollama URL入力のプレースホルダー。"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "無料のモデル（例：qwen）を選択することをお勧めします。",
         "description": "Silicon Flowモデルを選択するためのヒント。"
+    },
+    "openrouterModelHint": {
+        "message": "画像入力をサポートする無料モデルのみが表示されます。",
+        "description": "OpenRouterモデルを選択するためのヒント。"
     },
     "ollamaModelHint": {
         "message": "ローカルにインストールされているOllamaモデルを選択してください。",
