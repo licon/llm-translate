@@ -250,6 +250,9 @@ document.addEventListener('DOMContentLoaded', () => {
     populateLanguages(); // This now also sets the default language
     loadSettings(); // This now only handles other settings
     loadSelectedText();
+    
+    // Auto-focus the input field when popup opens
+    textInput.focus();
 });
 
 // Listen for messages from the background script (e.g., from context menu)

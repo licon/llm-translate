@@ -608,6 +608,8 @@ async function handleTranslation(text, targetLanguage, secondTargetLanguage, sen
             translation = await callGeminiAPI(text, apiKey, modelName, actualTargetLanguage, secondTargetLanguage);
         } else if (provider === 'siliconflow') {
             translation = await callSiliconFlowAPI(text, apiKey, modelName, actualTargetLanguage, secondTargetLanguage);
+        } else if (provider === 'openrouter') {
+            translation = await callOpenRouterAPI(text, apiKey, modelName, actualTargetLanguage, secondTargetLanguage);
         } else if (provider === 'ollama') {
             translation = await callOllamaAPI(text, ollamaUrl, modelName, actualTargetLanguage, secondTargetLanguage);
         } else {
@@ -703,6 +705,8 @@ async function handleCaptureAndTranslateImage(rect, sender, sendResponse) {
             translation = await visionTranslateGemini(croppedDataUrl);
         } else if (provider === 'siliconflow') {
             translation = await visionTranslateOpenAICompatible(croppedDataUrl);
+        } else if (provider === 'openrouter') {
+            translation = await visionTranslateOpenRouter(croppedDataUrl);
         } else if (provider === 'ollama') {
             translation = await visionTranslateOllama(croppedDataUrl);
         } else {
@@ -780,6 +784,27 @@ async function visionTranslateOpenAICompatible(imageDataUrl) {
     return data.choices?.[0]?.message?.content?.trim() || '';
 }
 
+async function visionTranslateOpenRouter(imageDataUrl) {
+    const { openrouterApiKey, openrouterSelectedModel, targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['openrouterApiKey', 'openrouterSelectedModel', 'targetLanguage', 'secondTargetLanguage']);
+    const apiKey = openrouterApiKey; const modelName = openrouterSelectedModel;
+    if (!apiKey || !modelName) throw new Error('OpenRouter API 或模型未配置');
+    const target = mapLangKeyToEnName(targetLanguage || 'langSimplifiedChinese');
+    const second = mapLangKeyToEnName(secondTargetLanguage || 'langEnglish');
+    const userPrompt = chrome.i18n.getMessage('imageTranslationPrompt', [target, second]);
+
+    const url = 'https://openrouter.ai/api/v1/chat/completions';
+    const messages = [
+        { role: 'user', content: [
+            { type: 'text', text: userPrompt },
+            { type: 'image_url', image_url: { url: imageDataUrl } }
+        ]}
+    ];
+    const resp = await fetch(url, { method: 'POST', headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json', 'HTTP-Referer': 'https://github.com/licon/llm-translate', 'X-Title': 'LLM Translate Extension' }, body: JSON.stringify({ model: modelName, messages, max_tokens: 2048, temperature: 0.2 }) });
+    if (!resp.ok) throw new Error('OpenRouter Vision 请求失败');
+    const data = await resp.json();
+    return data.choices?.[0]?.message?.content?.trim() || '';
+}
+
 async function visionTranslateOllama(imageDataUrl) {
     const { ollamaUrl, ollamaSelectedModel, targetLanguage, secondTargetLanguage } = await chrome.storage.local.get(['ollamaUrl', 'ollamaSelectedModel', 'targetLanguage', 'secondTargetLanguage']);
     const url = ollamaUrl; const modelName = ollamaSelectedModel;
@@ -850,6 +875,39 @@ async function callSiliconFlowAPI(text, apiKey, modelName, targetLanguage, secon
     if (!response.ok) {
         const errorBody = await response.json();
         throw new Error(errorBody.error.message || `API 请求失败`);
+    }
+    const data = await response.json();
+    return data.choices[0].message.content.trim();
+}
+
+/**
+ * 调用 OpenRouter API
+ */
+async function callOpenRouterAPI(text, apiKey, modelName, targetLanguage, secondTargetLanguage) {
+    const url = 'https://openrouter.ai/api/v1/chat/completions';
+    const userPrompt = chrome.i18n.getMessage('translationPrompt', [targetLanguage, secondTargetLanguage, text]);
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+            'HTTP-Referer': 'https://github.com/licon/llm-translate',
+            'X-Title': 'LLM Translate Extension',
+        },
+        body: JSON.stringify({
+            model: modelName,
+            messages: [
+                { role: 'user', content: userPrompt }
+            ],
+            max_tokens: 2048,
+            temperature: 0.3,
+        }),
+    });
+
+    if (!response.ok) {
+        const errorBody = await response.json();
+        throw new Error(errorBody.error?.message || `API 请求失败`);
     }
     const data = await response.json();
     return data.choices[0].message.content.trim();

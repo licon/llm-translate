@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 modelSelect: document.getElementById('siliconflow-model-select'),
                 fetchButton: document.querySelector('.fetch-models-button[data-provider="siliconflow"]'),
             },
+            openrouter: {
+                apiKeyInput: document.getElementById('openrouter-api-key'),
+                modelSelect: document.getElementById('openrouter-model-select'),
+                fetchButton: document.querySelector('.fetch-models-button[data-provider="openrouter"]'),
+            },
             ollama: {
                 apiKeyInput: document.getElementById('ollama-url'),
                 modelSelect: document.getElementById('ollama-model-select'),
@@ -103,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             if (providerName === 'gemini') await fetchGeminiModels(inputValue);
             else if (providerName === 'siliconflow') await fetchSiliconFlowModels(inputValue);
+            else if (providerName === 'openrouter') await fetchOpenRouterModels(inputValue);
         }
     }
 
@@ -133,6 +139,39 @@ document.addEventListener('DOMContentLoaded', () => {
             populateModelSelect(modelSelect, data.data, m => m.id, m => m.id);
             showStatus(chrome.i18n.getMessage('statusModelsSuccess'), 'success');
             loadSelectedModel('siliconflow');
+        } catch (error) {
+            modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusModelsFailed', [error.message])}</option>`;
+            showStatus(chrome.i18n.getMessage('statusModelsFailed', [error.message]), 'error');
+        }
+    }
+
+    async function fetchOpenRouterModels(apiKey) {
+        const modelSelect = elements.providers.openrouter.modelSelect;
+        modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusFetchingModels')}</option>`;
+        try {
+            const response = await fetch('https://openrouter.ai/api/v1/models', {
+                headers: { 
+                    'Authorization': `Bearer ${apiKey}`,
+                    'HTTP-Referer': 'https://github.com/licon/llm-translate',
+                    'X-Title': 'LLM Translate Extension'
+                }
+            });
+            if (!response.ok) throw new Error((await response.json()).error?.message || 'Failed to fetch models');
+            const data = await response.json();
+            // Filter for free models that support image input and sort by name
+            const chatModels = data.data.filter(m => 
+                m.id && 
+                m.name && 
+                !m.id.includes('embedding') && 
+                !m.id.includes('rerank') &&
+                m.name.toLowerCase().includes('free') &&
+                m.architecture && 
+                m.architecture.input_modalities && 
+                m.architecture.input_modalities.includes('image')
+            ).sort((a, b) => a.name.localeCompare(b.name));
+            populateModelSelect(modelSelect, chatModels, m => m.id, m => `${m.name} (${m.id})`);
+            showStatus(chrome.i18n.getMessage('statusModelsSuccess'), 'success');
+            loadSelectedModel('openrouter');
         } catch (error) {
             modelSelect.innerHTML = `<option>${chrome.i18n.getMessage('statusModelsFailed', [error.message])}</option>`;
             showStatus(chrome.i18n.getMessage('statusModelsFailed', [error.message]), 'error');
@@ -191,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadAllSettings() {
-        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey', 'ollamaUrl', 'geminiSelectedModel', 'siliconflowSelectedModel', 'ollamaSelectedModel', 'targetLanguage', 'secondTargetLanguage'];
+        const keys = ['activeProvider', 'geminiApiKey', 'siliconflowApiKey', 'openrouterApiKey', 'ollamaUrl', 'geminiSelectedModel', 'siliconflowSelectedModel', 'openrouterSelectedModel', 'ollamaSelectedModel', 'targetLanguage', 'secondTargetLanguage'];
         chrome.storage.local.get(keys, (result) => {
             if (result.activeProvider) switchTab(result.activeProvider);
             if (result.geminiApiKey) {
@@ -201,6 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (result.siliconflowApiKey) {
                 elements.providers.siliconflow.apiKeyInput.value = result.siliconflowApiKey;
                 fetchSiliconFlowModels(result.siliconflowApiKey);
+            }
+            if (result.openrouterApiKey) {
+                elements.providers.openrouter.apiKeyInput.value = result.openrouterApiKey;
+                fetchOpenRouterModels(result.openrouterApiKey);
             }
             if (result.ollamaUrl) {
                 elements.providers.ollama.apiKeyInput.value = result.ollamaUrl;

@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flow 提供商的標籤頁標題。"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter 提供商的標籤頁標題。"
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Ollama 提供商的標籤頁標題。"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow API 金鑰",
         "description": "Silicon Flow API 金鑰輸入欄位的標籤。"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API 金鑰",
+        "description": "OpenRouter API 金鑰輸入欄位的標籤。"
     },
     "ollamaUrlLabel": {
         "message": "Ollama 伺服器 URL",
@@ -67,6 +75,10 @@
         "message": "輸入您的 Silicon Flow API 金鑰",
         "description": "Silicon Flow API 金鑰輸入欄位的預留文字。"
     },
+    "openrouterApiPlaceholder": {
+        "message": "輸入您的 OpenRouter API 金鑰",
+        "description": "OpenRouter API 金鑰輸入欄位的預留文字。"
+    },
     "ollamaUrlPlaceholder": {
         "message": "輸入您的 Ollama 伺服器 URL（例如：http://localhost:11434）",
         "description": "Ollama URL 輸入欄位的預留文字。"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "建議選擇免費模型，例如 qwen。",
         "description": "選擇 Silicon Flow 模型的提示。"
+    },
+    "openrouterModelHint": {
+        "message": "僅顯示免費且支援圖片輸入的模型。",
+        "description": "選擇 OpenRouter 模型的提示。"
     },
     "ollamaModelHint": {
         "message": "選擇您在 Ollama 本機已安裝的任一模型。",
@@ -645,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "擷取 > 選擇區域",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 支援與回饋",
+        "description": "設定頁面中GitHub部分的標題。"
+    },
+    "githubDescription": {
+        "message": "喜歡這個擴充功能嗎？請給專案點星、Fork 或分享您的回饋，幫助我們改進！",
+        "description": "鼓勵使用者支援專案的描述。"
+    },
+    "visitGitHub": {
+        "message": "⭐ 給專案點星",
+        "description": "造訪GitHub儲存庫的按鈕。"
+    },
+    "reportIssue": {
+        "message": "🐛 回饋問題",
+        "description": "回饋問題或建議的按鈕。"
+    },
+    "githubEncouragement": {
+        "message": "您的支援幫助我們讓這個擴充功能變得更好！🚀",
+        "description": "關於支援專案的鼓勵性資訊。"
     }
 }

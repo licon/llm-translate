@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Rótulo para a guia do provedor Silicon Flow."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "Rótulo para a guia do provedor OpenRouter."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Rótulo para a guia do provedor Ollama."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Chave de API do Silicon Flow",
         "description": "Rótulo para a entrada da chave de API do Silicon Flow."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "Chave de API do OpenRouter",
+        "description": "Rótulo para a entrada da chave de API do OpenRouter."
     },
     "ollamaUrlLabel": {
         "message": "URL do Servidor Ollama",
@@ -67,6 +75,10 @@
         "message": "Digite sua chave de API do Silicon Flow",
         "description": "Espaço reservado para a entrada da chave de API do Silicon Flow."
     },
+    "openrouterApiPlaceholder": {
+        "message": "Digite sua chave de API do OpenRouter",
+        "description": "Espaço reservado para a entrada da chave de API do OpenRouter."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Digite a URL do seu servidor Ollama (ex., http://localhost:11434)",
         "description": "Espaço reservado para a entrada da URL do Ollama."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "Recomendado escolher modelos gratuitos, por exemplo, qwen.",
         "description": "Dica para selecionar um modelo Silicon Flow."
+    },
+    "openrouterModelHint": {
+        "message": "Apenas modelos gratuitos que suportam entrada de imagem são exibidos.",
+        "description": "Dica para selecionar um modelo OpenRouter."
     },
     "ollamaModelHint": {
         "message": "Selecione qualquer modelo instalado localmente no Ollama.",
@@ -645,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "Capturar > Área Selecionada",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 Suporte e Feedback",
+        "description": "Título para a seção GitHub nas configurações."
+    },
+    "githubDescription": {
+        "message": "Gosta desta extensão? Ajude-nos a melhorá-la dando uma estrela ao projeto ou compartilhando seu feedback!",
+        "description": "Descrição que encoraja os usuários a apoiar o projeto."
+    },
+    "visitGitHub": {
+        "message": "⭐ Dar estrela no GitHub",
+        "description": "Botão para visitar o repositório GitHub."
+    },
+    "reportIssue": {
+        "message": "🐛 Reportar problema",
+        "description": "Botão para reportar problemas ou feedback."
+    },
+    "githubEncouragement": {
+        "message": "Seu apoio nos ajuda a tornar esta extensão ainda melhor para todos! 🚀",
+        "description": "Mensagem encorajadora sobre apoiar o projeto."
     }
 }

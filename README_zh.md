@@ -6,9 +6,39 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
 
 与传统的机器翻译不同，本插件旨在通过先进的 AI 技术理解语言的细微差别，生成高质量的译文，帮助您轻松跨越语言障碍，高效获取全球信息。
 
+## 支持的 LLM 提供商
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="200" height="200">
+        <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
+        <strong>Google Gemini</strong><br>
+        <small>Google先进AI模型</small>
+      </td>
+      <td align="center" width="200" height="200">
+        <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
+        <strong>硅基流动</strong><br>
+        <small>中国领先的大模型AI平台</small>
+      </td>
+      <td align="center"  width="200" height="200">
+        <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
+        <strong>OpenRouter</strong><br>
+        <small>大语言模型的统一接口平台</small>
+      </td>
+      <td align="center" width="200" height="200">
+        <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
+        <strong>Ollama</strong><br>
+        <small>本地AI部署方案</small>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
 ## 核心功能
 
-*   **多提供商支持:** 支持配置多个大型语言模型提供商 (当前支持 **Google Gemini**、**Silicon Flow** 和 **Ollama**)，让您自由选择最适合的模型。
+*   **多提供商支持:** 支持配置多个大型语言模型提供商 (当前支持 **Google Gemini**、**Silicon Flow**、**OpenRouter** 和 **Ollama**)，让您自由选择最适合的模型。
 *   **即时划词翻译:** 在任何网页上选择文本，即可在鼠标旁看到翻译图标，点击后立刻在原地显示翻译结果，体验流畅无打扰。
 *   **🆕 右键菜单翻译:** 选中文字后右键点击，直接从上下文菜单访问翻译选项。可选择翻译为主要或次要目标语言，翻译结果将在居中弹窗中显示。
 *   **📸 截图翻译:** 捕获网页任意区域，使用AI视觉能力翻译图片中的文字。完美适用于翻译图片、PDF或截图中的文本。
@@ -28,6 +58,25 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
 *   **浏览器接口:** `WebExtensions API` (兼容 Chrome, Firefox, Edge 等现代浏览器)
 *   **语音合成:** `Web Speech API`
 
+## 提供商详情
+
+### 🌐 OpenRouter 集成 (新增)
+
+EZ Translate 现在支持 **OpenRouter**，这是一个统一的 API 平台，提供来自不同提供商的数百个 AI 模型的访问：
+
+**主要特性：**
+- **🆓 仅免费模型**: 自动过滤显示名称中包含 "free" 的免费模型
+- **🖼️ 图片支持**: 仅显示支持图片输入的模型，用于截图翻译
+- **🎯 智能过滤**: 结合两个条件显示最适合翻译任务的模型
+- **🔄 统一访问**: 单个 API 密钥即可访问来自 OpenAI、Anthropic、Google、Meta 等提供商的模型
+- **📊 模型多样性**: 根据您的需求从不同的模型系列和大小中选择
+
+**快速开始：**
+1. 访问 [OpenRouter](https://openrouter.ai/keys) 获取您的 API 密钥
+2. 在 EZ Translate 设置中，切换到 "OpenRouter" 标签页
+3. 输入您的 API 密钥并点击 "获取模型"
+4. 从过滤后的免费、支持图片的模型列表中选择
+
 ## 推荐模型
 
 ### 各提供商免费模型
@@ -36,6 +85,7 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
 |--------|----------|------|
 | **Google Gemini** | `gemma3:12b`<br>`gemma3:4b`<br>`gemma3n` | 免费模型，推荐 Gemma 3 12B |
 | **Silicon Flow** | `qwen3:8b`<br>`glm-4:9b`<br>`qwen2.5:7b` | 免费模型，推荐 Qwen3-8B |
+| **OpenRouter** | `meta-llama/llama-4-scout:free`<br>`google/gemma-3-27b-it:free`<br>`qwen/qwen2.5-vl-32b-instruct:free` | 支持图片的免费模型，自动过滤显示 |
 | **Ollama (本地)** | `qwen2:1.5b`<br>`llama3.1:8b`<br>`gemma2:2b` | 本地下载运行 |
 
 ### 模型选择建议
@@ -43,6 +93,7 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
 * **追求速度**: 选择较小模型 (1.5B-3B 参数)
 * **追求质量**: 选择较大模型 (7B+ 参数)
 * **追求隐私**: 使用 Ollama 本地模型
+* **追求多样性**: 使用 OpenRouter 访问来自不同提供商的数百个免费模型
 * **成本考虑**: 以上模型均为免费使用
 
 

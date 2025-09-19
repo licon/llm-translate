@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Silicon Flow 提供商的标签页标签。"
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "OpenRouter 提供商的标签页标签。"
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Ollama 提供商的标签页标签。"
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Silicon Flow API 密钥",
         "description": "Silicon Flow API 密钥输入框的标签。"
+    },
+    "openrouterApiKeyLabel": {
+        "message": "OpenRouter API 密钥",
+        "description": "OpenRouter API 密钥输入框的标签。"
     },
     "ollamaUrlLabel": {
         "message": "Ollama 服务器地址",
@@ -67,6 +75,10 @@
         "message": "输入您的 Silicon Flow API 密钥",
         "description": "Silicon Flow API 密钥输入框的占位符。"
     },
+    "openrouterApiPlaceholder": {
+        "message": "输入您的 OpenRouter API 密钥",
+        "description": "OpenRouter API 密钥输入框的占位符。"
+    },
     "ollamaUrlPlaceholder": {
         "message": "输入您的 Ollama 服务器地址 (例如: http://localhost:11434)",
         "description": "Ollama URL 输入框的占位符。"
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "建议选择免费模型，例如 qwen 等。",
         "description": "选择 Silicon Flow 模型的提示。"
+    },
+    "openrouterModelHint": {
+        "message": "仅显示免费且支持图片输入的模型。",
+        "description": "选择 OpenRouter 模型的提示。"
     },
     "ollamaModelHint": {
         "message": "选择您本地安装的任何 Ollama 模型。",
@@ -645,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "捕获 > 选择区域",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 支持与反馈",
+        "description": "设置页面中GitHub部分的标题。"
+    },
+    "githubDescription": {
+        "message": "喜欢这个扩展吗？请给项目点星、Fork 或分享您的反馈，帮助我们改进！",
+        "description": "鼓励用户支持项目的描述。"
+    },
+    "visitGitHub": {
+        "message": "⭐ 给项目点星",
+        "description": "访问GitHub仓库的按钮。"
+    },
+    "reportIssue": {
+        "message": "🐛 反馈问题",
+        "description": "反馈问题或建议的按钮。"
+    },
+    "githubEncouragement": {
+        "message": "您的支持帮助我们让这个扩展变得更好！🚀",
+        "description": "关于支持项目的鼓励性信息。"
     }
 }

@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "تسمية علامة تبويب مزود Silicon Flow."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "تسمية علامة تبويب مزود OpenRouter."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "تسمية علامة تبويب مزود Ollama."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "مفتاح Silicon Flow API",
         "description": "تسمية حقل إدخال مفتاح Silicon Flow API."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "مفتاح OpenRouter API",
+        "description": "تسمية حقل إدخال مفتاح OpenRouter API."
     },
     "ollamaUrlLabel": {
         "message": "رابط خادم Ollama",
@@ -67,6 +75,10 @@
         "message": "أدخل مفتاح Silicon Flow API الخاص بك",
         "description": "نص نائب لحقل إدخال مفتاح Silicon Flow API."
     },
+    "openrouterApiPlaceholder": {
+        "message": "أدخل مفتاح OpenRouter API الخاص بك",
+        "description": "نص نائب لحقل إدخال مفتاح OpenRouter API."
+    },
     "ollamaUrlPlaceholder": {
         "message": "أدخل رابط خادم Ollama الخاص بك (مثال: http://localhost:11434)",
         "description": "نص نائب لحقل إدخال رابط Ollama."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "يوصى باختيار النماذج المجانية، على سبيل المثال، qwen.",
         "description": "تلميح لاختيار نموذج Silicon Flow."
+    },
+    "openrouterModelHint": {
+        "message": "يتم عرض النماذج المجانية فقط التي تدعم إدخال الصور.",
+        "description": "تلميح لاختيار نموذج OpenRouter."
     },
     "ollamaModelHint": {
         "message": "اختر أي نموذج مثبت محليًا في Ollama.",
@@ -645,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "التقاط > المنطقة المحددة",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 الدعم والملاحظات",
+        "description": "عنوان قسم GitHub في الإعدادات."
+    },
+    "githubDescription": {
+        "message": "هل تحب هذا الامتداد؟ ساعدنا في تحسينه من خلال إعطاء النجم للمشروع أو مشاركة ملاحظاتك!",
+        "description": "وصف يشجع المستخدمين على دعم المشروع."
+    },
+    "visitGitHub": {
+        "message": "⭐ إعطاء نجمة على GitHub",
+        "description": "زر لزيارة مستودع GitHub."
+    },
+    "reportIssue": {
+        "message": "🐛 الإبلاغ عن مشكلة",
+        "description": "زر للإبلاغ عن المشاكل أو الملاحظات."
+    },
+    "githubEncouragement": {
+        "message": "دعمك يساعدنا في جعل هذا الامتداد أفضل للجميع! 🚀",
+        "description": "رسالة تشجيعية حول دعم المشروع."
     }
 }

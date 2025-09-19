@@ -35,6 +35,10 @@
         "message": "Silicon Flow",
         "description": "Étiquette de l'onglet du fournisseur Silicon Flow."
     },
+    "openrouterProvider": {
+        "message": "OpenRouter",
+        "description": "Étiquette de l'onglet du fournisseur OpenRouter."
+    },
     "ollamaProvider": {
         "message": "Ollama",
         "description": "Étiquette de l'onglet du fournisseur Ollama."
@@ -46,6 +50,10 @@
     "siliconflowApiKeyLabel": {
         "message": "Clé API Silicon Flow",
         "description": "Étiquette pour le champ de saisie de la clé API Silicon Flow."
+    },
+    "openrouterApiKeyLabel": {
+        "message": "Clé API OpenRouter",
+        "description": "Étiquette pour le champ de saisie de la clé API OpenRouter."
     },
     "ollamaUrlLabel": {
         "message": "URL du serveur Ollama",
@@ -67,6 +75,10 @@
         "message": "Saisissez votre clé API Silicon Flow",
         "description": "Texte de remplacement pour le champ de saisie de la clé API Silicon Flow."
     },
+    "openrouterApiPlaceholder": {
+        "message": "Saisissez votre clé API OpenRouter",
+        "description": "Texte de remplacement pour le champ de saisie de la clé API OpenRouter."
+    },
     "ollamaUrlPlaceholder": {
         "message": "Saisissez l'URL de votre serveur Ollama (ex. http://localhost:11434)",
         "description": "Texte de remplacement pour le champ de saisie de l'URL Ollama."
@@ -86,6 +98,10 @@
     "siliconflowModelHint": {
         "message": "Il est recommandé de choisir des modèles gratuits, par exemple, qwen.",
         "description": "Astuce pour la sélection d'un modèle Silicon Flow."
+    },
+    "openrouterModelHint": {
+        "message": "Seuls les modèles gratuits qui prennent en charge l'entrée d'images sont affichés.",
+        "description": "Astuce pour la sélection d'un modèle OpenRouter."
     },
     "ollamaModelHint": {
         "message": "Sélectionnez n'importe quel modèle que vous avez installé localement dans Ollama.",
@@ -645,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "Capturer > Zone Sélectionnée",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 Support et Commentaires",
+        "description": "Titre pour la section GitHub dans les paramètres."
+    },
+    "githubDescription": {
+        "message": "Vous aimez cette extension ? Aidez-nous à l'améliorer en donnant une étoile au projet ou en partageant vos commentaires !",
+        "description": "Description encourageant les utilisateurs à soutenir le projet."
+    },
+    "visitGitHub": {
+        "message": "⭐ Mettre une étoile sur GitHub",
+        "description": "Bouton pour visiter le dépôt GitHub."
+    },
+    "reportIssue": {
+        "message": "🐛 Signaler un problème",
+        "description": "Bouton pour signaler des problèmes ou des commentaires."
+    },
+    "githubEncouragement": {
+        "message": "Votre soutien nous aide à rendre cette extension encore meilleure pour tous ! 🚀",
+        "description": "Message encourageant sur le soutien au projet."
     }
 }

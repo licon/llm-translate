@@ -81,3 +81,89 @@ label a:hover { text-decoration: underline; }
     font-size: 18px;
     font-weight: 600;
 }
+
+/* --- GitHub Section --- */
+.github-section {
+    margin-top: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.github-content h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.github-content p {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.github-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.github-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    text-decoration: none;
+    color: white;
+}
+
+.issue-link {
+    background-color: #28a745;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+.issue-link:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.github-encouragement {
+    font-size: 13px;
+    color: #868e96;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .github-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .github-link {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+}
