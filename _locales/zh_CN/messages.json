@@ -661,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "捕获 > 选择区域",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 支持与反馈",
+        "description": "设置页面中GitHub部分的标题。"
+    },
+    "githubDescription": {
+        "message": "喜欢这个扩展吗？请给项目点星、Fork 或分享您的反馈，帮助我们改进！",
+        "description": "鼓励用户支持项目的描述。"
+    },
+    "visitGitHub": {
+        "message": "⭐ 给项目点星",
+        "description": "访问GitHub仓库的按钮。"
+    },
+    "reportIssue": {
+        "message": "🐛 反馈问题",
+        "description": "反馈问题或建议的按钮。"
+    },
+    "githubEncouragement": {
+        "message": "您的支持帮助我们让这个扩展变得更好！🚀",
+        "description": "关于支持项目的鼓励性信息。"
     }
 }
