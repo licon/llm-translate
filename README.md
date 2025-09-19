@@ -9,6 +9,36 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 
 [查看中文版本 (View Chinese Version)](README_zh.md)
 
+## Supported LLM Providers
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="200" height="200">
+        <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
+        <strong>Google Gemini</strong><br>
+        <small>Advanced AI model by Google</small>
+      </td>
+      <td align="center" width="200" height="200">
+        <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
+        <strong>Silicon Flow</strong><br>
+        <small>Chinese AI platform</small>
+      </td>
+      <td align="center"  width="200" height="200">
+        <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
+        <strong>OpenRouter</strong><br>
+        <small>Unified AI model access</small>
+      </td>
+      <td align="center" width="200" height="200">
+        <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
+        <strong>Ollama</strong><br>
+        <small>Local AI deployment</small>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
 ## Core Features
 
 *   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, **OpenRouter**, and **Ollama**), allowing you to freely choose the most suitable model.
@@ -24,6 +54,7 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 *   **Smart Target Language Settings:** Configure default and second target languages for intelligent translation switching.
 *   **Intelligent Language Detection:** Automatically detects when source language matches target language and switches to second target language.
 *   **Comprehensive Language Support:** Supports 100+ languages with native translations for all interface elements.
+
 
 ## Features to Implement
 *   **Custom Translation Styles:** Allow users to customize translation tone (formal, casual, technical, etc.).
