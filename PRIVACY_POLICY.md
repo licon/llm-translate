@@ -28,6 +28,7 @@ When you use the extension, the text you translate and your API key are sent to 
 
 *   **Google Gemini:** [Google Privacy Policy](https://policies.google.com/privacy)
 *   **Silicon Flow:** [Privacy Policy](https://docs.siliconflow.cn/en/legals/privacy-policy)
+*   **Openrouter:** [Privacy Policy](https://openrouter.ai/privacy)
 
 ### Data Security
 
