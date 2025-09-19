@@ -11,7 +11,7 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
 
 ## Core Features
 
-*   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, and **Ollama**), allowing you to freely choose the most suitable model.
+*   **Multi-provider Support:** Supports configuring multiple Large Language Model providers (currently supports **Google Gemini**, **Silicon Flow**, **OpenRouter**, and **Ollama**), allowing you to freely choose the most suitable model.
 *   **Instant Hover Translation:** Select text on any web page, and a translation icon will appear next to your mouse. Click it to see the translation result in place for a smooth and uninterrupted experience.
 *   **🆕 Context Menu Translation:** Right-click on selected text to access translation options directly from the context menu. Choose between your primary or secondary target language for instant translation in a centered popup window.
 *   **📸 Screenshot Translation:** Capture any area of the webpage and translate text within images using AI vision capabilities. Perfect for translating text in images, PDFs, or screenshots.
@@ -115,6 +115,30 @@ EZ Translate offers multiple convenient ways to translate text on web pages:
 *   **Browser API:** `WebExtensions API` (compatible with modern browsers like Chrome, Firefox, Edge, etc.)
 *   **Speech Synthesis:** `Web Speech API`
 
+## Provider Details
+
+### 🌐 OpenRouter Integration (NEW)
+
+EZ Translate now supports **OpenRouter**, a unified API platform that provides access to hundreds of AI models from different providers:
+
+**Key Features:**
+- **🆓 Free Models Only**: Automatically filters to show only free models with "free" in their names
+- **🖼️ Image Support**: Only displays models that support image input for screenshot translation
+- **🎯 Smart Filtering**: Combines both criteria to show the most suitable models for translation tasks
+- **🔄 Unified Access**: Single API key to access models from OpenAI, Anthropic, Google, Meta, and more
+- **📊 Model Variety**: Choose from different model families and sizes based on your needs
+
+**Getting Started:**
+1. Visit [OpenRouter](https://openrouter.ai/keys) to get your API key
+2. In EZ Translate settings, switch to the "OpenRouter" tab
+3. Enter your API key and click "Fetch Models"
+4. Select from the filtered list of free, image-capable models
+
+**Recommended OpenRouter Models:**
+- `meta-llama/llama-4-scout:free` - High-quality Llama model
+- `google/gemma-3-27b-it:free` - Latest Gemini with vision support
+- `qwen/qwen2.5-vl-32b-instruct:free` - Qwen's advanced reasoning capabilities
+
 ## Recommended Models
 
 ### Free Models by Provider
@@ -123,6 +147,7 @@ EZ Translate offers multiple convenient ways to translate text on web pages:
 |----------|-------------------|-------|
 | **Google Gemini** | `gemma3:12b`<br>`gemma3:4b`<br>`gemma3n` | Free models, recommend Gemma 3 12B |
 | **Silicon Flow** | `qwen3:8b`<br>`glm-4:9b`<br>`qwen2.5:7b` | Free models, recommend Qwen3-8B |
+| **OpenRouter** | `meta-llama/llama-4-scout:free`<br>`google/gemma-3-27b-it:free`<br>`qwen/qwen2.5-vl-32b-instruct:free` | Free models with image support, auto-filtered |
 | **Ollama (Local)** | `qwen2:1.5b`<br>`llama3.1:8b`<br>`gemma2:2b` | Download and run locally |
 
 ### Model Selection Tips
@@ -131,8 +156,9 @@ EZ Translate offers multiple convenient ways to translate text on web pages:
 * **For Quality**: Choose larger models (7B+ parameters)  
 * **For Privacy**: Use Ollama with local models
 * **For Cost**: All listed models are free to use
+* **For Variety**: Use OpenRouter to access hundreds of free models from different providers
 
-*Last updated: August 15, 2025*
+*Last updated: September 19, 2025*
 
 ## Translation Quality Comparison
 
