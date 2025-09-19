@@ -661,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "擷取 > 選擇區域",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 支援與回饋",
+        "description": "設定頁面中GitHub部分的標題。"
+    },
+    "githubDescription": {
+        "message": "喜歡這個擴充功能嗎？請給專案點星、Fork 或分享您的回饋，幫助我們改進！",
+        "description": "鼓勵使用者支援專案的描述。"
+    },
+    "visitGitHub": {
+        "message": "⭐ 給專案點星",
+        "description": "造訪GitHub儲存庫的按鈕。"
+    },
+    "reportIssue": {
+        "message": "🐛 回饋問題",
+        "description": "回饋問題或建議的按鈕。"
+    },
+    "githubEncouragement": {
+        "message": "您的支援幫助我們讓這個擴充功能變得更好！🚀",
+        "description": "關於支援專案的鼓勵性資訊。"
     }
 }

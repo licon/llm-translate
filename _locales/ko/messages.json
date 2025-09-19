@@ -661,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "캡처 > 선택 영역",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 지원 및 피드백",
+        "description": "설정의 GitHub 섹션 제목."
+    },
+    "githubDescription": {
+        "message": "이 확장 프로그램이 마음에 드시나요? 프로젝트에 별표를 주거나 피드백을 공유해서 개선에 도움을 주세요!",
+        "description": "사용자들이 프로젝트를 지원하도록 격려하는 설명."
+    },
+    "visitGitHub": {
+        "message": "⭐ GitHub에서 별표",
+        "description": "GitHub 저장소를 방문하는 버튼."
+    },
+    "reportIssue": {
+        "message": "🐛 문제 신고",
+        "description": "문제나 피드백을 신고하는 버튼."
+    },
+    "githubEncouragement": {
+        "message": "여러분의 지원이 이 확장 프로그램을 더욱 좋게 만드는 힘이 됩니다! 🚀",
+        "description": "프로젝트 지원에 대한 격려 메시지."
     }
 }

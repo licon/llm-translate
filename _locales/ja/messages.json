@@ -661,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "キャプチャ > 選択領域",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 サポートとフィードバック",
+        "description": "設定のGitHubセクションのタイトル。"
+    },
+    "githubDescription": {
+        "message": "この拡張機能が気に入りましたか？プロジェクトにスターを付けるか、フィードバックを共有して、改善にご協力ください！",
+        "description": "ユーザーにプロジェクトをサポートするよう促す説明。"
+    },
+    "visitGitHub": {
+        "message": "⭐ GitHubでスター",
+        "description": "GitHubリポジトリを訪問するボタン。"
+    },
+    "reportIssue": {
+        "message": "🐛 問題を報告",
+        "description": "問題やフィードバックを報告するボタン。"
+    },
+    "githubEncouragement": {
+        "message": "皆様のサポートが、この拡張機能をより良いものにする力になります！🚀",
+        "description": "プロジェクトのサポートについての励ましのメッセージ。"
     }
 }

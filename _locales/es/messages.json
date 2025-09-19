@@ -661,5 +661,25 @@
     "shortcutCaptureDescription": {
         "message": "Capturar > Área Seleccionada",
         "description": "Keyboard shortcut description for capture selected area feature."
+    },
+    "githubSectionTitle": {
+        "message": "🌟 Soporte y Comentarios",
+        "description": "Título para la sección de GitHub en configuración."
+    },
+    "githubDescription": {
+        "message": "¿Te gusta esta extensión? ¡Ayúdanos a mejorarla dándole una estrella al proyecto o compartiendo tus comentarios!",
+        "description": "Descripción que anima a los usuarios a apoyar el proyecto."
+    },
+    "visitGitHub": {
+        "message": "⭐ Dar estrella en GitHub",
+        "description": "Botón para visitar el repositorio de GitHub."
+    },
+    "reportIssue": {
+        "message": "🐛 Reportar problema",
+        "description": "Botón para reportar problemas o comentarios."
+    },
+    "githubEncouragement": {
+        "message": "¡Tu apoyo nos ayuda a hacer esta extensión aún mejor para todos! 🚀",
+        "description": "Mensaje alentador sobre apoyar el proyecto."
     }
 }
