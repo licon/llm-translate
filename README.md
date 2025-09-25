@@ -15,24 +15,32 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
   <table>
     <tr>
       <td align="center" width="200" height="200">
-        <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
-        <strong>Google Gemini</strong><br>
-        <small>Advanced AI model by Google</small>
+        <a href="https://ai.google.dev/" target="_blank">
+          <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
+          <strong>Google Gemini</strong><br>
+          <small>Advanced AI model by Google</small>
+        </a>
       </td>
       <td align="center" width="200" height="200">
-        <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
-        <strong>Silicon Flow</strong><br>
-        <small>Chinese AI platform</small>
+        <a href="https://cloud.siliconflow.cn/" target="_blank">
+          <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
+          <strong>Silicon Flow</strong><br>
+          <small>Chinese AI platform</small>
+        </a>
       </td>
       <td align="center"  width="200" height="200">
-        <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
-        <strong>OpenRouter</strong><br>
-        <small>Unified AI model access</small>
+        <a href="https://openrouter.ai/" target="_blank">
+          <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
+          <strong>OpenRouter</strong><br>
+          <small>Unified AI model access</small>
+        </a>
       </td>
       <td align="center" width="200" height="200">
-        <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
-        <strong>Ollama</strong><br>
-        <small>Local AI deployment</small>
+        <a href="https://ollama.ai/" target="_blank">
+          <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
+          <strong>Ollama</strong><br>
+          <small>Local AI deployment</small>
+        </a>
       </td>
     </tr>
   </table>

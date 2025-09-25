@@ -12,24 +12,32 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
   <table>
     <tr>
       <td align="center" width="200" height="200">
-        <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
-        <strong>Google Gemini</strong><br>
-        <small>Google先进AI模型</small>
+        <a href="https://ai.google.dev/" target="_blank">
+          <img src="logos/google-gemini.png" alt="Google Gemini" width="200"><br>
+          <strong>Google Gemini</strong><br>
+          <small>Google先进AI模型</small>
+        </a>
       </td>
       <td align="center" width="200" height="200">
-        <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
-        <strong>硅基流动</strong><br>
-        <small>中国领先的大模型AI平台</small>
+        <a href="https://cloud.siliconflow.cn/" target="_blank">
+          <img src="logos/siliconflow.png" alt="Silicon Flow" width="200"><br>
+          <strong>硅基流动</strong><br>
+          <small>中国领先的大模型AI平台</small>
+        </a>
       </td>
       <td align="center"  width="200" height="200">
-        <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
-        <strong>OpenRouter</strong><br>
-        <small>大语言模型的统一接口平台</small>
+        <a href="https://openrouter.ai/" target="_blank">
+          <img src="logos/openrouter.png" alt="OpenRouter" width="200"><br>
+          <strong>OpenRouter</strong><br>
+          <small>大语言模型的统一接口平台</small>
+        </a>
       </td>
       <td align="center" width="200" height="200">
-        <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
-        <strong>Ollama</strong><br>
-        <small>本地AI部署方案</small>
+        <a href="https://ollama.com/" target="_blank">
+          <img src="logos/ollama_logo.png" alt="Ollama" width="200"><br>
+          <strong>Ollama</strong><br>
+          <small>本地AI部署方案</small>
+        </a>
       </td>
     </tr>
   </table>
