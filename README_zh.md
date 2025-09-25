@@ -43,6 +43,21 @@ EZ Translate 是一款现代化的浏览器翻译插件，它利用大型语言�
   </table>
 </div>
 
+## 从 GitHub Releases 手动安装
+
+适用于无法访问 Chrome 应用商店的用户。
+
+- 前往 GitHub Releases 下载最新压缩包：[:link: 最新版本](https://github.com/licon/llm-translate/releases/latest)
+- 解压下载的 `.zip` 文件
+- Chrome/Edge/Brave（Chromium 内核）：
+  - 打开 `chrome://extensions`（Edge: `edge://extensions`，Brave: `brave://extensions`）
+  - 打开「开发者模式」
+  - 点击「加载已解压的扩展程序」，选择解压后包含 `manifest.json` 的文件夹
+- Firefox：
+  - 打开 `about:debugging#/runtime/this-firefox`
+  - 点击「临时载入附加组件…」，选择解压目录中的 `manifest.json`
+- 后续升级：重新下载最新 `.zip`，解压后在扩展页点击「重新加载」
+
 
 ## 核心功能
 

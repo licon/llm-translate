@@ -46,6 +46,20 @@ Unlike traditional machine translation, this plugin aims to understand the nuanc
   </table>
 </div>
 
+## Install via GitHub Releases (Manual)
+
+This method is recommended if you cannot access the Chrome Web Store.
+
+- Download the latest release `.zip` from GitHub Releases: [Latest Release](https://github.com/licon/llm-translate/releases/latest)
+- Unzip the downloaded file
+- Chrome/Edge/Brave (Chromium-based):
+  - Open `chrome://extensions` (Edge: `edge://extensions`, Brave: `brave://extensions`)
+  - Enable "Developer mode"
+  - Click "Load unpacked" and select the unzipped folder that contains `manifest.json`
+- Firefox:
+  - Open `about:debugging#/runtime/this-firefox`
+  - Click "Load Temporary Add-on..." and select the `manifest.json` inside the unzipped folder
+- To update later: re-download the latest `.zip`, unzip, and click "Reload" on the extension page
 
 ## Core Features
 
